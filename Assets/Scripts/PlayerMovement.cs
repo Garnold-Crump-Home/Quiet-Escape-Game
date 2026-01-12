@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 6f;
+    public float moveSpeed = 5f;
     public float jumpForce = 7f;
 
     [Header("Crouch")]
@@ -34,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
     {
         HandleJump();
         HandleCrouch();
+        if(isCrouching == true)
+        {
+            moveSpeed = 3f;
+        }
+        else { moveSpeed = 6f;
+        }
+
     }
 
     void FixedUpdate()
