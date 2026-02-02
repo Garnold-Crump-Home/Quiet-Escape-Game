@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool isCrouching;
 
+    [Header("Flashlight")]
+    public Light flashlight;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -32,9 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        FlashLight();
         HandleJump();
         HandleCrouch();
-        if(isCrouching == true)
+        if (isCrouching == true)
         {
             moveSpeed = 3f;
         }
@@ -85,5 +88,20 @@ public class PlayerMovement : MonoBehaviour
     void CheckGround()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+    }
+
+    void FlashLight()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (flashlight.enabled)
+            {
+                flashlight.enabled = false;
+            }
+            else
+            {
+                flashlight.enabled = true;
+            }
+        }
     }
 }
