@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Flashlight")]
     public Light flashlight;
+    public Animator flashlightAnimation;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,7 +42,9 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed = 3f;
         }
-        else { moveSpeed = 6f;
+        else
+        {
+            moveSpeed = 6f;
         }
 
     }
@@ -96,12 +99,20 @@ public class PlayerMovement : MonoBehaviour
         {
             if (flashlight.enabled)
             {
+               
                 flashlight.enabled = false;
+                flashlightAnimation.SetTrigger("ToggleLight");
+                flashlightAnimation.Play("FlashlightToggle", 0, 0f);
+
             }
             else
             {
                 flashlight.enabled = true;
+                flashlightAnimation.SetTrigger("ToggleLight");
+                flashlightAnimation.Play("FlashlightToggle", 0, 0f);
             }
+
+
         }
     }
 }

@@ -27,8 +27,9 @@ public class Door : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    DoorAnimation.SetBool("DoorOpen", true);
                     DoorAnimation.SetBool("Closed", false);
+                    DoorAnimation.SetBool("DoorOpen", true);
+                    
                     doorOpen = true;
                 }
             }
@@ -41,6 +42,9 @@ public class Door : MonoBehaviour
                 {
                     
                  doorOpen =false;
+                    DoorAnimation.SetBool("DoorOpen", false);
+                    DoorAnimation.SetBool("Closed", true);
+                    
 
                 }
             }
