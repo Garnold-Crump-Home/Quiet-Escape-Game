@@ -3,8 +3,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 8f;
     public float jumpForce = 7f;
+    public float stamina = 100f;
+    public bool isSprinting = false;
 
     [Header("Crouch")]
     public float crouchHeight = 1f;
@@ -38,13 +40,17 @@ public class PlayerMovement : MonoBehaviour
         FlashLight();
         HandleJump();
         HandleCrouch();
+        IsSprinting();
+       
+
+
         if (isCrouching == true)
         {
             moveSpeed = 3f;
         }
-        else
+        else if(isCrouching == false && isSprinting == false) 
         {
-            moveSpeed = 6f;
+            moveSpeed = 8f;
         }
 
     }
@@ -113,6 +119,34 @@ public class PlayerMovement : MonoBehaviour
             }
 
 
+        }
+    }
+
+    void IsSprinting()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
+        {
+            stamina -= 10f * Time.deltaTime;
+            if(stamina > 0f)
+            {
+               moveSpeed = 12f;
+                isSprinting = true;
+            }
+
+           
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+          isSprinting = false;
+        }
+        if(isSprinting != true)
+        {
+            stamina += 5f * Time.deltaTime;
+            if(stamina > 100f)
+            {
+                stamina = 100f;
+                moveSpeed = 8f;
+            }
         }
     }
 }
