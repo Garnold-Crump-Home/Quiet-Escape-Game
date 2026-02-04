@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Flashlight")]
     public Light flashlight;
     public Animator flashlightAnimation;
+
+    [Header("Idle Animation")]
+    public Animator IdleLeft;
+    public Animator IdleRight;
+
+    public Camera Camera;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -41,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
         HandleJump();
         HandleCrouch();
         IsSprinting();
-       
+        IdleAnimation();
+
 
 
         if (isCrouching == true)
@@ -131,6 +138,9 @@ public class PlayerMovement : MonoBehaviour
             {
                moveSpeed = 12f;
                 isSprinting = true;
+                IdleRight.SetBool("isSprinting", true);
+                IdleLeft.SetBool("isSprinting", true);
+                Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, 75f, Time.deltaTime * 5f);
             }
 
            
@@ -139,14 +149,44 @@ public class PlayerMovement : MonoBehaviour
         {
           isSprinting = false;
         }
-        if(isSprinting != true)
+        if(stamina <= 0f)
         {
+            stamina = 0f;
+            moveSpeed = 8f;
+            isSprinting = false;
+        }
+        if (isSprinting != true)
+        {
+            IdleLeft.SetBool("isSprinting", false);
+            IdleRight.SetBool("isSprinting", false);
+            Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, 60f, Time.deltaTime * 5f);
             stamina += 5f * Time.deltaTime;
             if(stamina > 100f)
             {
                 stamina = 100f;
                 moveSpeed = 8f;
+
             }
         }
     }
+
+    void IdleAnimation()
+    {
+        if(rb.velocity.magnitude < 1f && isGrounded && !Input.anyKey && !Input.anyKeyDown)
+        {
+           Invoke("StartAnimation", 1f);
+        }
+        else
+        {
+            IdleLeft.SetBool("isIdle", false);
+            IdleRight.SetBool("isIdle", false);
+        }
+    }
+
+    void StartAnimation()
+    {
+        IdleLeft.SetBool("isIdle", true);
+        IdleRight.SetBool("isIdle", true);
+    }
+       
 }
