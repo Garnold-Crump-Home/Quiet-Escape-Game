@@ -4,6 +4,7 @@ public class WoodFall : MonoBehaviour
 {
     public Rigidbody[] nailsRb;
     private Rigidbody rb;
+    public bool woodIsFalling = false;
 
     void Start()
     {
@@ -27,6 +28,7 @@ public class WoodFall : MonoBehaviour
         {
             rb.freezeRotation = false;
             rb.constraints = RigidbodyConstraints.None;
+            woodIsFalling = true;
         }
     }
 }

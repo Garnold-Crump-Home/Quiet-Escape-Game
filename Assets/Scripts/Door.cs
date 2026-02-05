@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public Transform player;
     public Animator DoorAnimation;
     public bool doorOpen = false;
+    public WoodFall woodFall;
 
 
     public float interactionDistance = 5f;
@@ -19,33 +20,41 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        float distance = Vector3.Distance(player.position, transform.position);
-        if (doorOpen == false)
+        if (woodFall.woodIsFalling)
         {
-            if (distance <= interactionDistance)
+
+
+            float distance = Vector3.Distance(player.position, transform.position);
+            if (doorOpen == false)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (distance <= interactionDistance)
                 {
-                    DoorAnimation.SetBool("Closed", false);
-                    DoorAnimation.SetBool("DoorOpen", true);
-                    
-                    doorOpen = true;
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        DoorAnimation.SetBool("Closed", false);
+                        DoorAnimation.SetBool("Closed1", false);
+                        DoorAnimation.SetBool("DoorOpen", true);
+                        DoorAnimation.SetBool("DoorOpen1", true);
+
+                        doorOpen = true;
+                    }
                 }
             }
-        }
-        else if (doorOpen == true)
-        {
-            if (distance <= interactionDistance)
+            else if (doorOpen == true)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (distance <= interactionDistance)
                 {
-                    
-                 doorOpen =false;
-                    DoorAnimation.SetBool("DoorOpen", false);
-                    DoorAnimation.SetBool("Closed", true);
-                    
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
 
+                        doorOpen = false;
+                        DoorAnimation.SetBool("DoorOpen", false);
+                        DoorAnimation.SetBool("DoorOpen1", false);
+                        DoorAnimation.SetBool("Closed", true);
+                        DoorAnimation.SetBool("Closed1", true);
+
+
+                    }
                 }
             }
         }
