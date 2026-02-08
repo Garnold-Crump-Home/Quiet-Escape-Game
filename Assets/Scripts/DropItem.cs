@@ -13,6 +13,7 @@ public class DropItem : MonoBehaviour
     public float throwForce = 1f;
     public bool isThrown = false;
     public Animator animator;
+    private bool dropobj = false;
     void Start()
     {
         
@@ -30,7 +31,13 @@ public class DropItem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 isThrown = true;
-                Throw();
+                animator.SetBool("isIdle", false);
+                animator.SetTrigger("DropObj");
+                dropobj = true;
+                if (dropobj)
+                {
+                    Invoke("Throw", 1f);
+                }
                
                
                 
@@ -48,6 +55,7 @@ public class DropItem : MonoBehaviour
             rb.AddForce(transform.forward * throwForce, ForceMode.Impulse);
             objectToThrow.parent = null;
             isThrown = false;
+            dropobj = false;
         }
     }
 }

@@ -2223,6 +2223,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1707208157562722191}
     - target: {fileID: 2070316939801874568, guid: 4aa6f8a0adfa5b14b97f663cfa4f1d6d, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1900310719}
+    - target: {fileID: 2070316939801874568, guid: 4aa6f8a0adfa5b14b97f663cfa4f1d6d, type: 3}
       propertyPath: heldObject
       value: 
       objectReference: {fileID: 1311480948}

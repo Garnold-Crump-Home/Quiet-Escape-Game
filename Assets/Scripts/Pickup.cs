@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour
     public Transform Hand;
     public GameObject heldObject;
     public bool holdingObject = false;
+    public Animator animator;
     void Start()
     {
         
@@ -24,17 +25,22 @@ public class Pickup : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                  
-                    this.transform.parent = playerCamera;
-                    this.transform.position = new Vector3(Hand.position.x, Hand.position.y, Hand.position.z);
-                 
-                    heldObject.gameObject.SetActive(true);
-                    this.gameObject.SetActive(false);
+                animator.SetTrigger("Pickup");
+                Invoke("PickupObj", 1f);
 
 
                 }
             }
 
         }
+
+    public void PickupObj()
+    {
+        this.transform.parent = playerCamera;
+        this.transform.position = new Vector3(Hand.position.x, Hand.position.y, Hand.position.z);
+
+        heldObject.gameObject.SetActive(true);
+        this.gameObject.SetActive(false);
+    }
     
 }
