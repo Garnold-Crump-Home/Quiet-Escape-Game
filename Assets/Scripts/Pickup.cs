@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pickup : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Pickup : MonoBehaviour
     public GameObject heldObject;
     public bool holdingObject = false;
     public Animator animator;
+    public PlayerMovement playerMovement;
+    public Button pickupButton;
+    public GameObject canvas;
+
     void Start()
     {
         
@@ -19,20 +24,31 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerMovement.HoldingObj && Input.GetKeyDown(KeyCode.Q))
+        {
+            playerMovement.HoldingObj = false;
+        }
+        if (!playerMovement.HoldingObj)
+        {
             float distance = Vector3.Distance(player.position, transform.position);
-            if (distance <= 4f)
+            if (distance >= 4.5f)
+            { canvas.SetActive(false); }
+
+
+            else if (distance <= 4f)
             {
+                canvas.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                animator.SetTrigger("Pickup");
-                Invoke("PickupObj", 1f);
-
+                    animator.SetTrigger("Pickup");
+                    Invoke("PickupObj", 1f);
+                    canvas.SetActive(false);
 
                 }
             }
 
         }
+    }
 
     public void PickupObj()
     {
@@ -41,6 +57,7 @@ public class Pickup : MonoBehaviour
 
         heldObject.gameObject.SetActive(true);
         this.gameObject.SetActive(false);
+        playerMovement.HoldingObj = true;
     }
     
 }

@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator IdleLeft;
     public Animator IdleRight;
 
+    public bool HoldingObj = false;
     public Camera Camera;
     void Start()
     {
