@@ -9,6 +9,9 @@ public class Door : MonoBehaviour
     public Animator DoorAnimation;
     public bool doorOpen = false;
     public WoodFall woodFall;
+    public RedKey redKey;
+    public GreenKey greenKey;
+    public BlueKey blueKey;
 
 
     public float interactionDistance = 5f;
@@ -20,7 +23,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (woodFall.woodIsFalling)
+        if (woodFall.woodIsFalling && redKey.redKeyUnlocked && blueKey.blueKeyUnlocked && greenKey.greenKeyUnlocked)
         {
 
 

@@ -13,7 +13,6 @@ public class Pickup : MonoBehaviour
     public bool holdingObject = false;
     public Animator animator;
     public PlayerMovement playerMovement;
-    public Button pickupButton;
     public GameObject canvas;
 
     void Start()
@@ -28,14 +27,14 @@ public class Pickup : MonoBehaviour
         {
             playerMovement.HoldingObj = false;
         }
-        if (!playerMovement.HoldingObj)
+        else if (playerMovement.HoldingObj == false)
         {
             float distance = Vector3.Distance(player.position, transform.position);
             if (distance >= 4.5f)
             { canvas.SetActive(false); }
 
 
-            else if (distance <= 4f)
+            else if (distance <= 6f)
             {
                 canvas.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
