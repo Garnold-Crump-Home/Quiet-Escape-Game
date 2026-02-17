@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Flashlight")]
     public Light flashlight;
     public Animator flashlightAnimation;
+    public AudioSource audioSourceLight;
 
 
     [Header("Idle Animation")]
@@ -36,14 +37,26 @@ public class PlayerMovement : MonoBehaviour
     public bool HoldingObj = false;
     public Camera Camera;
 
+    public AudioSource audioSource;
+    public AudioSource audioSource2;
+    public bool audioIsPlaying = false;
+
+
     public Slider staminaSlider;
     void Start()
     {
+        audioSource.spatialBlend = 0f;
+        audioSource2.spatialBlend = 0f;
+        audioSource.playOnAwake = false;
+        audioSource2.playOnAwake = false;
         rb = GetComponent<Rigidbody>();
         capsule = GetComponent<CapsuleCollider>();
 
         rb.freezeRotation = true;
         standHeight = capsule.height;
+        audioSource.Stop();
+        audioSource2.Stop();
+       
     }
 
     void Update()
@@ -120,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (flashlight.enabled)
             {
-               
+                audioSourceLight.Play();
                 flashlight.enabled = false;
                 flashlightAnimation.SetTrigger("ToggleLight");
                 flashlightAnimation.Play("FlashlightToggle", 0, 0f);
@@ -128,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
+                audioSourceLight.Play();
                 flashlight.enabled = true;
                 flashlightAnimation.SetTrigger("ToggleLight");
                 flashlightAnimation.Play("FlashlightToggle", 0, 0f);
@@ -141,11 +155,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && !isCrouching)
         {
+            audioIsPlaying = true;
+            if (audioIsPlaying && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+                audioSource2.Play();
+                audioSource.loop = true;
+                audioSource2.loop = true;
+               
+            }
+          
             stamina -= 10f * Time.deltaTime;
             if(stamina > 0f)
             {
                moveSpeed = 12f;
                 isSprinting = true;
+               
                 IdleRight.SetBool("isSprinting", true);
                 IdleLeft.SetBool("isSprinting", true);
                 Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, 75f, Time.deltaTime * 5f);
@@ -155,7 +180,15 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-          isSprinting = false;
+            audioIsPlaying = false;
+            isSprinting = false; if (!audioIsPlaying && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+                audioSource2.Stop();
+                audioSource.loop = false;
+                audioSource2.loop = false;
+            }
+           
         }
         if(stamina <= 0f)
         {
@@ -165,6 +198,9 @@ public class PlayerMovement : MonoBehaviour
         }
         if (isSprinting != true)
         {
+         
+            
+           
             IdleLeft.SetBool("isSprinting", false);
             IdleRight.SetBool("isSprinting", false);
             Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, 60f, Time.deltaTime * 5f);
