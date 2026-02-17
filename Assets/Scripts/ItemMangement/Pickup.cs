@@ -27,30 +27,39 @@ public class Pickup : MonoBehaviour
         {
             playerMovement.HoldingObj = false;
         }
-        else if (playerMovement.HoldingObj == false)
+        else if (!playerMovement.HoldingObj)
         {
-            float distance = Vector3.Distance(player.position, transform.position);
-            if (distance >= 4.5f)
-            { canvas.SetActive(false); }
+            Ray ray = new Ray(playerCamera.position, playerCamera.forward);
+            RaycastHit hit;
 
+            float maxDistance = 4.5f;
 
-            else if (distance <= 6f)
+            if (Physics.Raycast(ray, out hit, maxDistance))
             {
-                canvas.SetActive(true);
-                if (Input.GetKeyDown(KeyCode.E))
+                if (hit.transform == this.transform)
                 {
-                    animator.SetTrigger("Pickup");
-                    Invoke("PickupObj", 1f);
-                    canvas.SetActive(false);
+                    canvas.SetActive(true);
 
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        
+                        animator.SetTrigger("Pickup");
+                        Invoke("PickupObj", 1.2f);
+                        
+                    }
+
+                    return; // stop here so canvas doesn't get disabled
                 }
             }
 
+            canvas.SetActive(false);
         }
     }
 
+
     public void PickupObj()
     {
+        canvas.SetActive(false);
         this.transform.parent = playerCamera;
         this.transform.position = new Vector3(Hand.position.x, Hand.position.y, Hand.position.z);
 

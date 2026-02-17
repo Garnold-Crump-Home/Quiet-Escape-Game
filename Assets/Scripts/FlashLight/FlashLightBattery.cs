@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class FlashLightBattery : MonoBehaviour
 {
@@ -18,10 +19,21 @@ public class FlashLightBattery : MonoBehaviour
     public float flickerAmount = 300f;
     public float flickerSpeed = 0.05f;
 
+    [Header("UI")]
+    public RawImage image1;
+    public RawImage image2;
+    public RawImage image3;
+    public RawImage image4;
+    public RawImage image5;
+
+   
+
     float flickerTimer;
 
     void Update()
     {
+        BatteryUILevel();
+      
         // Drain battery
         if (flashlight.enabled)
         {
@@ -59,6 +71,57 @@ public class FlashLightBattery : MonoBehaviour
                 baseIntensity,
                 Time.deltaTime * 5f
             );
+        }
+    }
+    void BatteryUILevel()
+    {
+        if (BatteryLevel > 80f)
+        {
+            image1.enabled = true;
+            image2.enabled = true;
+            image3.enabled = true;
+            image4.enabled = true;
+            image5.enabled = true;
+        }
+        else if (BatteryLevel > 60f)
+        {
+            image1.enabled = false;
+            image2.enabled = true;
+            image3.enabled = true;
+            image4.enabled = true;
+            image5.enabled = true;
+        }
+        else if (BatteryLevel > 40f)
+        {
+            image1.enabled = false;
+            image2.enabled = false;
+            image3.enabled = true;
+            image4.enabled = true;
+            image5.enabled = true;
+        }
+        else if (BatteryLevel > 20f)
+        {
+            image1.enabled = false;
+            image2.enabled = false;
+            image3.enabled = false;
+            image4.enabled = true;
+            image5.enabled = true;
+        }
+        else if (BatteryLevel > 0f)
+        {
+            image1.enabled = false;
+            image2.enabled = false;
+            image3.enabled = false;
+            image4.enabled = false;
+            image5.enabled = true;
+        }
+        else
+        {
+            image1.enabled = false;
+            image2.enabled = false;
+            image3.enabled = false;
+            image4.enabled = false;
+            image5.enabled = false;
         }
     }
 }

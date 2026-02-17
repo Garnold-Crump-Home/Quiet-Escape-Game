@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -27,12 +28,15 @@ public class PlayerMovement : MonoBehaviour
     public Light flashlight;
     public Animator flashlightAnimation;
 
+
     [Header("Idle Animation")]
     public Animator IdleLeft;
     public Animator IdleRight;
 
     public bool HoldingObj = false;
     public Camera Camera;
+
+    public Slider staminaSlider;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -44,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        staminaSlider.value = stamina;
+        staminaSlider.maxValue = 100f;
+        staminaSlider.minValue = 0f;
         FlashLight();
         HandleJump();
         HandleCrouch();
@@ -189,5 +196,8 @@ public class PlayerMovement : MonoBehaviour
         IdleLeft.SetBool("isIdle", true);
         IdleRight.SetBool("isIdle", true);
     }
-       
+
+    
 }
+       
+
