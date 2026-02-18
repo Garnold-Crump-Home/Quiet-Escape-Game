@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class SmartAvoidance : MonoBehaviour
 {
+    public bool playScript = true;
     [Header("Target")]
     public Transform player;
 
@@ -25,6 +26,11 @@ public class SmartAvoidance : MonoBehaviour
     private Vector3 wanderDirection;
     private float wanderTimer = 0f;
 
+    [Header("Animations")]
+    public Animator rightLeg;
+    public Animator leftLeg;
+    public Animator leftArm;
+    public Animator rightArm;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,34 +41,39 @@ public class SmartAvoidance : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player == null) return;
-
-        float distance = Vector3.Distance(transform.position, player.position);
-
-        // --- Detection Logic ---
-        if (!isChasing && distance <= detectionRange)
+        if (playScript)
         {
-            if (requireLineOfSight)
+
+
+            if (player == null) return;
+
+            float distance = Vector3.Distance(transform.position, player.position);
+
+
+            if (!isChasing && distance <= detectionRange)
             {
-                if (HasLineOfSight())
+                if (requireLineOfSight)
+                {
+                    if (HasLineOfSight())
+                        isChasing = true;
+                }
+                else
+                {
                     isChasing = true;
+                }
             }
+
+            // Lose target if too far
+            if (isChasing && distance > loseRange)
+                isChasing = false;
+
+            // --- Behavior ---
+            if (isChasing)
+                ChasePlayer();
             else
-            {
-                isChasing = true;
-            }
+                Wander();
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
-
-        // Lose target if too far
-        if (isChasing && distance > loseRange)
-            isChasing = false;
-
-        // --- Behavior ---
-        if (isChasing)
-            ChasePlayer();
-        else
-            Wander();
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     bool HasLineOfSight()
@@ -79,6 +90,10 @@ public class SmartAvoidance : MonoBehaviour
 
     void ChasePlayer()
     {
+        rightLeg.SetBool("Chasing", true);
+        leftLeg.SetBool("Chasing", true);
+        leftArm.SetBool("Chasing", true);  
+        rightArm.SetBool("Chasing", true);
         Vector3 direction = (player.position - transform.position).normalized;
 
         // Smooth rotation
@@ -91,6 +106,10 @@ public class SmartAvoidance : MonoBehaviour
 
     void Wander()
     {
+        rightLeg.SetBool("Chasing", false);
+        leftLeg.SetBool("Chasing", false);
+        leftArm.SetBool("Chasing", false);
+        rightArm.SetBool("Chasing", false);
         wanderTimer -= Time.deltaTime;
 
         if (wanderTimer <= 0f)
