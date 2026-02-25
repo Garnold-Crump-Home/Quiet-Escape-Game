@@ -32,7 +32,7 @@ public class Pickup : MonoBehaviour
             Ray ray = new Ray(playerCamera.position, playerCamera.forward);
             RaycastHit hit;
 
-            float maxDistance = 4.5f;
+            float maxDistance = 6f;
 
             if (Physics.Raycast(ray, out hit, maxDistance))
             {
