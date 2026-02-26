@@ -90,15 +90,18 @@ public class Objectives : MonoBehaviour
                 
                     obj8.SetActive(true);
                     obj3Completed = true;
+                   
+
+                }
+                if (Input.anyKeyDown)
+                {
+                    obj8.SetActive(false);
+                    door.SetActive(true);
                 }
 
             }
 
-            if(Input.anyKeyDown)
-            {
-                obj8.SetActive(false);
-                door.SetActive(true);
-            }
+           
         }
     }
 }
