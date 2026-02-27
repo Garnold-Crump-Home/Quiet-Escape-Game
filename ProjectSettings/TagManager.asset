@@ -6,6 +6,8 @@ TagManager:
   tags:
   - PlayerUICanvas
   - Pickup
+  - FlashLight
+  - MainLight
   layers:
   - Default
   - TransparentFX
