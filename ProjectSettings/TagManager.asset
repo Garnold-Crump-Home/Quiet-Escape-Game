@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerUICanvas
+  - Pickup
+  - FlashLight
+  - MainLight
   layers:
   - Default
   - TransparentFX
