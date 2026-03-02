@@ -9,6 +9,7 @@ public class Settings : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
     public Dropdown shadowsQuality;
+
  
     void Start()
     {
@@ -17,7 +18,7 @@ public class Settings : MonoBehaviour
         shadowsQuality.value = QualitySettings.shadows == ShadowQuality.Disable ? 0 : (QualitySettings.shadows == ShadowQuality.HardOnly ? 1 : 2);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
             Light light = GameObject.FindWithTag("MainLight").GetComponent<Light>();

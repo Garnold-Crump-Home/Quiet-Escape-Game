@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject mapChooseScreen;
     public GameObject settingsScreen;
     public GameObject loading;
+    public GameObject graphics;
     public Text loadingText; // assign your UI Text in Inspector
     public Text play;
     private bool colorChanged = false;
@@ -22,6 +23,17 @@ public class ButtonManager : MonoBehaviour
            Invoke("playButton", 0.2f); // delay to show color change
         }
         
+    }
+    public void graphicsButton()
+    {
+        mainScreen.SetActive(false);
+        settingsScreen.SetActive(false);
+        graphics.SetActive(true);
+    }
+    public void backGraphicsButton()
+    {
+        graphics.SetActive(false);
+        settingsScreen.SetActive(true);
     }
     public void backButton()
     {
