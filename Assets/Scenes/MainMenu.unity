@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -295,9 +299,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 23fa3221c36358948ac152f64b323b55, type: 2}
+    - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
       value: SideTable4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -347,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8570813}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -836,9 +848,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Name
       value: Shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1151,7 +1195,7 @@ GameObject:
   - component: {fileID: 61925272}
   - component: {fileID: 61925271}
   - component: {fileID: 61925273}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1311,7 +1355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1418,7 +1462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1753,7 +1797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 93968718}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2243,7 +2287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 125635151}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2416,7 +2460,7 @@ GameObject:
   - component: {fileID: 135709597}
   - component: {fileID: 135709596}
   - component: {fileID: 135709598}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2577,6 +2621,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2762,7 +2810,7 @@ GameObject:
   - component: {fileID: 152172649}
   - component: {fileID: 152172648}
   - component: {fileID: 152172650}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2865,7 +2913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160675228}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3004,7 +3052,7 @@ GameObject:
   - component: {fileID: 175415501}
   - component: {fileID: 175415500}
   - component: {fileID: 175415502}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3164,7 +3212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3257,7 +3305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206612209}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3823,7 +3871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212856743}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3993,6 +4041,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4328,7 +4380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 249590404}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4567,6 +4619,7 @@ MonoBehaviour:
   resolutionDropdown: {fileID: 933279981}
   qualityDropdown: {fileID: 913893230}
   shadowsQuality: {fileID: 1658494563}
+  volumeSlider: {fileID: 819846418}
 --- !u!4 &263684509
 Transform:
   m_ObjectHideFlags: 0
@@ -4736,6 +4789,7 @@ MonoBehaviour:
   settingsScreen: {fileID: 1654526158}
   loading: {fileID: 868126627}
   graphics: {fileID: 1109770447}
+  audioScreen: {fileID: 703928504}
   loadingText: {fileID: 38112401}
   play: {fileID: 570658261}
 --- !u!4 &272141651
@@ -4867,7 +4921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 290183804}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5134,7 +5188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312875386}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5169,7 +5223,7 @@ GameObject:
   - component: {fileID: 315173141}
   - component: {fileID: 315173140}
   - component: {fileID: 315173142}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5380,7 +5434,7 @@ GameObject:
   - component: {fileID: 335953734}
   - component: {fileID: 335953733}
   - component: {fileID: 335953735}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6101,7 +6155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6151,7 +6205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 368721820}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6240,6 +6294,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6340,9 +6398,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -325351938848464373, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
       propertyPath: m_Name
       value: PlasticChair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6471,7 +6537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 383930600}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6835,7 +6901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412871661}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7050,7 +7116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7157,7 +7223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7316,6 +7382,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &427304523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427304524}
+  - component: {fileID: 427304526}
+  - component: {fileID: 427304525}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &427304524
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427304523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1418356503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &427304525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427304523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &427304526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427304523}
+  m_CullTransparentMesh: 1
 --- !u!1001 &433203610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7382,7 +7523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7664,7 +7805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 454414055}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7803,7 +7944,7 @@ GameObject:
   - component: {fileID: 463166849}
   - component: {fileID: 463166848}
   - component: {fileID: 463166850}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8847,7 +8988,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 522981325}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9462,6 +9603,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570658259}
   m_CullTransparentMesh: 1
+--- !u!1 &571516998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571516999}
+  - component: {fileID: 571517000}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &571516999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571516998}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0041, y: -0.00247, z: -0.001}
+  m_LocalScale: {x: 1, y: -1.4723, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1394384924}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &571517000
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571516998}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e71d1215d7ebdc240921a6fd8ef2bb62, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1.9178467
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &572159390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9706,7 +9975,7 @@ GameObject:
   - component: {fileID: 590343733}
   - component: {fileID: 590343732}
   - component: {fileID: 590343734}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9957,7 +10226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599835528}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10552,7 +10821,7 @@ GameObject:
   - component: {fileID: 635338847}
   - component: {fileID: 635338846}
   - component: {fileID: 635338848}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10712,7 +10981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10820,6 +11089,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11121,7 +11394,7 @@ GameObject:
   - component: {fileID: 661754259}
   - component: {fileID: 661754258}
   - component: {fileID: 661754260}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11388,6 +11661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11538,7 +11815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 675820970}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11731,7 +12008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11876,6 +12153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11983,6 +12264,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12031,7 +12316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703626437}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12165,7 +12450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706138853}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12197,7 +12482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 710503988}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12413,7 +12698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 731404535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlasticChairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12811,7 +13096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13297,7 +13582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789044121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlasticChairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13836,6 +14121,96 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.56934035, y: 0.43505466, z: 0.30664587}
   m_Center: {x: -0.015677474, y: 0.51508635, z: -0.3083751}
+--- !u!1 &819846416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 819846417}
+  - component: {fileID: 819846418}
+  m_Layer: 5
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &819846417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819846416}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 929607229}
+  - {fileID: 1878693879}
+  - {fileID: 1418356503}
+  m_Father: {fileID: 1522582593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.00003764697, y: -22.899994}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &819846418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819846416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 427304525}
+  m_FillRect: {fileID: 2045927604}
+  m_HandleRect: {fileID: 427304524}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &824084917
 GameObject:
   m_ObjectHideFlags: 0
@@ -13846,7 +14221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824084919}
   - component: {fileID: 824084918}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CardBoardBoxes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14236,7 +14611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14590,7 +14965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853879512}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14928,7 +15303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874573349}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15067,7 +15442,7 @@ GameObject:
   - component: {fileID: 876392902}
   - component: {fileID: 876392901}
   - component: {fileID: 876392903}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15401,7 +15776,7 @@ GameObject:
   - component: {fileID: 895920427}
   - component: {fileID: 895920426}
   - component: {fileID: 895920428}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15561,7 +15936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15611,7 +15986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 912855030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HospitalBeds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15875,6 +16250,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923000237}
   m_CullTransparentMesh: 1
+--- !u!1 &929607228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929607229}
+  - component: {fileID: 929607231}
+  - component: {fileID: 929607230}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &929607229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929607228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 819846417}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929607230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929607228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &929607231
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929607228}
+  m_CullTransparentMesh: 1
 --- !u!1 &931296132
 GameObject:
   m_ObjectHideFlags: 0
@@ -15992,7 +16442,7 @@ GameObject:
   - component: {fileID: 932673873}
   - component: {fileID: 932673872}
   - component: {fileID: 932673874}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16447,7 +16897,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 975878366}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16899,7 +17349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1027964359}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16987,7 +17437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17076,9 +17526,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Name
       value: Shelf (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17282,12 +17764,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1432721547}
+  - {fileID: 1522582593}
   m_Father: {fileID: 923000238}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142.8, y: 58.9}
-  m_SizeDelta: {x: 60.9544, y: 31.4808}
+  m_AnchoredPosition: {x: -147.6, y: 70.7}
+  m_SizeDelta: {x: 51.7283, y: 21.4509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051464739
 MonoBehaviour:
@@ -17339,7 +17822,7 @@ GameObject:
   - component: {fileID: 1053564653}
   - component: {fileID: 1053564652}
   - component: {fileID: 1053564654}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17622,7 +18105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070076383}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17657,7 +18140,7 @@ GameObject:
   - component: {fileID: 1076419381}
   - component: {fileID: 1076419380}
   - component: {fileID: 1076419382}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17817,7 +18300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18625,7 +19108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1110690784}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18923,7 +19406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19260,7 +19743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19830,7 +20313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1160933427}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19918,7 +20401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20025,7 +20508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20237,7 +20720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20290,7 +20773,7 @@ GameObject:
   - component: {fileID: 1195924713}
   - component: {fileID: 1195924712}
   - component: {fileID: 1195924714}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20450,7 +20933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20500,7 +20983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197830873}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20729,7 +21212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20992,7 +21475,7 @@ GameObject:
   - component: {fileID: 1243777727}
   - component: {fileID: 1243777726}
   - component: {fileID: 1243777728}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21571,7 +22054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262845034}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21803,7 +22286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22057,7 +22540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22576,7 +23059,7 @@ GameObject:
   - component: {fileID: 1305908587}
   - component: {fileID: 1305908586}
   - component: {fileID: 1305908588}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22679,7 +23162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327237109}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22767,7 +23250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23029,7 +23512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23082,7 +23565,7 @@ GameObject:
   - component: {fileID: 1346271563}
   - component: {fileID: 1346271562}
   - component: {fileID: 1346271564}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23497,7 +23980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23623,7 +24106,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 272141650}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: graphicsButton
+        m_MethodName: audioButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23737,7 +24220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24004,7 +24487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24300,7 +24783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24411,7 +24894,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571516999}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
       insertIndex: -1
@@ -24419,9 +24905,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1394384921}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1394384924}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1394384923}
@@ -24446,7 +24929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce5c95ffab06e14fbe9f2d33640f68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassSound: {fileID: 1394384924}
+  glassSound: {fileID: 0}
 --- !u!135 &1394384922
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24480,102 +24963,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15005c88196de4644933f74e511e1e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1394384924
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!4 &1394384924 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
+  m_PrefabInstance: {fileID: 1394384919}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394384920}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e71d1215d7ebdc240921a6fd8ef2bb62, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!65 &1394384928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24609,7 +25001,7 @@ GameObject:
   - component: {fileID: 1398511253}
   - component: {fileID: 1398511252}
   - component: {fileID: 1398511254}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24967,6 +25359,42 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.449642, y: 2.0058293, z: 2.1990278}
   m_Center: {x: -4.1795387, y: 0.0029146802, z: -0.009936638}
+--- !u!1 &1418356502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418356503}
+  m_Layer: 5
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1418356503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418356502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 427304524}
+  m_Father: {fileID: 819846417}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1419946790
 GameObject:
   m_ObjectHideFlags: 0
@@ -25727,7 +26155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25777,7 +26205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450268623}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26093,7 +26521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476448992}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26483,7 +26911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509667631}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26515,7 +26943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1513479469}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26537,6 +26965,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 731404535}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!1 &1522582592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522582593}
+  - component: {fileID: 1522582595}
+  - component: {fileID: 1522582594}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1522582593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522582592}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0001224743}
+  m_LocalScale: {x: 0.63107413, y: 0.53762054, z: 0.41666672}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 819846417}
+  m_Father: {fileID: 1051464738}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -223.55167, y: -42.4}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1522582594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522582592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Master Volume
+--- !u!222 &1522582595
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522582592}
+  m_CullTransparentMesh: 1
 --- !u!1 &1524510338
 GameObject:
   m_ObjectHideFlags: 0
@@ -26708,7 +27216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26833,7 +27341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534419255}
   - component: {fileID: 1534419254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UpstairsDeco
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27465,7 +27973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27572,7 +28080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27625,7 +28133,7 @@ GameObject:
   - component: {fileID: 1574059369}
   - component: {fileID: 1574059368}
   - component: {fileID: 1574059370}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27919,6 +28427,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28731,7 +29243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29870,7 +30382,7 @@ GameObject:
   - component: {fileID: 1714739281}
   - component: {fileID: 1714739280}
   - component: {fileID: 1714739282}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29976,7 +30488,7 @@ GameObject:
   - component: {fileID: 1722284653}
   - component: {fileID: 1722284652}
   - component: {fileID: 1722284654}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30184,7 +30696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756554680}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30349,7 +30861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30458,6 +30970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_6699010_HOSPITAL+Bed+500K (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a778ce0bf324014409cbddae3089cddf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30506,7 +31022,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1806570367}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31576,7 +32092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31925,6 +32441,42 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4358321, y: 0.7682905, z: 0.47747907}
   m_Center: {x: 0, y: 0.38411695, z: 0.0000009536743}
+--- !u!1 &1878693878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878693879}
+  m_Layer: 5
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1878693879
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878693878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2045927604}
+  m_Father: {fileID: 819846417}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1881035273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31985,9 +32537,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -325351938848464373, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
       propertyPath: m_Name
       value: PlasticChair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13daf22941ed596488e796f2fd446d3f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32011,7 +32571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893044467}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32243,7 +32803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32398,7 +32958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1922021654}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32642,7 +33202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949104222}
   - component: {fileID: 1949104221}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Crates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33550,6 +34110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -33558,9 +34122,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 23fa3221c36358948ac152f64b323b55, type: 2}
+    - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
       value: SideTable4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33925,7 +34497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011655765}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33978,7 +34550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026286803}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34013,7 +34585,7 @@ GameObject:
   - component: {fileID: 2036691425}
   - component: {fileID: 2036691424}
   - component: {fileID: 2036691426}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Chair - ADDE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34173,7 +34745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34214,6 +34786,81 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.084, y: 2.084, z: 2.084}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2045927603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045927604}
+  - component: {fileID: 2045927606}
+  - component: {fileID: 2045927605}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2045927604
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045927603}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878693879}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2045927605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045927603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2045927606
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045927603}
+  m_CullTransparentMesh: 1
 --- !u!1 &2046252853
 GameObject:
   m_ObjectHideFlags: 0
@@ -34910,7 +35557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35332,7 +35979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edfa5e09dc6350a4ba830a17945d219e, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35909,7 +36556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114236204}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35941,7 +36588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114588312}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: PlasticChair (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36586,7 +37233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e45c120f4b19b044ca18f5958cf793a8, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

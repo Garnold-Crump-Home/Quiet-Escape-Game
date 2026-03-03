@@ -7,9 +7,12 @@ public class Battery : MonoBehaviour
 {
     public Transform player;
     public FlashLightBattery flashlightBattery;
-    public Animator pickup;
+    public Animator animator;
     public GameObject canvas;
     public Transform playerCamera;
+
+    public float maxDistance = 4f;
+    public float detectionRadius = 0.3f;
 
     void Start()
     {
@@ -22,28 +25,69 @@ public class Battery : MonoBehaviour
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
         RaycastHit hit;
 
-        float maxDistance = 4.5f;
-
-        if (Physics.Raycast(ray, out hit, maxDistance))
+        if (Physics.SphereCast(ray, detectionRadius, out hit, maxDistance, ~0, QueryTriggerInteraction.Collide))
         {
-            if (hit.transform == this.transform)
+            // Look for Battery script on parent (so child trigger works)
+            Battery battery = hit.collider.GetComponentInParent<Battery>();
+
+            if (battery != null)
             {
                 canvas.SetActive(true);
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Application.isPlaying && Input.GetKeyDown(KeyCode.E))
                 {
-                    pickup.SetTrigger("Pickup");
-                    flashlightBattery.BatteryLevel += 50f;
-                    Destroy(gameObject);
+                    animator.SetTrigger("Pickup");
+                    battery.PickupObj();
                 }
-            }
-            if (flashlightBattery.BatteryLevel > 100f)
-            {
-                flashlightBattery.BatteryLevel = 100f;
 
+                return;
             }
+        }
+
+        canvas.SetActive(false);
+    }
+    public void PickupObj()
+    {
+        if (!Application.isPlaying) return;
+
+        flashlightBattery.BatteryLevel += 50f;
+                    Destroy(gameObject);
+
+
+        if (flashlightBattery.BatteryLevel > 100f)
+        {
+            flashlightBattery.BatteryLevel = 100f;
 
         }
+
+        }
+
+    void OnDrawGizmos()
+    {
+        if (playerCamera == null) return;
+
+        Ray ray = new Ray(playerCamera.position, playerCamera.forward);
+        RaycastHit hit;
+
+        bool hittingPickup = false;
+
+        if (Physics.SphereCast(ray, detectionRadius, out hit, maxDistance, ~0, QueryTriggerInteraction.Collide))
+        {
+            if (hit.collider.GetComponentInParent<Battery>() != null)
+            {
+                hittingPickup = true;
+            }
+        }
+
+        Gizmos.color = hittingPickup ? Color.red : Color.green;
+        Vector3 origin = playerCamera.position;
+        Vector3 end = origin + playerCamera.forward * maxDistance;
+
+        Gizmos.DrawWireSphere(origin, detectionRadius);
+        Gizmos.DrawWireSphere(end, detectionRadius);
+        Gizmos.DrawLine(origin, end);
     }
 }
+
+
 

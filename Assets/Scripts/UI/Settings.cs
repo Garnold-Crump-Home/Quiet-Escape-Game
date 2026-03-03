@@ -9,13 +9,15 @@ public class Settings : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
     public Dropdown shadowsQuality;
+    public Slider volumeSlider;
 
- 
+
     void Start()
     {
         
         qualityDropdown.value = QualitySettings.GetQualityLevel();
         shadowsQuality.value = QualitySettings.shadows == ShadowQuality.Disable ? 0 : (QualitySettings.shadows == ShadowQuality.HardOnly ? 1 : 2);
+        volumeSlider.value = AudioListener.volume;
     }
 
    
@@ -72,7 +74,10 @@ public class Settings : MonoBehaviour
               
                 break;
         }
-       
 
+
+        AudioListener.volume = volumeSlider.value;
+        volumeSlider.maxValue = 100f;
+        volumeSlider.minValue = 0f;
     }
 }

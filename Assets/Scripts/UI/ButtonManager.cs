@@ -10,10 +10,18 @@ public class ButtonManager : MonoBehaviour
     public GameObject settingsScreen;
     public GameObject loading;
     public GameObject graphics;
+    public GameObject audioScreen;
     public Text loadingText; // assign your UI Text in Inspector
     public Text play;
     private bool colorChanged = false;
 
+    public void audioButton()
+    {
+               mainScreen.SetActive(false);
+        settingsScreen.SetActive(false);
+        audioScreen.SetActive(true);
+
+    }
     public void playClick()
     {
         if (colorChanged == false) { play.color = Color.gray;  colorChanged = true; }
@@ -33,6 +41,7 @@ public class ButtonManager : MonoBehaviour
     public void backGraphicsButton()
     {
         graphics.SetActive(false);
+        audioScreen.SetActive(false);
         settingsScreen.SetActive(true);
     }
     public void backButton()

@@ -29,16 +29,16 @@ public class Pickup : MonoBehaviour
             return;
         }
 
-        // DETECTION
+        
         if (playerMovement != null && !playerMovement.HoldingObj)
         {
             Ray ray = new Ray(playerCamera.position, playerCamera.forward);
             RaycastHit hit;
 
-            // Include triggers in detection
+          
             if (Physics.SphereCast(ray, detectionRadius, out hit, maxDistance, ~0, QueryTriggerInteraction.Collide))
             {
-                // Check if the hit collider is the child trigger (or its parent has Pickup)
+                
                 Pickup pickup = hit.collider.GetComponentInParent<Pickup>();
                 if (pickup != null)
                 {
@@ -54,7 +54,7 @@ public class Pickup : MonoBehaviour
                 }
             }
 
-            // Not looking at any pickup
+            
             canvas.SetActive(false);
         }
     }
