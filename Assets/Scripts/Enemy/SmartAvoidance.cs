@@ -3,6 +3,7 @@ using UnityEngine;
 public class SmartAvoidance : MonoBehaviour
 {
     public bool playScript = true;
+
     [Header("Target")]
     public Transform player;
 
@@ -21,8 +22,13 @@ public class SmartAvoidance : MonoBehaviour
     public float wanderTurnSpeed = 3f;
     public float wanderDirectionChangeInterval = 3f;
 
+    [Header("Avoidance")]
+    public float rayDistance = 2f;
+    public float sideOffset = 0.6f;
+    public float avoidStrength = 2f;
+
     private Rigidbody rb;
-    public bool isChasing = false;
+    private bool isChasing = false;
     private Vector3 wanderDirection;
     private float wanderTimer = 0f;
 
@@ -33,115 +39,133 @@ public class SmartAvoidance : MonoBehaviour
     public Animator rightArm;
 
     public WardrobeCollider wardrobeCollider;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
         PickNewWanderDirection();
     }
 
     void FixedUpdate()
     {
-        if (playScript)
+        if (!playScript || player == null) return;
+
+        float distance = Vector3.Distance(transform.position, player.position);
+
+        // --- Detection ---
+        if (!isChasing && distance <= detectionRange)
         {
-
-
-            if (player == null) return;
-
-            float distance = Vector3.Distance(transform.position, player.position);
-
-
-            if (!isChasing && distance <= detectionRange)
-            {
-                if (requireLineOfSight)
-                {
-                    if (HasLineOfSight())
-                        isChasing = true;
-                }
-                else
-                {
-                    isChasing = true;
-                }
-            }
-
-            // Lose target if too far
-            if (isChasing && distance > loseRange)
-                isChasing = false;
-
-            // --- Behavior ---
-            if (isChasing)
-                ChasePlayer();
-            else
-                Wander();
-            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            if (!requireLineOfSight || HasLineOfSight())
+                isChasing = true;
         }
+
+        if (isChasing && distance > loseRange)
+            isChasing = false;
+
+        // --- Behavior ---
+        if (isChasing)
+            ChasePlayer();
+        else
+            Wander();
+
+        // Keep upright
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     bool HasLineOfSight()
     {
         Vector3 dir = (player.position - transform.position).normalized;
 
-        if (Physics.Raycast(transform.position + Vector3.up * 1f, dir, out RaycastHit hit, detectionRange, ~0))
-        {
+        if (Physics.Raycast(transform.position + Vector3.up, dir, out RaycastHit hit, detectionRange))
             return hit.transform == player;
-        }
 
         return false;
     }
 
+    // -------------------------
+    //      AVOIDANCE LOGIC
+    // -------------------------
+    Vector3 GetAvoidanceVector()
+    {
+        Vector3 forward = transform.forward;
+        Vector3 right = transform.right;
+
+        bool front = Physics.Raycast(transform.position + Vector3.up, forward, out RaycastHit hitF, rayDistance, obstacleMask);
+        bool left = Physics.Raycast(transform.position - right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
+        bool rightSide = Physics.Raycast(transform.position + right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
+
+        Vector3 avoid = Vector3.zero;
+
+        if (front)
+            avoid += hitF.normal * avoidStrength;
+
+        if (left)
+            avoid += transform.right * avoidStrength;
+
+        if (rightSide)
+            avoid -= transform.right * avoidStrength;
+
+        return avoid;
+    }
+
     void ChasePlayer()
     {
-        if(wardrobeCollider.isInWardrobe)
+        if (wardrobeCollider.isInWardrobe)
         {
             isChasing = false;
             return;
         }
-        if (!wardrobeCollider.isInWardrobe)
-        {
-           
-           
 
-            rightLeg.SetBool("Chasing", true);
-            leftLeg.SetBool("Chasing", true);
-            leftArm.SetBool("Chasing", true);
-            rightArm.SetBool("Chasing", true);
-            Vector3 direction = (player.position - transform.position).normalized;
+        SetChasingAnimations(true);
 
-            // Smooth rotation
-            Quaternion targetRot = Quaternion.LookRotation(direction);
-            rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * turnSpeed));
+        Vector3 direction = (player.position - transform.position).normalized;
 
-            // Move forward
-            rb.MovePosition(rb.position + transform.forward * moveSpeed * Time.deltaTime);
-        }
+        // Add avoidance
+        Vector3 avoid = GetAvoidanceVector();
+        if (avoid != Vector3.zero)
+            direction = (direction + avoid).normalized;
+
+        // Rotate
+        Quaternion targetRot = Quaternion.LookRotation(direction);
+        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * turnSpeed));
+
+        // Move
+        rb.MovePosition(rb.position + transform.forward * moveSpeed * Time.deltaTime);
     }
 
     void Wander()
     {
-        rightLeg.SetBool("Chasing", false);
-        leftLeg.SetBool("Chasing", false);
-        leftArm.SetBool("Chasing", false);
-        rightArm.SetBool("Chasing", false);
-        wanderTimer -= Time.deltaTime;
+        SetChasingAnimations(false);
 
+        wanderTimer -= Time.deltaTime;
         if (wanderTimer <= 0f)
             PickNewWanderDirection();
 
-        // Smooth rotation toward wander direction
-        Quaternion targetRot = Quaternion.LookRotation(wanderDirection);
+        Vector3 avoid = GetAvoidanceVector();
+        Vector3 direction = wanderDirection;
+
+        if (avoid != Vector3.zero)
+            direction = (wanderDirection + avoid).normalized;
+
+        Quaternion targetRot = Quaternion.LookRotation(direction);
         rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * wanderTurnSpeed));
 
-        // Move forward
         rb.MovePosition(rb.position + transform.forward * wanderSpeed * Time.deltaTime);
     }
 
     void PickNewWanderDirection()
     {
         wanderTimer = wanderDirectionChangeInterval;
-
-        // Random horizontal direction
         Vector2 random = Random.insideUnitCircle.normalized;
         wanderDirection = new Vector3(random.x, 0f, random.y);
+    }
+
+    void SetChasingAnimations(bool chasing)
+    {
+        rightLeg.SetBool("Chasing", chasing);
+        leftLeg.SetBool("Chasing", chasing);
+        leftArm.SetBool("Chasing", chasing);
+        rightArm.SetBool("Chasing", chasing);
     }
 }
