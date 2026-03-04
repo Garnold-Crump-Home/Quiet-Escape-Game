@@ -1,67 +1,69 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
-    public Dropdown shadowsQuality;
     public Slider volumeSlider;
 
+    private Light mainLight;
 
     void Start()
     {
-        
+       
+        GameObject lightObj = GameObject.FindWithTag("MainLight");
+        if (lightObj != null)
+            mainLight = lightObj.GetComponent<Light>();
+        else
+            Debug.LogWarning("MainLight not found!");
+
+      
         qualityDropdown.value = QualitySettings.GetQualityLevel();
-        shadowsQuality.value = QualitySettings.shadows == ShadowQuality.Disable ? 0 : (QualitySettings.shadows == ShadowQuality.HardOnly ? 1 : 2);
         volumeSlider.value = AudioListener.volume;
+
+        volumeSlider.minValue = 0f;
+        volumeSlider.maxValue = 1f;
+
+      
+        qualityDropdown.onValueChanged.AddListener(SetQuality);
+        resolutionDropdown.onValueChanged.AddListener(SetResolution);
+        volumeSlider.onValueChanged.AddListener(SetVolume);
     }
 
-   
-    void Update()
+    // QUALITY SETTINGS
+    void SetQuality(int index)
     {
-            Light light = GameObject.FindWithTag("MainLight").GetComponent<Light>();
-        if (light != null)
-        {
-            if (QualitySettings.shadows != ShadowQuality.Disable)
-            {
-                light.shadows = LightShadows.None;
-            }
-            else
-            {
-                light.shadows = LightShadows.Hard;
-            }
-        } else { Debug.LogWarning("MainLight not found!"); }
+        QualitySettings.SetQualityLevel(index);
 
-        QualitySettings.SetQualityLevel(qualityDropdown.value);
-        switch (shadowsQuality.value)
+        if (mainLight == null) return;
+
+        switch (index)
         {
-            case 0:
+            case 0: // Low
                 QualitySettings.shadows = ShadowQuality.Disable;
+                mainLight.shadows = LightShadows.None;
                 break;
-            case 1:
-                QualitySettings.shadows = ShadowQuality.HardOnly;
-                break;
-            case 2:
-                QualitySettings.shadows = ShadowQuality.All;
-                break;
-        }
-        if (QualitySettings.shadows != ShadowQuality.Disable)
-        {
-            light.shadows = LightShadows.None;
-        }
-        else
-        {
-            light.shadows = LightShadows.Hard;
-        }
 
-     switch(resolutionDropdown.value)
+            case 1: // Medium
+                QualitySettings.shadows = ShadowQuality.HardOnly;
+                mainLight.shadows = LightShadows.Hard;
+                break;
+
+            case 2: // High
+                QualitySettings.shadows = ShadowQuality.All;
+                mainLight.shadows = LightShadows.Soft;
+                break;
+        }
+    }
+
+    // RESOLUTION SETTINGS
+    void SetResolution(int index)
+    {
+        switch (index)
         {
             case 0:
-                Screen.SetResolution(1280, 720,  Screen.fullScreen);
+                Screen.SetResolution(1280, 720, Screen.fullScreen);
                 break;
             case 1:
                 Screen.SetResolution(1920, 1080, Screen.fullScreen);
@@ -71,13 +73,13 @@ public class Settings : MonoBehaviour
                 break;
             case 3:
                 Screen.SetResolution(3840, 2160, Screen.fullScreen);
-              
                 break;
         }
+    }
 
-
-        AudioListener.volume = volumeSlider.value;
-        volumeSlider.maxValue = 100f;
-        volumeSlider.minValue = 0f;
+    
+    void SetVolume(float value)
+    {
+        AudioListener.volume = value;
     }
 }

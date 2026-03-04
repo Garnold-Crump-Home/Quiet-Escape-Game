@@ -162,7 +162,7 @@ public class SmartAvoidance : MonoBehaviour
     }
 
     void SetChasingAnimations(bool chasing)
-    {
+    { 
         rightLeg.SetBool("Chasing", chasing);
         leftLeg.SetBool("Chasing", chasing);
         leftArm.SetBool("Chasing", chasing);

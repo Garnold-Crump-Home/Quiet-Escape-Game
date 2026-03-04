@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1630910}
   - component: {fileID: 1630909}
   - component: {fileID: 1630911}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 20864673}
   - component: {fileID: 20864672}
   - component: {fileID: 20864674}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47384921}
   - component: {fileID: 47384922}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1108,81 +1108,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7311765, y: 1.5923096, z: 3.8179762}
   m_Center: {x: 0.005213309, y: 0.29615322, z: -0.1847013}
---- !u!1 &55652387
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 55652388}
-  - component: {fileID: 55652390}
-  - component: {fileID: 55652389}
-  m_Layer: 5
-  m_Name: Item Checkmark
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &55652388
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55652387}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 501588027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &55652389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55652387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &55652390
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55652387}
-  m_CullTransparentMesh: 1
 --- !u!1 &61925268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1462,7 @@ GameObject:
   - component: {fileID: 73824190}
   - component: {fileID: 73824189}
   - component: {fileID: 73824191}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1881,7 +1806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1893,7 +1818,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -1901,7 +1826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1954,7 +1879,7 @@ GameObject:
   - component: {fileID: 105513247}
   - component: {fileID: 105513246}
   - component: {fileID: 105513248}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2059,7 +1984,7 @@ GameObject:
   - component: {fileID: 106285979}
   - component: {fileID: 106285978}
   - component: {fileID: 106285980}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2372,19 +2297,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8380157826906577798, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -6733177361254619370, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -516098083770646512, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Name
@@ -2392,11 +2317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1790534147060613675, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_LocalScale.y
@@ -2404,15 +2329,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4831018558786363571, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6506492592744408605, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7621458937846134407, guid: 9a70845ebefafed4d9698042f46dcb79, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3262,7 +3187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 189319732}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3339,7 +3264,7 @@ GameObject:
   - component: {fileID: 208308092}
   - component: {fileID: 208308091}
   - component: {fileID: 208308093}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3542,7 +3467,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a65fced89190cdc44a7639a0aeeaa461, type: 2}
     - target: {fileID: -516098083770646512, guid: f7250a222dd85304eaa008f699574acc, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -305091885687274788, guid: f7250a222dd85304eaa008f699574acc, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -3769,7 +3694,7 @@ GameObject:
   - component: {fileID: 212509732}
   - component: {fileID: 212509731}
   - component: {fileID: 212509733}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4097,7 +4022,7 @@ GameObject:
   - component: {fileID: 223821234}
   - component: {fileID: 223821233}
   - component: {fileID: 223821235}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4202,7 +4127,7 @@ GameObject:
   - component: {fileID: 228180815}
   - component: {fileID: 228180814}
   - component: {fileID: 228180816}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4326,15 +4251,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 913893229}
-  - {fileID: 1658494562}
   - {fileID: 933279980}
   - {fileID: 2087665137}
   m_Father: {fileID: 1109770451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: -0.0020142, y: -0.000030518}
+  m_SizeDelta: {x: 333.34, y: 187.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244623060
 MonoBehaviour:
@@ -4493,7 +4417,7 @@ GameObject:
   - component: {fileID: 258690477}
   - component: {fileID: 258690476}
   - component: {fileID: 258690478}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4618,7 +4542,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolutionDropdown: {fileID: 933279981}
   qualityDropdown: {fileID: 913893230}
-  shadowsQuality: {fileID: 1658494563}
   volumeSlider: {fileID: 819846418}
 --- !u!4 &263684509
 Transform:
@@ -4647,114 +4570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15005c88196de4644933f74e511e1e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &266085215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 266085216}
-  - component: {fileID: 266085219}
-  - component: {fileID: 266085218}
-  - component: {fileID: 266085217}
-  m_Layer: 5
-  m_Name: Template
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &266085216
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266085215}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 525719950}
-  - {fileID: 1966122839}
-  m_Father: {fileID: 1658494562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 150}
-  m_Pivot: {x: 0.5, y: 1}
---- !u!114 &266085217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266085215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 353313576}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 2
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 525719950}
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 1966122840}
-  m_HorizontalScrollbarVisibility: 0
-  m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: 0
-  m_VerticalScrollbarSpacing: -3
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &266085218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266085215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &266085219
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266085215}
-  m_CullTransparentMesh: 1
 --- !u!1 &272141649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,7 +4634,7 @@ GameObject:
   - component: {fileID: 281196883}
   - component: {fileID: 281196882}
   - component: {fileID: 281196884}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4955,7 +4770,7 @@ GameObject:
   - component: {fileID: 300249775}
   - component: {fileID: 300249774}
   - component: {fileID: 300249776}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5086,7 +4901,7 @@ GameObject:
   - component: {fileID: 306426896}
   - component: {fileID: 306426895}
   - component: {fileID: 306426897}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5329,7 +5144,7 @@ GameObject:
   - component: {fileID: 327879556}
   - component: {fileID: 327879555}
   - component: {fileID: 327879557}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5540,7 +5355,7 @@ GameObject:
   - component: {fileID: 345906288}
   - component: {fileID: 345906287}
   - component: {fileID: 345906289}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5645,7 +5460,7 @@ GameObject:
   - component: {fileID: 348772246}
   - component: {fileID: 348772245}
   - component: {fileID: 348772247}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5750,7 +5565,7 @@ GameObject:
   - component: {fileID: 349957757}
   - component: {fileID: 349957756}
   - component: {fileID: 349957758}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5843,42 +5658,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5719643, y: 0.4258861, z: 0.3473623}
   m_Center: {x: -0.57940495, y: 0.5108502, z: -0.30329406}
---- !u!1 &353313575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 353313576}
-  m_Layer: 5
-  m_Name: Content
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &353313576
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353313575}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 501588027}
-  m_Father: {fileID: 525719950}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 28}
-  m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &353610028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,7 +5670,7 @@ GameObject:
   - component: {fileID: 353610032}
   - component: {fileID: 353610031}
   - component: {fileID: 353610033}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5996,7 +5775,7 @@ GameObject:
   - component: {fileID: 354610587}
   - component: {fileID: 354610586}
   - component: {fileID: 354610588}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6435,7 +6214,7 @@ GameObject:
   - component: {fileID: 383442191}
   - component: {fileID: 383442190}
   - component: {fileID: 383442192}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6569,7 +6348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384582703}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6694,7 +6473,7 @@ GameObject:
   - component: {fileID: 407534766}
   - component: {fileID: 407534765}
   - component: {fileID: 407534767}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6799,7 +6578,7 @@ GameObject:
   - component: {fileID: 407548449}
   - component: {fileID: 407548448}
   - component: {fileID: 407548450}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6935,7 +6714,7 @@ GameObject:
   - component: {fileID: 413923066}
   - component: {fileID: 413923065}
   - component: {fileID: 413923067}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7264,124 +7043,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.084, y: 2.084, z: 2.084}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &423531450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 423531453}
-  - component: {fileID: 423531452}
-  - component: {fileID: 423531451}
-  m_Layer: 0
-  m_Name: Point Light
-  m_TagString: MainLight
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &423531451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423531450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 3
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
---- !u!108 &423531452
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423531450}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &423531453
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423531450}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -105.53834, y: 6.4102364, z: 32.457108}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427304523
 GameObject:
   m_ObjectHideFlags: 0
@@ -7598,7 +7259,7 @@ GameObject:
   - component: {fileID: 443846320}
   - component: {fileID: 443846319}
   - component: {fileID: 443846321}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7703,7 +7364,7 @@ GameObject:
   - component: {fileID: 447620151}
   - component: {fileID: 447620150}
   - component: {fileID: 447620152}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7839,7 +7500,7 @@ GameObject:
   - component: {fileID: 454560312}
   - component: {fileID: 454560311}
   - component: {fileID: 454560313}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8137,7 +7798,7 @@ GameObject:
   - component: {fileID: 490419440}
   - component: {fileID: 490419439}
   - component: {fileID: 490419441}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8230,93 +7891,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.59151626, y: 0.18158203, z: 0.5890672}
   m_Center: {x: -0.003925906, y: 0.3537699, z: 0.09501208}
---- !u!1 &501588026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 501588027}
-  - component: {fileID: 501588028}
-  m_Layer: 5
-  m_Name: Item
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &501588027
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501588026}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1839182025}
-  - {fileID: 55652388}
-  - {fileID: 724859588}
-  m_Father: {fileID: 353313576}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &501588028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501588026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1839182026}
-  toggleTransition: 1
-  graphic: {fileID: 55652389}
-  m_Group: {fileID: 0}
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
 --- !u!1 &503772666
 GameObject:
   m_ObjectHideFlags: 0
@@ -8329,7 +7903,7 @@ GameObject:
   - component: {fileID: 503772670}
   - component: {fileID: 503772669}
   - component: {fileID: 503772671}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8434,7 +8008,7 @@ GameObject:
   - component: {fileID: 508030337}
   - component: {fileID: 508030336}
   - component: {fileID: 508030338}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8618,7 +8192,7 @@ GameObject:
   - component: {fileID: 510594899}
   - component: {fileID: 510594898}
   - component: {fileID: 510594900}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8723,7 +8297,7 @@ GameObject:
   - component: {fileID: 511313546}
   - component: {fileID: 511313545}
   - component: {fileID: 511313547}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8878,7 +8452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8890,7 +8464,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -8898,7 +8472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8948,7 +8522,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 520561312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SideTables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9011,96 +8585,6 @@ Transform:
   - {fileID: 152172646}
   m_Father: {fileID: 789044121}
   m_LocalEulerAnglesHint: {x: 0, y: 168.502, z: 0}
---- !u!1 &525719949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 525719950}
-  - component: {fileID: 525719953}
-  - component: {fileID: 525719952}
-  - component: {fileID: 525719951}
-  m_Layer: 5
-  m_Name: Viewport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &525719950
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525719949}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 353313576}
-  m_Father: {fileID: 266085216}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: 0}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &525719951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525719949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
---- !u!114 &525719952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525719949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &525719953
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525719949}
-  m_CullTransparentMesh: 1
 --- !u!1 &525932338
 GameObject:
   m_ObjectHideFlags: 0
@@ -9221,7 +8705,7 @@ GameObject:
   - component: {fileID: 531663926}
   - component: {fileID: 531663925}
   - component: {fileID: 531663927}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9326,7 +8810,7 @@ GameObject:
   - component: {fileID: 537452484}
   - component: {fileID: 537452483}
   - component: {fileID: 537452485}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9431,7 +8915,7 @@ GameObject:
   - component: {fileID: 556345280}
   - component: {fileID: 556345279}
   - component: {fileID: 556345281}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9613,7 +9097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571516999}
   - component: {fileID: 571517000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9743,7 +9227,7 @@ GameObject:
   - component: {fileID: 572159394}
   - component: {fileID: 572159393}
   - component: {fileID: 572159395}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9870,7 +9354,7 @@ GameObject:
   - component: {fileID: 589338986}
   - component: {fileID: 589338985}
   - component: {fileID: 589338987}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10078,7 +9562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594937555}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10124,7 +9608,7 @@ GameObject:
   - component: {fileID: 596637734}
   - component: {fileID: 596637733}
   - component: {fileID: 596637735}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10611,7 +10095,7 @@ GameObject:
   - component: {fileID: 612290483}
   - component: {fileID: 612290482}
   - component: {fileID: 612290484}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10716,7 +10200,7 @@ GameObject:
   - component: {fileID: 618494601}
   - component: {fileID: 618494600}
   - component: {fileID: 618494602}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11145,7 +10629,7 @@ GameObject:
   - component: {fileID: 641884595}
   - component: {fileID: 641884594}
   - component: {fileID: 641884596}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11247,7 +10731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650236886}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11500,7 +10984,7 @@ GameObject:
   - component: {fileID: 661788648}
   - component: {fileID: 661788647}
   - component: {fileID: 661788649}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11717,7 +11201,7 @@ GameObject:
   - component: {fileID: 671039572}
   - component: {fileID: 671039571}
   m_Layer: 5
-  m_Name: LoadMap
+  m_Name: MapSelection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11793,8 +11277,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671039570}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11803,7 +11287,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1041.2225, y: -804.2904}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &675820969
@@ -11849,7 +11333,7 @@ GameObject:
   - component: {fileID: 676400296}
   - component: {fileID: 676400295}
   - component: {fileID: 676400297}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12505,85 +11989,6 @@ Transform:
   - {fileID: 135709594}
   m_Father: {fileID: 731404535}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &724859587
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 724859588}
-  - component: {fileID: 724859590}
-  - component: {fileID: 724859589}
-  m_Layer: 5
-  m_Name: Item Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &724859588
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724859587}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 501588027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -0.5}
-  m_SizeDelta: {x: -30, y: -3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724859589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724859587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Option A
---- !u!222 &724859590
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724859587}
-  m_CullTransparentMesh: 1
 --- !u!1 &731371418
 GameObject:
   m_ObjectHideFlags: 0
@@ -12596,7 +12001,7 @@ GameObject:
   - component: {fileID: 731371422}
   - component: {fileID: 731371421}
   - component: {fileID: 731371423}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12811,7 +12216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdbea0d6736f46e4baf246f5f8b5bb9b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12835,7 +12240,7 @@ GameObject:
   - component: {fileID: 741104083}
   - component: {fileID: 741104082}
   - component: {fileID: 741104084}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13170,7 +12575,7 @@ GameObject:
   - component: {fileID: 753071487}
   - component: {fileID: 753071486}
   - component: {fileID: 753071488}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13275,7 +12680,7 @@ GameObject:
   - component: {fileID: 757484938}
   - component: {fileID: 757484937}
   - component: {fileID: 757484939}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13406,7 +12811,7 @@ GameObject:
   - component: {fileID: 778991686}
   - component: {fileID: 778991685}
   - component: {fileID: 778991687}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13535,8 +12940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: 0.0000092983, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783199180
 MonoBehaviour:
@@ -13640,7 +13045,7 @@ GameObject:
   - component: {fileID: 795659690}
   - component: {fileID: 795659689}
   - component: {fileID: 795659691}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13824,7 +13229,7 @@ GameObject:
   - component: {fileID: 802060513}
   - component: {fileID: 802060512}
   - component: {fileID: 802060514}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14028,7 +13433,7 @@ GameObject:
   - component: {fileID: 819154832}
   - component: {fileID: 819154831}
   - component: {fileID: 819154833}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14279,7 +13684,7 @@ GameObject:
   - component: {fileID: 825050909}
   - component: {fileID: 825050908}
   - component: {fileID: 825050910}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14452,7 +13857,7 @@ GameObject:
   - component: {fileID: 831966622}
   - component: {fileID: 831966621}
   - component: {fileID: 831966623}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14664,7 +14069,7 @@ GameObject:
   - component: {fileID: 835137680}
   - component: {fileID: 835137679}
   - component: {fileID: 835137681}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14792,8 +14197,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: -0.0020142, y: -0.000030518}
+  m_SizeDelta: {x: 333.34, y: 187.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841445411
 MonoBehaviour:
@@ -14842,7 +14247,7 @@ GameObject:
   - component: {fileID: 844098116}
   - component: {fileID: 844098115}
   - component: {fileID: 844098117}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15022,8 +14427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: 0, y: -0.000005722}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &863138392
 MonoBehaviour:
@@ -15175,8 +14580,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868126627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15186,7 +14591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1041.2225, y: -804.2904}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &874065788
@@ -15201,7 +14606,7 @@ GameObject:
   - component: {fileID: 874065792}
   - component: {fileID: 874065791}
   - component: {fileID: 874065793}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15337,7 +14742,7 @@ GameObject:
   - component: {fileID: 874632530}
   - component: {fileID: 874632529}
   - component: {fileID: 874632531}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15598,7 +15003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15610,7 +15015,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -15618,7 +15023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15671,7 +15076,7 @@ GameObject:
   - component: {fileID: 889210031}
   - component: {fileID: 889210030}
   - component: {fileID: 889210032}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16077,7 +15482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.1000032, y: -16.131}
+  m_AnchoredPosition: {x: -2.1000032, y: -9.8}
   m_SizeDelta: {x: 46.28, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913893230
@@ -16212,8 +15617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: -0.0020142, y: -0.000030518}
+  m_SizeDelta: {x: 333.34, y: 187.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923000239
 MonoBehaviour:
@@ -16337,7 +15742,7 @@ GameObject:
   - component: {fileID: 931296136}
   - component: {fileID: 931296135}
   - component: {fileID: 931296137}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16575,7 +15980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.1000032, y: 24.626999}
+  m_AnchoredPosition: {x: -2.1000032, y: 10.6}
   m_SizeDelta: {x: 46.28, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933279981
@@ -16689,7 +16094,7 @@ GameObject:
   - component: {fileID: 943508735}
   - component: {fileID: 943508734}
   - component: {fileID: 943508736}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16932,7 +16337,7 @@ GameObject:
   - component: {fileID: 994257567}
   - component: {fileID: 994257566}
   - component: {fileID: 994257568}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17037,7 +16442,7 @@ GameObject:
   - component: {fileID: 1000678256}
   - component: {fileID: 1000678255}
   - component: {fileID: 1000678257}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17142,7 +16547,7 @@ GameObject:
   - component: {fileID: 1006986818}
   - component: {fileID: 1006986817}
   - component: {fileID: 1006986819}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17247,7 +16652,7 @@ GameObject:
   - component: {fileID: 1027619847}
   - component: {fileID: 1027619846}
   - component: {fileID: 1027619848}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17916,81 +17321,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.43583238, y: 0.76829046, z: 0.47747937}
   m_Center: {x: 0.00000047683716, y: 0.38411692, z: 0}
---- !u!1 &1057535726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1057535727}
-  - component: {fileID: 1057535729}
-  - component: {fileID: 1057535728}
-  m_Layer: 5
-  m_Name: Arrow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1057535727
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057535726}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1658494562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -15, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1057535728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057535726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1057535729
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057535726}
-  m_CullTransparentMesh: 1
 --- !u!1 &1064773648
 GameObject:
   m_ObjectHideFlags: 0
@@ -18003,7 +17333,7 @@ GameObject:
   - component: {fileID: 1064773652}
   - component: {fileID: 1064773651}
   - component: {fileID: 1064773653}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18353,7 +17683,7 @@ GameObject:
   - component: {fileID: 1079132350}
   - component: {fileID: 1079132349}
   - component: {fileID: 1079132351}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18456,7 +17786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1080473146}
   - component: {fileID: 1080473147}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18537,81 +17867,6 @@ Transform:
   - {fileID: 750144463}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1096626708
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1096626709}
-  - component: {fileID: 1096626711}
-  - component: {fileID: 1096626710}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1096626709
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096626708}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1206200482}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.2}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1096626710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096626708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1096626711
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096626708}
-  m_CullTransparentMesh: 1
 --- !u!1 &1098887190
 GameObject:
   m_ObjectHideFlags: 0
@@ -18809,7 +18064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100663822}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19142,7 +18397,7 @@ GameObject:
   - component: {fileID: 1112500004}
   - component: {fileID: 1112500003}
   - component: {fileID: 1112500005}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19247,7 +18502,7 @@ GameObject:
   - component: {fileID: 1115576995}
   - component: {fileID: 1115576994}
   - component: {fileID: 1115576996}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19558,7 +18813,7 @@ GameObject:
   - component: {fileID: 1132001804}
   - component: {fileID: 1132001803}
   - component: {fileID: 1132001805}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19808,7 +19063,7 @@ GameObject:
   - component: {fileID: 1147081390}
   - component: {fileID: 1147081389}
   - component: {fileID: 1147081391}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19934,7 +19189,7 @@ GameObject:
   - component: {fileID: 1152016047}
   - component: {fileID: 1152016046}
   - component: {fileID: 1152016048}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20561,7 +19816,7 @@ GameObject:
   - component: {fileID: 1190338389}
   - component: {fileID: 1190338388}
   - component: {fileID: 1190338390}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21005,42 +20260,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 789044121}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!1 &1206200481
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1206200482}
-  m_Layer: 5
-  m_Name: Sliding Area
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1206200482
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206200481}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1096626709}
-  m_Father: {fileID: 1966122839}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1222800410
 GameObject:
   m_ObjectHideFlags: 0
@@ -21053,7 +20272,7 @@ GameObject:
   - component: {fileID: 1222800414}
   - component: {fileID: 1222800413}
   - component: {fileID: 1222800415}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21265,7 +20484,7 @@ GameObject:
   - component: {fileID: 1236703530}
   - component: {fileID: 1236703529}
   - component: {fileID: 1236703531}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21370,7 +20589,7 @@ GameObject:
   - component: {fileID: 1241314405}
   - component: {fileID: 1241314404}
   - component: {fileID: 1241314406}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21619,15 +20838,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -7640558969779515294, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -7146521406498821007, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21635,7 +20854,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 26d16490a8a2a4a4f942926b45c77a67, type: 2}
     - target: {fileID: -1599826595754709761, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21643,11 +20862,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 26d16490a8a2a4a4f942926b45c77a67, type: 2}
     - target: {fileID: -516098083770646512, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -466329591000292508, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Name
@@ -21655,11 +20874,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8416272007918961125, guid: 13a8fc0b6fe7aab4aa1ee8dcaa020231, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21905,7 +21124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -21917,7 +21136,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -21925,7 +21144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22138,7 +21357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -22150,7 +21369,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -22158,7 +21377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22593,7 +21812,7 @@ GameObject:
   - component: {fileID: 1285858349}
   - component: {fileID: 1285858348}
   - component: {fileID: 1285858350}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22799,8 +22018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: -0.000025431, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299451351
 MonoBehaviour:
@@ -22849,7 +22068,7 @@ GameObject:
   - component: {fileID: 1300115902}
   - component: {fileID: 1300115901}
   - component: {fileID: 1300115903}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22954,7 +22173,7 @@ GameObject:
   - component: {fileID: 1303135150}
   - component: {fileID: 1303135149}
   - component: {fileID: 1303135151}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23353,7 +22572,7 @@ GameObject:
   - component: {fileID: 1333982388}
   - component: {fileID: 1333982387}
   - component: {fileID: 1333982389}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23716,7 +22935,7 @@ GameObject:
   - component: {fileID: 1347455731}
   - component: {fileID: 1347455730}
   - component: {fileID: 1347455732}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23821,7 +23040,7 @@ GameObject:
   - component: {fileID: 1349014589}
   - component: {fileID: 1349014588}
   - component: {fileID: 1349014590}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24270,7 +23489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1367496602}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24313,7 +23532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370221381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Couches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24602,7 +23821,7 @@ GameObject:
   - component: {fileID: 1380741864}
   - component: {fileID: 1380741863}
   - component: {fileID: 1380741865}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24892,6 +24111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlassShard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b189266bff9996438cff4d6c5a3ee15, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -24929,7 +24152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce5c95ffab06e14fbe9f2d33640f68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassSound: {fileID: 0}
+  glassSound: {fileID: 571517000}
 --- !u!135 &1394384922
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25129,8 +24352,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1324, y: 569}
+  m_AnchoredPosition: {x: -0.000015259, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399057077
 MonoBehaviour:
@@ -25166,85 +24389,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399057075}
-  m_CullTransparentMesh: 1
---- !u!1 &1400028211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1400028212}
-  - component: {fileID: 1400028214}
-  - component: {fileID: 1400028213}
-  m_Layer: 5
-  m_Name: Label
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1400028212
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400028211}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1658494562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.5545006, y: 0.1878004}
-  m_SizeDelta: {x: -6.8367, y: -5.9725}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1400028213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400028211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: On
---- !u!222 &1400028214
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400028211}
   m_CullTransparentMesh: 1
 --- !u!1001 &1403051847
 PrefabInstance:
@@ -25312,7 +24456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30b84d35878de8449bc3ace7fad9e20b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25613,7 +24757,7 @@ GameObject:
   - component: {fileID: 1425649630}
   - component: {fileID: 1425649629}
   - component: {fileID: 1425649631}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26055,7 +25199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441643432}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26314,7 +25458,7 @@ GameObject:
   - component: {fileID: 1463214129}
   - component: {fileID: 1463214128}
   - component: {fileID: 1463214130}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26419,7 +25563,7 @@ GameObject:
   - component: {fileID: 1473959703}
   - component: {fileID: 1473959702}
   - component: {fileID: 1473959704}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26555,7 +25699,7 @@ GameObject:
   - component: {fileID: 1488382516}
   - component: {fileID: 1488382515}
   - component: {fileID: 1488382517}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26660,7 +25804,7 @@ GameObject:
   - component: {fileID: 1490637425}
   - component: {fileID: 1490637424}
   - component: {fileID: 1490637426}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26815,7 +25959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26827,7 +25971,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -26835,7 +25979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27057,7 +26201,7 @@ GameObject:
   - component: {fileID: 1524510342}
   - component: {fileID: 1524510341}
   - component: {fileID: 1524510343}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27394,7 +26538,7 @@ GameObject:
   - component: {fileID: 1549433807}
   - component: {fileID: 1549433806}
   - component: {fileID: 1549433808}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27499,7 +26643,7 @@ GameObject:
   - component: {fileID: 1552662898}
   - component: {fileID: 1552662897}
   - component: {fileID: 1552662899}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27604,7 +26748,7 @@ GameObject:
   - component: {fileID: 1561315504}
   - component: {fileID: 1561315503}
   - component: {fileID: 1561315505}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27709,7 +26853,7 @@ GameObject:
   - component: {fileID: 1566720699}
   - component: {fileID: 1566720698}
   - component: {fileID: 1566720700}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27814,7 +26958,7 @@ GameObject:
   - component: {fileID: 1569193505}
   - component: {fileID: 1569193504}
   - component: {fileID: 1569193506}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28513,87 +27657,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 1.9999996, z: 1.9999996}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1612171690
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1612171691}
-  - component: {fileID: 1612171693}
-  - component: {fileID: 1612171692}
-  m_Layer: 5
-  m_Name: Text (Legacy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1612171691
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612171690}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1658494562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 13.6}
-  m_SizeDelta: {x: 57.86, y: 23}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1612171692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612171690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Shadows
-
-'
---- !u!222 &1612171693
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612171690}
-  m_CullTransparentMesh: 1
 --- !u!1 &1612507897
 GameObject:
   m_ObjectHideFlags: 0
@@ -28737,7 +27800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -28749,7 +27812,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -28757,7 +27820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29005,7 +28068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646185609}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29296,7 +28359,7 @@ GameObject:
   - component: {fileID: 1657591522}
   - component: {fileID: 1657591521}
   - component: {fileID: 1657591523}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29389,143 +28452,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.56934017, y: 0.43505466, z: 0.3066458}
   m_Center: {x: -0.015670799, y: 0.51508635, z: -0.30837503}
---- !u!1 &1658494561
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1658494562}
-  - component: {fileID: 1658494565}
-  - component: {fileID: 1658494564}
-  - component: {fileID: 1658494563}
-  m_Layer: 5
-  m_Name: Shadows
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1658494562
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658494561}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62662, y: 0.52467287, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1400028212}
-  - {fileID: 1057535727}
-  - {fileID: 266085216}
-  - {fileID: 1612171691}
-  m_Father: {fileID: 244623059}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.1, y: 5.3}
-  m_SizeDelta: {x: 46.2792, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1658494563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658494561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d0b652f32a2cc243917e4028fa0f046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1658494564}
-  m_Template: {fileID: 266085216}
-  m_CaptionText: {fileID: 1400028213}
-  m_CaptionImage: {fileID: 0}
-  m_ItemText: {fileID: 724859589}
-  m_ItemImage: {fileID: 0}
-  m_Value: 0
-  m_Options:
-    m_Options:
-    - m_Text: On
-      m_Image: {fileID: 0}
-    - m_Text: Off
-      m_Image: {fileID: 0}
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_AlphaFadeSpeed: 0.15
---- !u!114 &1658494564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658494561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1658494565
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658494561}
-  m_CullTransparentMesh: 1
 --- !u!1 &1661242231
 GameObject:
   m_ObjectHideFlags: 0
@@ -29535,7 +28461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1661242232}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29660,7 +28586,7 @@ GameObject:
   - component: {fileID: 1673010476}
   - component: {fileID: 1673010475}
   - component: {fileID: 1673010477}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29840,7 +28766,7 @@ GameObject:
   - component: {fileID: 1681969742}
   - component: {fileID: 1681969741}
   - component: {fileID: 1681969743}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29945,7 +28871,7 @@ GameObject:
   - component: {fileID: 1696053852}
   - component: {fileID: 1696053851}
   - component: {fileID: 1696053853}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30050,7 +28976,7 @@ GameObject:
   - component: {fileID: 1696153615}
   - component: {fileID: 1696153614}
   - component: {fileID: 1696153616}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30152,7 +29078,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699773841}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30198,7 +29124,7 @@ GameObject:
   - component: {fileID: 1702011144}
   - component: {fileID: 1702011143}
   - component: {fileID: 1702011145}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30594,7 +29520,7 @@ GameObject:
   - component: {fileID: 1732427700}
   - component: {fileID: 1732427699}
   - component: {fileID: 1732427701}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31057,7 +29983,7 @@ GameObject:
   - component: {fileID: 1808269413}
   - component: {fileID: 1808269412}
   - component: {fileID: 1808269414}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31262,7 +30188,7 @@ GameObject:
   - component: {fileID: 1829327928}
   - component: {fileID: 1829327927}
   - component: {fileID: 1829327929}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31367,7 +30293,7 @@ GameObject:
   - component: {fileID: 1830016234}
   - component: {fileID: 1830016233}
   - component: {fileID: 1830016235}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Legs.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31525,7 +30451,7 @@ GameObject:
   - component: {fileID: 1839156106}
   - component: {fileID: 1839156105}
   - component: {fileID: 1839156107}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31618,81 +30544,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.57218033, y: 0.44462314, z: 0.33604267}
   m_Center: {x: 0.54867756, y: 0.5096501, z: -0.3067564}
---- !u!1 &1839182024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1839182025}
-  - component: {fileID: 1839182027}
-  - component: {fileID: 1839182026}
-  m_Layer: 5
-  m_Name: Item Background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1839182025
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839182024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 501588027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1839182026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839182024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1839182027
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839182024}
-  m_CullTransparentMesh: 1
 --- !u!1 &1847053948
 GameObject:
   m_ObjectHideFlags: 0
@@ -31705,7 +30556,7 @@ GameObject:
   - component: {fileID: 1847053952}
   - component: {fileID: 1847053951}
   - component: {fileID: 1847053953}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31860,7 +30711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -31872,7 +30723,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -31880,7 +30731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31933,7 +30784,7 @@ GameObject:
   - component: {fileID: 1856792894}
   - component: {fileID: 1856792893}
   - component: {fileID: 1856792895}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32276,7 +31127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867730424}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Couch (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32322,7 +31173,7 @@ GameObject:
   - component: {fileID: 1869568352}
   - component: {fileID: 1869568351}
   - component: {fileID: 1869568353}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32655,7 +31506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8391222552659086748, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -32667,7 +31518,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e35f63b4e16c73e4aa60cac03f827a03, type: 2}
     - target: {fileID: -516098083770646512, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Name
@@ -32675,7 +31526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f136e4bde7f342c44b16ce98cb2fc5a3, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32856,7 +31707,7 @@ GameObject:
   - component: {fileID: 1912160514}
   - component: {fileID: 1912160513}
   - component: {fileID: 1912160515}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32994,7 +31845,7 @@ GameObject:
   - component: {fileID: 1931886008}
   - component: {fileID: 1931886007}
   - component: {fileID: 1931886009}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33099,7 +31950,7 @@ GameObject:
   - component: {fileID: 1945354352}
   - component: {fileID: 1945354351}
   - component: {fileID: 1945354353}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33278,7 +32129,7 @@ GameObject:
   - component: {fileID: 1954910695}
   - component: {fileID: 1954910694}
   - component: {fileID: 1954910696}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33446,132 +32297,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964647652}
   m_CullTransparentMesh: 1
---- !u!1 &1966122838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1966122839}
-  - component: {fileID: 1966122842}
-  - component: {fileID: 1966122841}
-  - component: {fileID: 1966122840}
-  m_Layer: 5
-  m_Name: Scrollbar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1966122839
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966122838}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1206200482}
-  m_Father: {fileID: 266085216}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 0}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &1966122840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966122838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1096626710}
-  m_HandleRect: {fileID: 1096626709}
-  m_Direction: 2
-  m_Value: 0
-  m_Size: 0.2
-  m_NumberOfSteps: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1966122841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966122838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1966122842
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966122838}
-  m_CullTransparentMesh: 1
 --- !u!1 &1979533650
 GameObject:
   m_ObjectHideFlags: 0
@@ -33584,7 +32309,7 @@ GameObject:
   - component: {fileID: 1979533654}
   - component: {fileID: 1979533653}
   - component: {fileID: 1979533655}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Back_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34185,7 +32910,7 @@ GameObject:
   - component: {fileID: 1997017898}
   - component: {fileID: 1997017897}
   - component: {fileID: 1997017899}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34290,7 +33015,7 @@ GameObject:
   - component: {fileID: 2008392075}
   - component: {fileID: 2008392074}
   - component: {fileID: 2008392076}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34395,7 +33120,7 @@ GameObject:
   - component: {fileID: 2011159593}
   - component: {fileID: 2011159592}
   - component: {fileID: 2011159594}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34873,7 +33598,7 @@ GameObject:
   - component: {fileID: 2046252857}
   - component: {fileID: 2046252856}
   - component: {fileID: 2046252858}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34978,7 +33703,7 @@ GameObject:
   - component: {fileID: 2050355983}
   - component: {fileID: 2050355982}
   - component: {fileID: 2050355984}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35083,7 +33808,7 @@ GameObject:
   - component: {fileID: 2054615544}
   - component: {fileID: 2054615543}
   - component: {fileID: 2054615545}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35188,7 +33913,7 @@ GameObject:
   - component: {fileID: 2055410771}
   - component: {fileID: 2055410770}
   - component: {fileID: 2055410772}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35293,7 +34018,7 @@ GameObject:
   - component: {fileID: 2059099143}
   - component: {fileID: 2059099142}
   - component: {fileID: 2059099144}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Beams.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35398,7 +34123,7 @@ GameObject:
   - component: {fileID: 2062358369}
   - component: {fileID: 2062358368}
   - component: {fileID: 2062358370}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Sitting_Frame.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35610,7 +34335,7 @@ GameObject:
   - component: {fileID: 2068333943}
   - component: {fileID: 2068333942}
   - component: {fileID: 2068333944}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35715,7 +34440,7 @@ GameObject:
   - component: {fileID: 2068367201}
   - component: {fileID: 2068367200}
   - component: {fileID: 2068367202}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35820,7 +34545,7 @@ GameObject:
   - component: {fileID: 2073188470}
   - component: {fileID: 2073188469}
   - component: {fileID: 2073188471}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36032,7 +34757,7 @@ GameObject:
   - component: {fileID: 2082104973}
   - component: {fileID: 2082104972}
   - component: {fileID: 2082104974}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36345,7 +35070,7 @@ GameObject:
   - component: {fileID: 2100708405}
   - component: {fileID: 2100708404}
   - component: {fileID: 2100708406}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Arms.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36622,7 +35347,7 @@ GameObject:
   - component: {fileID: 2115191915}
   - component: {fileID: 2115191914}
   - component: {fileID: 2115191916}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: SB_Tapes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36727,7 +35452,7 @@ GameObject:
   - component: {fileID: 2121134144}
   - component: {fileID: 2121134143}
   - component: {fileID: 2121134145}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_5.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36832,7 +35557,7 @@ GameObject:
   - component: {fileID: 2123387156}
   - component: {fileID: 2123387155}
   - component: {fileID: 2123387157}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37074,7 +35799,7 @@ GameObject:
   - component: {fileID: 2132085693}
   - component: {fileID: 2132085692}
   - component: {fileID: 2132085694}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_3.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37365,7 +36090,7 @@ GameObject:
   - component: {fileID: 2139107871}
   - component: {fileID: 2139107870}
   - component: {fileID: 2139107872}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37470,7 +36195,7 @@ GameObject:
   - component: {fileID: 2140062357}
   - component: {fileID: 2140062356}
   - component: {fileID: 2140062358}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_6.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37619,7 +36344,7 @@ GameObject:
   - component: {fileID: 2146888849}
   - component: {fileID: 2146888848}
   - component: {fileID: 2146888850}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cushion_2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37729,6 +36454,5 @@ SceneRoots:
   - {fileID: 1250551131}
   - {fileID: 2141337080}
   - {fileID: 263684509}
-  - {fileID: 423531453}
   - {fileID: 1088667686}
   - {fileID: 1394384919}
