@@ -117,7 +117,7 @@ public class SmartAvoidance : MonoBehaviour
             return;
         }
 
-        SetChasingAnimations(true);
+        SetChasingAnimations();
 
         Vector3 direction = (player.position - transform.position).normalized;
 
@@ -136,7 +136,7 @@ public class SmartAvoidance : MonoBehaviour
 
     void Wander()
     {
-        SetChasingAnimations(false);
+        SetChasingAnimations();
 
         wanderTimer -= Time.deltaTime;
         if (wanderTimer <= 0f)
@@ -161,8 +161,27 @@ public class SmartAvoidance : MonoBehaviour
         wanderDirection = new Vector3(random.x, 0f, random.y);
     }
 
-    void SetChasingAnimations(bool chasing)
-    { 
+    void SetChasingAnimations()
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+        bool idle = distanceToPlayer > 70f;
+        bool walking = distanceToPlayer <= 70f && distanceToPlayer > 25f;
+        bool chasing = distanceToPlayer <= 25f;
+
+        // Idle
+        rightLeg.SetBool("Idle", idle);
+        leftLeg.SetBool("Idle", idle);
+        leftArm.SetBool("Idle", idle);
+        rightArm.SetBool("Idle", idle);
+
+        // Walking
+        rightLeg.SetBool("Walking", walking);
+        leftLeg.SetBool("Walking", walking);
+        leftArm.SetBool("Walking", walking);
+        rightArm.SetBool("Walking", walking);
+
+        // Chasing
         rightLeg.SetBool("Chasing", chasing);
         leftLeg.SetBool("Chasing", chasing);
         leftArm.SetBool("Chasing", chasing);

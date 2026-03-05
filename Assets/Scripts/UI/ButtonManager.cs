@@ -1,6 +1,8 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
@@ -13,6 +15,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject audioScreen;
     public Text loadingText; // assign your UI Text in Inspector
     public Text play;
+    public PlayableDirector playableDirector;
     private bool colorChanged = false;
 
     public void audioButton()
@@ -66,7 +69,8 @@ public class ButtonManager : MonoBehaviour
     {
         mapChooseScreen.SetActive(false);
         loading.SetActive(true);
-        StartCoroutine(LoadSceneWithDots("Level1", 5f)); // 5 seconds minimum loading
+        StartCoroutine(LoadSceneWithDots("Level1", 6f)); 
+       playableDirector.Play(); 
     }
 
     public void loadTutorial()
