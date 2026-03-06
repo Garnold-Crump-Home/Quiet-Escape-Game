@@ -14585,7 +14585,7 @@ GameObject:
   - component: {fileID: 838453767}
   - component: {fileID: 838453766}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: HospitalLoading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

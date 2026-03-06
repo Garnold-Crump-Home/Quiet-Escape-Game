@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - FlashLight
   - MainLight
+  - Enemy
   layers:
   - Default
   - TransparentFX
