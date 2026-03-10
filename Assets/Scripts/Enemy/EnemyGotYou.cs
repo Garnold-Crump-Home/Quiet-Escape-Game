@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,10 @@ public class EnemyGotYou : MonoBehaviour
         public Animator rightArm;
     public Animator death;
     public FirstPerson firstPersonScript;
+    public Transform player;
+    public Transform deathArea;
+    public Transform Enemy;
+    public Transform jumpScare;
     void Start()
     {
         death.enabled = false;
@@ -30,6 +35,7 @@ public class EnemyGotYou : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            player.transform.position = deathArea.position;
             rightLeg.SetTrigger("GotYou");
                 leftLeg.SetTrigger("GotYou");
                 leftArm.SetTrigger("GotYou");
@@ -39,6 +45,7 @@ public class EnemyGotYou : MonoBehaviour
             playerRb.constraints = RigidbodyConstraints.FreezeAll;
             enemy.constraints = RigidbodyConstraints.FreezeAll;
             Invoke("PlayerFall", 1f);
+            Invoke("JumpScare", 2f);
 
 
         }
@@ -50,5 +57,11 @@ public class EnemyGotYou : MonoBehaviour
         firstPersonScript.enabled = false;
         death.SetTrigger("Death");
 
+    }
+
+    void JumpScare()
+    {
+        Enemy.transform.position = jumpScare.position;
+        Enemy.rotation = jumpScare.rotation;
     }
 }

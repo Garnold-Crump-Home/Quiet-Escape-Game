@@ -6,9 +6,13 @@ public class Settings : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
     public Slider volumeSlider;
+    public float maxFps;
+    public string Fps;
+    public Text fpsText;
+        public Slider fpsSlider;
 
     private Light mainLight;
-
+    
     void Start()
     {
        
@@ -29,6 +33,7 @@ public class Settings : MonoBehaviour
         qualityDropdown.onValueChanged.AddListener(SetQuality);
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
         volumeSlider.onValueChanged.AddListener(SetVolume);
+        fpsSlider.onValueChanged.AddListener(SetFpsMax);
     }
 
     // QUALITY SETTINGS
@@ -81,5 +86,17 @@ public class Settings : MonoBehaviour
     void SetVolume(float value)
     {
         AudioListener.volume = value;
+    }
+
+    void SetFpsMax(float value)
+    {
+        Application.targetFrameRate = (int)maxFps; 
+        fpsSlider.maxValue = 300;
+        fpsSlider.minValue = 30;
+        
+        fpsText.text = fpsSlider.value.ToString();
+        
+       
+        
     }
 }

@@ -40,6 +40,8 @@ public class SmartAvoidance : MonoBehaviour
 
     public WardrobeCollider wardrobeCollider;
 
+    public bool Animate = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -47,8 +49,27 @@ public class SmartAvoidance : MonoBehaviour
         PickNewWanderDirection();
     }
 
+    private void Update()
+    {
+        if (Animate)
+        {
+            rightArm.enabled = true;
+            leftArm.enabled = true;
+            rightLeg.enabled = true;
+            leftLeg.enabled = true;
+        }
+        if (!Animate)
+        {
+            rightArm.enabled = false;
+            leftArm.enabled = false;
+            leftLeg.enabled = false;
+            rightLeg.enabled = false;
+
+        }
+    }
     void FixedUpdate()
     {
+       
         if (!playScript || player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
@@ -169,19 +190,19 @@ public class SmartAvoidance : MonoBehaviour
         bool walking = distanceToPlayer <= 70f && distanceToPlayer > 25f;
         bool chasing = distanceToPlayer <= 25f;
 
-        // Idle
+       
         rightLeg.SetBool("Idle", idle);
         leftLeg.SetBool("Idle", idle);
         leftArm.SetBool("Idle", idle);
         rightArm.SetBool("Idle", idle);
 
-        // Walking
+        
         rightLeg.SetBool("Walking", walking);
         leftLeg.SetBool("Walking", walking);
         leftArm.SetBool("Walking", walking);
         rightArm.SetBool("Walking", walking);
 
-        // Chasing
+        
         rightLeg.SetBool("Chasing", chasing);
         leftLeg.SetBool("Chasing", chasing);
         leftArm.SetBool("Chasing", chasing);

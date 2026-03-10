@@ -1,48 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TaserProjectile : MonoBehaviour
 {
-    private Rigidbody rb;
-
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-   private void OnCollisionEnter(Collision collision)
-    {
-
-        if(CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            GameObject enemyObject = GameObject.FindWithTag("Enemy");
-            rb = enemyObject.GetComponent<Rigidbody>();
+            EnemyStun stun = collision.gameObject.GetComponent<EnemyStun>();
+            Destroy(gameObject);
 
-
-            rb.freezeRotation = true;
-            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-
-            Invoke("Unfreeze", 5f);
+            if (stun != null)
+            {
+                stun.Stun(5f);
+            }
         }
-        Invoke("DestroyProjectile", 2f);
+
+       Invoke("DestroyObj", 0.5f);
     }
 
-    void Unfreeze()
+    public void DestroyObj()
     {
-              
-        rb.freezeRotation = false;
-        rb.constraints = RigidbodyConstraints.None;
-    }
-
-    void DestroyProjectile()
-    {
-       Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

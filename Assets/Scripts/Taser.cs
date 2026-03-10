@@ -10,6 +10,7 @@ public class Taser : MonoBehaviour
     public float Ammo = 4f;
     public float reloadTime = 2f;
     public float launchVelocity = 700f;
+    public ParticleSystem particle;
     void Start()
     {
         
@@ -25,6 +26,7 @@ public class Taser : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
+                    particle.Play();
                     reloadTime = 2f;
                     GameObject newProjectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
                     Ammo -= 1f;
