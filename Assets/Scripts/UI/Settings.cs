@@ -6,37 +6,41 @@ public class Settings : MonoBehaviour
     public Dropdown resolutionDropdown;
     public Dropdown qualityDropdown;
     public Slider volumeSlider;
-    public float maxFps;
-    public string Fps;
+
+    public Slider fpsSlider;
     public Text fpsText;
-        public Slider fpsSlider;
 
     private Light mainLight;
-    
+
     void Start()
     {
-       
+        QualitySettings.vSyncCount = 0;
+
         GameObject lightObj = GameObject.FindWithTag("MainLight");
         if (lightObj != null)
             mainLight = lightObj.GetComponent<Light>();
         else
             Debug.LogWarning("MainLight not found!");
 
-      
         qualityDropdown.value = QualitySettings.GetQualityLevel();
         volumeSlider.value = AudioListener.volume;
 
         volumeSlider.minValue = 0f;
         volumeSlider.maxValue = 1f;
 
-      
+        // FPS slider setup (ONLY ONCE)
+        fpsSlider.minValue = 30;
+        fpsSlider.maxValue = 300;
+        fpsSlider.value = Application.targetFrameRate <= 0 ? 60 : Application.targetFrameRate;
+
+        fpsText.text = fpsSlider.value.ToString();
+
         qualityDropdown.onValueChanged.AddListener(SetQuality);
         resolutionDropdown.onValueChanged.AddListener(SetResolution);
         volumeSlider.onValueChanged.AddListener(SetVolume);
         fpsSlider.onValueChanged.AddListener(SetFpsMax);
     }
 
-    // QUALITY SETTINGS
     void SetQuality(int index)
     {
         QualitySettings.SetQualityLevel(index);
@@ -45,24 +49,23 @@ public class Settings : MonoBehaviour
 
         switch (index)
         {
-            case 0: // Low
+            case 0:
                 QualitySettings.shadows = ShadowQuality.Disable;
                 mainLight.shadows = LightShadows.None;
                 break;
 
-            case 1: // Medium
+            case 1:
                 QualitySettings.shadows = ShadowQuality.HardOnly;
                 mainLight.shadows = LightShadows.Hard;
                 break;
 
-            case 2: // High
+            case 2:
                 QualitySettings.shadows = ShadowQuality.All;
                 mainLight.shadows = LightShadows.Soft;
                 break;
         }
     }
 
-    // RESOLUTION SETTINGS
     void SetResolution(int index)
     {
         switch (index)
@@ -82,7 +85,6 @@ public class Settings : MonoBehaviour
         }
     }
 
-    
     void SetVolume(float value)
     {
         AudioListener.volume = value;
@@ -90,13 +92,8 @@ public class Settings : MonoBehaviour
 
     void SetFpsMax(float value)
     {
-        Application.targetFrameRate = (int)maxFps; 
-        fpsSlider.maxValue = 300;
-        fpsSlider.minValue = 30;
-        
-        fpsText.text = fpsSlider.value.ToString();
-        
-       
-        
+        int fps = Mathf.RoundToInt(value);
+        Application.targetFrameRate = fps;
+        fpsText.text = fps.ToString();
     }
 }

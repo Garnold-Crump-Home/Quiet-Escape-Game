@@ -16,6 +16,7 @@ public class ButtonManager : MonoBehaviour
     public Text loadingText; // assign your UI Text in Inspector
     public Text play;
     public PlayableDirector playableDirector;
+    public bool MapChoose = false;
     private bool colorChanged = false;
 
     public void audioButton()
@@ -69,7 +70,8 @@ public class ButtonManager : MonoBehaviour
     {
         mapChooseScreen.SetActive(false);
         loading.SetActive(true);
-        StartCoroutine(LoadSceneWithDots("Level1", 6f)); 
+        StartCoroutine(LoadSceneWithDots("Level1", 6f));
+        MapChoose = true;
        playableDirector.Play(); 
     }
 
