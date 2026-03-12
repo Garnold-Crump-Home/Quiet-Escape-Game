@@ -52,6 +52,7 @@ public class ButtonManager : MonoBehaviour
     {
                 settingsScreen.SetActive(false);
         mapChooseScreen.SetActive(false);
+        
         mainScreen.SetActive(true);
     }
      public void settingsButton()
@@ -74,9 +75,10 @@ public class ButtonManager : MonoBehaviour
         MapChoose = true;
        playableDirector.Play(); 
     }
-
+    
     public void loadTutorial()
     {
+        mainScreen.SetActive(false) ;
         mapChooseScreen.SetActive(false);
         loading.SetActive(true);
         StartCoroutine(LoadSceneWithDots("Tutorial", 5f)); // 5 seconds minimum loading

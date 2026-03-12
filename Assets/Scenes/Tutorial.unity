@@ -969,7 +969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &101019829
 Transform:
   m_ObjectHideFlags: 0
@@ -4285,9 +4285,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 5793411824020470532}
   flashlightBattery: {fileID: 102961199}
-  pickup: {fileID: 8168724883996405133}
+  animator: {fileID: 0}
   canvas: {fileID: 1664115029}
   playerCamera: {fileID: 7250459254899968189}
+  maxDistance: 4
+  detectionRadius: 0.3
 --- !u!54 &543700207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14603,12 +14605,15 @@ MonoBehaviour:
   wanderSpeed: 2
   wanderTurnSpeed: 3
   wanderDirectionChangeInterval: 3
-  isChasing: 0
+  rayDistance: 2
+  sideOffset: 0.6
+  avoidStrength: 2
   rightLeg: {fileID: 242999069}
   leftLeg: {fileID: 242999070}
   leftArm: {fileID: 5659563115001972195}
   rightArm: {fileID: 8554565847603142326}
   wardrobeCollider: {fileID: 1365422898}
+  Animate: 1
 --- !u!136 &1876023809
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16689,12 +16694,19 @@ MonoBehaviour:
   playerRb: {fileID: 6857995598003411840}
   enemy: {fileID: 2126521088}
   smartAvoidanceScript: {fileID: 2126521086}
+  firstPersonScript: {fileID: 5959876386950873872}
+  player: {fileID: 0}
+  deathArea: {fileID: 0}
+  enemyTransform: {fileID: 0}
+  jumpScare: {fileID: 0}
   rightLeg: {fileID: 984415227}
   leftLeg: {fileID: 324811732}
   leftArm: {fileID: 2083878765}
   rightArm: {fileID: 1550039940}
   death: {fileID: 6857995598003411842}
-  firstPersonScript: {fileID: 5959876386950873872}
+  deathScreen: {fileID: 0}
+  gameOver: {fileID: 0}
+  playerManagement: {fileID: 0}
 --- !u!136 &2126521085
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16743,12 +16755,15 @@ MonoBehaviour:
   wanderSpeed: 2
   wanderTurnSpeed: 3
   wanderDirectionChangeInterval: 3
-  isChasing: 0
+  rayDistance: 2
+  sideOffset: 0.6
+  avoidStrength: 2
   rightLeg: {fileID: 984415227}
   leftLeg: {fileID: 324811732}
   leftArm: {fileID: 2083878765}
   rightArm: {fileID: 1550039940}
   wardrobeCollider: {fileID: 1365422898}
+  Animate: 1
 --- !u!136 &2126521087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17785,7 +17800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &919132149263032907
 GameObject:
   m_ObjectHideFlags: 0
@@ -17845,12 +17860,19 @@ MonoBehaviour:
   playerRb: {fileID: 6857995598003411840}
   enemy: {fileID: 1876023810}
   smartAvoidanceScript: {fileID: 1876023808}
+  firstPersonScript: {fileID: 5959876386950873872}
+  player: {fileID: 0}
+  deathArea: {fileID: 0}
+  enemyTransform: {fileID: 0}
+  jumpScare: {fileID: 0}
   rightLeg: {fileID: 242999069}
   leftLeg: {fileID: 242999070}
   leftArm: {fileID: 5659563115001972195}
   rightArm: {fileID: 8554565847603142326}
   death: {fileID: 6857995598003411842}
-  firstPersonScript: {fileID: 5959876386950873872}
+  deathScreen: {fileID: 0}
+  gameOver: {fileID: 0}
+  playerManagement: {fileID: 0}
 --- !u!4 &921115242404790270
 Transform:
   m_ObjectHideFlags: 0

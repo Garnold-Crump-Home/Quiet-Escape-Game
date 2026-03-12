@@ -20,25 +20,28 @@ public class Taser : MonoBehaviour
     void Update()
     {
         reloadTime -= Time.deltaTime;
-        if (Ammo > 0)
+        if (Cursor.lockState == CursorLockMode.Locked)
         {
-            if (reloadTime <= 0f)
+            if (Ammo > 0)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (reloadTime <= 0f)
                 {
-                    particle.Play();
-                    reloadTime = 2f;
-                    GameObject newProjectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
-                    Ammo -= 1f;
-                    Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
-                    if (rb != null)
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
                     {
-                        rb.AddForce(firePoint.forward * launchVelocity);
+                        particle.Play();
+                        reloadTime = 2f;
+                        GameObject newProjectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
+                        Ammo -= 1f;
+                        Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
+                        if (rb != null)
+                        {
+                            rb.AddForce(firePoint.forward * launchVelocity);
 
+                        }
+
+
+                        Destroy(newProjectile, 5f);
                     }
-
-
-                    Destroy(newProjectile, 5f);
                 }
             }
         }

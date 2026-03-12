@@ -28,7 +28,7 @@ public class Settings : MonoBehaviour
         volumeSlider.minValue = 0f;
         volumeSlider.maxValue = 1f;
 
-        // FPS slider setup (ONLY ONCE)
+        
         fpsSlider.minValue = 30;
         fpsSlider.maxValue = 300;
         fpsSlider.value = Application.targetFrameRate <= 0 ? 60 : Application.targetFrameRate;

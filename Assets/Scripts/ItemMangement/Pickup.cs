@@ -22,7 +22,7 @@ public class Pickup : MonoBehaviour
     {
         if (playerCamera == null) return;
 
-        // DROP OBJECT
+        
         if (playerMovement != null && playerMovement.HoldingObj && Input.GetKeyDown(KeyCode.Q))
         {
             DropObject();
