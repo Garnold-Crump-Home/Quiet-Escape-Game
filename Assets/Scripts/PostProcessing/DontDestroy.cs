@@ -17,7 +17,7 @@ public class NewBehaviourScript : MonoBehaviour
     public PlayableDirector director;
     public ButtonManager buttonManager;
     public GameObject camera1;
-   
+    public GameObject pillars;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,9 +39,11 @@ public class NewBehaviourScript : MonoBehaviour
             Crates.SetActive(true);
             postProcess.SetActive(true);
             shelf.SetActive(true);
-            HospitalLoading.SetActive(true);
+            HospitalLoading.SetActive(true); 
+            pillars.SetActive(true);
             director.Play();
             camera1.SetActive(false);
+           
         }
         
     }
