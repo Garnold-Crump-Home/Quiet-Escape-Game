@@ -18,6 +18,8 @@ public class NewBehaviourScript : MonoBehaviour
     public ButtonManager buttonManager;
     public GameObject camera1;
     public GameObject pillars;
+    public GameObject Cutscene;
+    public GameObject car;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +29,10 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
         DontDestroyOnLoad(building);
+        DontDestroyOnLoad(Cutscene);
+        DontDestroyOnLoad(car);
 
         if (buttonManager.MapChoose == true)
         {
@@ -43,8 +47,16 @@ public class NewBehaviourScript : MonoBehaviour
             pillars.SetActive(true);
             director.Play();
             camera1.SetActive(false);
-           
+            Invoke("Car", 6f);
         }
+
+        
+    }
+
+    public void Car()
+    {
+        car.SetActive(true);
+        Cutscene.SetActive(true);
         
     }
 }
