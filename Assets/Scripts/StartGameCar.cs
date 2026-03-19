@@ -9,6 +9,10 @@ public class StartGameCar : MonoBehaviour
     public GameObject OutsideCarCam;
     public GameObject car;
     public CarCutScene carCutScene;
+    public GameObject Trees;
+    public GameObject Car;
+    public GameObject Terrain;
+    
     public bool exit = true;
     void Start()
     {
@@ -33,15 +37,20 @@ public class StartGameCar : MonoBehaviour
 
     public void Exit()
     {
-        carCam.SetActive(false);
+        Destroy(carCam);
         OutsideCarCam.SetActive(true);
         animator.SetTrigger("Exit");
-        Invoke("EnablePlayer", 1f);
+        Invoke("EnablePlayer", 3f);
     }
 
     public void EnablePlayer()
     {
-        car.SetActive(false);
-       OutsideCarCam.SetActive(false );
+        Destroy(car);
+        Destroy(Trees);
+        Destroy(Car);
+        Destroy(OutsideCarCam);
+        Destroy(Terrain);
+        Destroy(Car);
+       
     }
 }

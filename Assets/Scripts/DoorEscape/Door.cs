@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
     public RedKey redKey;
     public GreenKey greenKey;
     public BlueKey blueKey;
+    public GameObject TerrainObj;
 
 
     public float interactionDistance = 5f;
@@ -40,6 +41,8 @@ public class Door : MonoBehaviour
                         DoorAnimation.SetBool("DoorOpen1", true);
 
                         doorOpen = true;
+                    
+
                     }
                 }
             }

@@ -41,67 +41,79 @@ public class SmartAvoidance : MonoBehaviour
     public WardrobeCollider wardrobeCollider;
 
     public bool Animate = true;
+    public GameObject Player;
+    public bool start = false;
 
     void Start()
     {
+        Invoke("StartEnemys", 10f);
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        Player.SetActive(false);
         PickNewWanderDirection();
     }
 
     private void Update()
     {
-        if (Animate)
+        if (start)
         {
-            rightArm.enabled = true;
-            leftArm.enabled = true;
-            rightLeg.enabled = true;
-            leftLeg.enabled = true;
-        }
-        if (!Animate)
-        {
-            rightArm.enabled = false;
-            leftArm.enabled = false;
-            leftLeg.enabled = false;
-            rightLeg.enabled = false;
+            if (Animate)
+            {
+                rightArm.enabled = true;
+                leftArm.enabled = true;
+                rightLeg.enabled = true;
+                leftLeg.enabled = true;
+            }
+            if (!Animate)
+            {
+                rightArm.enabled = false;
+                leftArm.enabled = false;
+                leftLeg.enabled = false;
+                rightLeg.enabled = false;
 
+            }
         }
     }
     void FixedUpdate()
     {
-       
-        if (!playScript || player == null) return;
-
-        float distance = Vector3.Distance(transform.position, player.position);
-
-        // --- Detection ---
-        if (!isChasing && distance <= detectionRange)
+        if (start)
         {
-            if (!requireLineOfSight || HasLineOfSight())
-                isChasing = true;
+            if (!playScript || player == null) return;
+
+            float distance = Vector3.Distance(transform.position, player.position);
+
+            // --- Detection ---
+            if (!isChasing && distance <= detectionRange)
+            {
+                if (!requireLineOfSight || HasLineOfSight())
+                    isChasing = true;
+            }
+
+            if (isChasing && distance > loseRange)
+                isChasing = false;
+
+            // --- Behavior ---
+            if (isChasing)
+                ChasePlayer();
+            else
+                Wander();
+
+            // Keep upright
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
-
-        if (isChasing && distance > loseRange)
-            isChasing = false;
-
-        // --- Behavior ---
-        if (isChasing)
-            ChasePlayer();
-        else
-            Wander();
-
-        // Keep upright
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
     }
 
     bool HasLineOfSight()
     {
-        Vector3 dir = (player.position - transform.position).normalized;
+       
+            Vector3 dir = (player.position - transform.position).normalized;
 
-        if (Physics.Raycast(transform.position + Vector3.up, dir, out RaycastHit hit, detectionRange))
-            return hit.transform == player;
+            if (Physics.Raycast(transform.position + Vector3.up, dir, out RaycastHit hit, detectionRange))
+                return hit.transform == player;
 
-        return false;
+            return false;
+        
     }
 
     // -------------------------
@@ -109,103 +121,124 @@ public class SmartAvoidance : MonoBehaviour
     // -------------------------
     Vector3 GetAvoidanceVector()
     {
-        Vector3 forward = transform.forward;
-        Vector3 right = transform.right;
 
-        bool front = Physics.Raycast(transform.position + Vector3.up, forward, out RaycastHit hitF, rayDistance, obstacleMask);
-        bool left = Physics.Raycast(transform.position - right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
-        bool rightSide = Physics.Raycast(transform.position + right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
+        
+            Vector3 forward = transform.forward;
+            Vector3 right = transform.right;
 
-        Vector3 avoid = Vector3.zero;
+            bool front = Physics.Raycast(transform.position + Vector3.up, forward, out RaycastHit hitF, rayDistance, obstacleMask);
+            bool left = Physics.Raycast(transform.position - right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
+            bool rightSide = Physics.Raycast(transform.position + right * sideOffset + Vector3.up, forward, rayDistance, obstacleMask);
 
-        if (front)
-            avoid += hitF.normal * avoidStrength;
+            Vector3 avoid = Vector3.zero;
 
-        if (left)
-            avoid += transform.right * avoidStrength;
+            if (front)
+                avoid += hitF.normal * avoidStrength;
 
-        if (rightSide)
-            avoid -= transform.right * avoidStrength;
+            if (left)
+                avoid += transform.right * avoidStrength;
 
-        return avoid;
-    }
+            if (rightSide)
+                avoid -= transform.right * avoidStrength;
+
+            return avoid;
+        
+    } 
 
     void ChasePlayer()
     {
-        if (wardrobeCollider.isInWardrobe)
+        if (start)
         {
-            isChasing = false;
-            return;
+            if (wardrobeCollider.isInWardrobe)
+            {
+                isChasing = false;
+                return;
+            }
+
+            SetChasingAnimations();
+
+            Vector3 direction = (player.position - transform.position).normalized;
+
+            // Add avoidance
+            Vector3 avoid = GetAvoidanceVector();
+            if (avoid != Vector3.zero)
+                direction = (direction + avoid).normalized;
+
+            // Rotate
+            Quaternion targetRot = Quaternion.LookRotation(direction);
+            rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * turnSpeed));
+
+            // Move
+            rb.MovePosition(rb.position + transform.forward * moveSpeed * Time.deltaTime);
         }
-
-        SetChasingAnimations();
-
-        Vector3 direction = (player.position - transform.position).normalized;
-
-        // Add avoidance
-        Vector3 avoid = GetAvoidanceVector();
-        if (avoid != Vector3.zero)
-            direction = (direction + avoid).normalized;
-
-        // Rotate
-        Quaternion targetRot = Quaternion.LookRotation(direction);
-        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * turnSpeed));
-
-        // Move
-        rb.MovePosition(rb.position + transform.forward * moveSpeed * Time.deltaTime);
     }
 
     void Wander()
     {
-        SetChasingAnimations();
+        if (start)
+        {
+            SetChasingAnimations();
 
-        wanderTimer -= Time.deltaTime;
-        if (wanderTimer <= 0f)
-            PickNewWanderDirection();
+            wanderTimer -= Time.deltaTime;
+            if (wanderTimer <= 0f)
+                PickNewWanderDirection();
 
-        Vector3 avoid = GetAvoidanceVector();
-        Vector3 direction = wanderDirection;
+            Vector3 avoid = GetAvoidanceVector();
+            Vector3 direction = wanderDirection;
 
-        if (avoid != Vector3.zero)
-            direction = (wanderDirection + avoid).normalized;
+            if (avoid != Vector3.zero)
+                direction = (wanderDirection + avoid).normalized;
 
-        Quaternion targetRot = Quaternion.LookRotation(direction);
-        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * wanderTurnSpeed));
+            Quaternion targetRot = Quaternion.LookRotation(direction);
+            rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * wanderTurnSpeed));
 
-        rb.MovePosition(rb.position + transform.forward * wanderSpeed * Time.deltaTime);
+            rb.MovePosition(rb.position + transform.forward * wanderSpeed * Time.deltaTime);
+        }
     }
 
     void PickNewWanderDirection()
     {
-        wanderTimer = wanderDirectionChangeInterval;
-        Vector2 random = Random.insideUnitCircle.normalized;
-        wanderDirection = new Vector3(random.x, 0f, random.y);
+        if (start)
+        {
+            wanderTimer = wanderDirectionChangeInterval;
+            Vector2 random = Random.insideUnitCircle.normalized;
+            wanderDirection = new Vector3(random.x, 0f, random.y);
+        }
     }
 
     void SetChasingAnimations()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        if (start)
+        {
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        bool idle = distanceToPlayer > 70f;
-        bool walking = distanceToPlayer <= 70f && distanceToPlayer > 25f;
-        bool chasing = distanceToPlayer <= 25f;
+            bool idle = distanceToPlayer > 70f;
+            bool walking = distanceToPlayer <= 70f && distanceToPlayer > 25f;
+            bool chasing = distanceToPlayer <= 25f;
 
-       
-        rightLeg.SetBool("Idle", idle);
-        leftLeg.SetBool("Idle", idle);
-        leftArm.SetBool("Idle", idle);
-        rightArm.SetBool("Idle", idle);
 
-        
-        rightLeg.SetBool("Walking", walking);
-        leftLeg.SetBool("Walking", walking);
-        leftArm.SetBool("Walking", walking);
-        rightArm.SetBool("Walking", walking);
+            rightLeg.SetBool("Idle", idle);
+            leftLeg.SetBool("Idle", idle);
+            leftArm.SetBool("Idle", idle);
+            rightArm.SetBool("Idle", idle);
 
-        
-        rightLeg.SetBool("Chasing", chasing);
-        leftLeg.SetBool("Chasing", chasing);
-        leftArm.SetBool("Chasing", chasing);
-        rightArm.SetBool("Chasing", chasing);
+
+            rightLeg.SetBool("Walking", walking);
+            leftLeg.SetBool("Walking", walking);
+            leftArm.SetBool("Walking", walking);
+            rightArm.SetBool("Walking", walking);
+
+
+            rightLeg.SetBool("Chasing", chasing);
+            leftLeg.SetBool("Chasing", chasing);
+            leftArm.SetBool("Chasing", chasing);
+            rightArm.SetBool("Chasing", chasing);
+        }
+    }
+    
+    void StartEnemys()
+    {
+        start = true; 
+        Player.SetActive(true);
     }
 }

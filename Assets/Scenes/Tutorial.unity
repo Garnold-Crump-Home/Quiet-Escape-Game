@@ -264,7 +264,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1388,7 +1388,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -2582,7 +2582,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -10004,7 +10004,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -10715,7 +10715,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
@@ -13984,7 +13984,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -14614,6 +14614,8 @@ MonoBehaviour:
   rightArm: {fileID: 8554565847603142326}
   wardrobeCollider: {fileID: 1365422898}
   Animate: 1
+  Player: {fileID: 0}
+  start: 0
 --- !u!136 &1876023809
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15260,7 +15262,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16472,7 +16474,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16764,6 +16766,8 @@ MonoBehaviour:
   rightArm: {fileID: 1550039940}
   wardrobeCollider: {fileID: 1365422898}
   Animate: 1
+  Player: {fileID: 0}
+  start: 0
 --- !u!136 &2126521087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18333,6 +18337,10 @@ PrefabInstance:
     - target: {fileID: 385385892772704831, guid: 7f3363aaf942c1e4b9a97316f7e2d1b8, type: 3}
       propertyPath: objectToThrow
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 642987169662997790, guid: 7f3363aaf942c1e4b9a97316f7e2d1b8, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 726459331251352991, guid: 7f3363aaf942c1e4b9a97316f7e2d1b8, type: 3}
       propertyPath: m_SizeDelta.x

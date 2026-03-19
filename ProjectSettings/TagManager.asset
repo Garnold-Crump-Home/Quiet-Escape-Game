@@ -9,6 +9,7 @@ TagManager:
   - FlashLight
   - MainLight
   - Enemy
+  - TerrainObj
   layers:
   - Default
   - TransparentFX
