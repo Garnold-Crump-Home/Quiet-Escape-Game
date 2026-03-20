@@ -9,7 +9,7 @@ public class CarCutScene : MonoBehaviour
     void Start()
     {
         animator.SetTrigger("PlayCutScene");
-        Invoke("BoolTrue", 2f);
+        Invoke("BoolTrue", 6f);
     }
 
     // Update is called once per frame
@@ -22,4 +22,6 @@ public class CarCutScene : MonoBehaviour
     {
         play = true;
     }
+
+   
 }

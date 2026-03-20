@@ -46,7 +46,7 @@ public class SmartAvoidance : MonoBehaviour
 
     void Start()
     {
-        Invoke("StartEnemys", 10f);
+       
         
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
@@ -236,9 +236,5 @@ public class SmartAvoidance : MonoBehaviour
         }
     }
     
-    void StartEnemys()
-    {
-        start = true; 
-        Player.SetActive(true);
-    }
+    
 }
