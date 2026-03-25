@@ -12,6 +12,8 @@ public class StartGameCar : MonoBehaviour
     public GameObject Trees;
     public GameObject Car;
     public GameObject Terrain;
+    public GameObject Canvas;
+
     
     public bool exit = true;
     void Start()
@@ -22,25 +24,31 @@ public class StartGameCar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Invoke("Exit", 16f);
+
+    }
+
+    public void Exit()
+    {
+        Canvas.SetActive(true);
         if (carCutScene.play)
         {
             if (exit)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Exit(); 
+                    Canvas.SetActive(false);
+                    Destroy(carCam);
+                    OutsideCarCam.SetActive(true);
+                    animator.SetTrigger("Exit");
+                   
+                    Invoke("EnablePlayer", 3f);
                     exit = false;
                 }
             }
         }
-    }
-
-    public void Exit()
-    {
-        Destroy(carCam);
-        OutsideCarCam.SetActive(true);
-        animator.SetTrigger("Exit");
-        Invoke("EnablePlayer", 3f);
+      
     }
 
     public void EnablePlayer()

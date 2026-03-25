@@ -46,8 +46,8 @@ public class SmartAvoidance : MonoBehaviour
 
     void Start()
     {
-       
-        
+
+        Invoke("Start2", 22f);
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         Player.SetActive(false);
@@ -56,6 +56,10 @@ public class SmartAvoidance : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Player.SetActive(true);
+        }
         if (start)
         {
             if (Animate)
@@ -235,6 +239,13 @@ public class SmartAvoidance : MonoBehaviour
             rightArm.SetBool("Chasing", chasing);
         }
     }
+
+    void Start2()
+    {
+        start = true;
+    }
+
+
     
     
 }

@@ -36,6 +36,10 @@ public class ButtonManager : MonoBehaviour
         }
         
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
     public void graphicsButton()
     {
         mainScreen.SetActive(false);
