@@ -4,36 +4,43 @@ using UnityEngine;
 
 public class RedKey : MonoBehaviour
 {
-    public Transform redKey;
     public GameObject redKeyActivate;
     public bool redKeyUnlocked = false;
     public Rigidbody rb;
     public Rigidbody rb2;
+    public PlayerUITrigger playerUITrigger;
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        float distance = Vector3.Distance(redKey.position, transform.position);
-        if (redKeyActivate.activeSelf)
+        if (playerUITrigger.KeyCanUnlock)
         {
-
-
-            if (distance <= 3f)
-            {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    redKeyUnlocked = true;
-                }
-            }
+           KeyUnlock();
         }
         if(redKeyUnlocked)
         {
             rb.constraints = RigidbodyConstraints.None;
             rb2.constraints = RigidbodyConstraints.None;
         }
+    }
+
+    public void KeyUnlock()
+    {
+        if (redKeyActivate.activeSelf)
+        {
+
+
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                redKeyUnlocked = true;
+            }
+
+        }
+
     }
 }

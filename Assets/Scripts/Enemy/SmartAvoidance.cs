@@ -120,9 +120,7 @@ public class SmartAvoidance : MonoBehaviour
         
     }
 
-    // -------------------------
-    //      AVOIDANCE LOGIC
-    // -------------------------
+   
     Vector3 GetAvoidanceVector()
     {
 

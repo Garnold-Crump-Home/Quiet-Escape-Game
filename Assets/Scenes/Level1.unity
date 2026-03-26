@@ -2469,6 +2469,7 @@ GameObject:
   - component: {fileID: 121663634}
   - component: {fileID: 121663633}
   - component: {fileID: 121663638}
+  - component: {fileID: 121663639}
   m_Layer: 8
   m_Name: WardrobeDoor2
   m_TagString: Untagged
@@ -2504,8 +2505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!95 &121663634
 Animator:
   serializedVersion: 5
@@ -2597,6 +2598,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2.0000002, z: 2}
+  m_Center: {x: -0.000030517578, y: 0.00000047683716, z: 0}
+--- !u!65 &121663639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121663631}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2}
   m_Center: {x: -0.000030517578, y: 0.00000047683716, z: 0}
 --- !u!1 &122037914
 GameObject:
@@ -4176,6 +4198,7 @@ GameObject:
   - component: {fileID: 188588865}
   - component: {fileID: 188588866}
   - component: {fileID: 188588867}
+  - component: {fileID: 188588868}
   m_Layer: 8
   m_Name: Door.001 (1)
   m_TagString: Untagged
@@ -4309,6 +4332,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100, y: 452.18427, z: 199.99997}
   m_Center: {x: -49.99994, y: -2.8932338, z: 0.00009918213}
+--- !u!65 &188588868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188588859}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 99.99999, y: 4787.7, z: 200}
+  m_Center: {x: -49.99969, y: -2.8932343, z: 0.0003354452}
 --- !u!1 &192320348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,11 +10880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b779a022294ed47836b782459a51b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueKey: {fileID: 1843165764290914389}
   blueKeyActivate: {fileID: 5602894827194694409}
   blueKeyUnlocked: 0
   rb: {fileID: 269883795}
   rb2: {fileID: 1812582550}
+  playerUITrigger: {fileID: 287553315}
 --- !u!54 &269883795
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11124,6 +11168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUICanvas: {fileID: 1632545535}
+  KeyCanUnlock: 0
 --- !u!1 &290380266
 GameObject:
   m_ObjectHideFlags: 0
@@ -25596,8 +25641,7 @@ MonoBehaviour:
   redKey: {fileID: 1624472318}
   greenKey: {fileID: 2082343203}
   blueKey: {fileID: 269883793}
-  TerrainObj: {fileID: 0}
-  interactionDistance: 5
+  KeyCanUnlock: 0
 --- !u!95 &913121708
 Animator:
   serializedVersion: 5
@@ -26227,6 +26271,7 @@ GameObject:
   - component: {fileID: 962608024}
   - component: {fileID: 962608023}
   - component: {fileID: 962608028}
+  - component: {fileID: 962608029}
   m_Layer: 8
   m_Name: WardrobeDoor1
   m_TagString: Untagged
@@ -26262,8 +26307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!95 &962608024
 Animator:
   serializedVersion: 5
@@ -26355,6 +26400,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2.0000002, z: 2}
+  m_Center: {x: -0.000030517578, y: 0.00000047683716, z: 0}
+--- !u!65 &962608029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962608021}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2}
   m_Center: {x: -0.000030517578, y: 0.00000047683716, z: 0}
 --- !u!1 &964624377
 GameObject:
@@ -35824,17 +35890,18 @@ MonoBehaviour:
   BatteryLevel: 100
   flashlight: {fileID: 103141676}
   Lights: {fileID: 103141673}
-  maxIntensity: 200
-  minIntensity: 25
   drainRate: 0.5
   lowBatteryThreshold: 20
+  maxIntensity: 200
+  minIntensity: 25
   flickerAmount: 300
   flickerSpeed: 0.05
-  image1: {fileID: 3737172022452994224}
-  image2: {fileID: 4926381277616640701}
-  image3: {fileID: 4365163328111927196}
-  image4: {fileID: 247975688618878811}
-  image5: {fileID: 5485793960030331418}
+  batteryIcons:
+  - {fileID: 5485793960030331418}
+  - {fileID: 247975688618878811}
+  - {fileID: 4365163328111927196}
+  - {fileID: 4926381277616640701}
+  - {fileID: 3737172022452994224}
 --- !u!1 &1490566014
 GameObject:
   m_ObjectHideFlags: 0
@@ -38268,11 +38335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262d404393d1d7949ae1411130c11835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redKey: {fileID: 5177920148715307949}
   redKeyActivate: {fileID: 62482843983673613}
   redKeyUnlocked: 0
   rb: {fileID: 1624472319}
   rb2: {fileID: 1692322084}
+  playerUITrigger: {fileID: 287553315}
 --- !u!54 &1624472319
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41278,6 +41345,7 @@ GameObject:
   - component: {fileID: 1774457886}
   - component: {fileID: 1774457887}
   - component: {fileID: 1774457888}
+  - component: {fileID: 1774457889}
   m_Layer: 8
   m_Name: Door (1)
   m_TagString: Untagged
@@ -41411,6 +41479,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100.000015, y: 452.18442, z: 200.00003}
   m_Center: {x: -49.99946, y: -2.8932376, z: -0.0003509736}
+--- !u!65 &1774457889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774457880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100.00006, y: 4787.7, z: 200.00003}
+  m_Center: {x: -50.00052, y: -2.893241, z: -0.00015248635}
 --- !u!1 &1774776913
 GameObject:
   m_ObjectHideFlags: 0
@@ -41646,6 +41735,7 @@ GameObject:
   - component: {fileID: 1797063481}
   - component: {fileID: 1797063480}
   - component: {fileID: 1797063485}
+  - component: {fileID: 1797063486}
   m_Layer: 8
   m_Name: WardrobeDoor2
   m_TagString: Untagged
@@ -41681,8 +41771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!95 &1797063481
 Animator:
   serializedVersion: 5
@@ -41774,6 +41864,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2.0000002, z: 2}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
+--- !u!65 &1797063486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797063478}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2}
   m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!1 &1802684704
 GameObject:
@@ -45175,6 +45286,7 @@ GameObject:
   - component: {fileID: 1971341227}
   - component: {fileID: 1971341226}
   - component: {fileID: 1971341231}
+  - component: {fileID: 1971341232}
   m_Layer: 8
   m_Name: WardrobeDoor1
   m_TagString: Untagged
@@ -45210,8 +45322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!95 &1971341227
 Animator:
   serializedVersion: 5
@@ -45303,6 +45415,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2, y: 2.0000002, z: 2}
+  m_Center: {x: 0.0000076293945, y: 0, z: 0}
+--- !u!65 &1971341232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971341224}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2}
   m_Center: {x: 0.0000076293945, y: 0, z: 0}
 --- !u!1 &1972135546
 GameObject:
@@ -45958,8 +46091,7 @@ MonoBehaviour:
   redKey: {fileID: 1624472318}
   greenKey: {fileID: 2082343203}
   blueKey: {fileID: 269883793}
-  TerrainObj: {fileID: 0}
-  interactionDistance: 5
+  KeyCanUnlock: 0
 --- !u!1 &1998143219
 GameObject:
   m_ObjectHideFlags: 0
@@ -46372,6 +46504,7 @@ GameObject:
   - component: {fileID: 2020489979}
   - component: {fileID: 2020489983}
   - component: {fileID: 2020489982}
+  - component: {fileID: 2020489984}
   m_Layer: 0
   m_Name: SafeCode
   m_TagString: Untagged
@@ -46463,6 +46596,7 @@ MonoBehaviour:
   safeScript: {fileID: 3155949316249170853}
   answer1: {fileID: 99439018}
   paper: {fileID: 975694235}
+  CanPickUp: 0
 --- !u!65 &2020489983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46484,6 +46618,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2020489984
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020489977}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 19.3, y: -22.2, z: 28.42}
+  m_Center: {x: 12.95, y: 0, z: 0}
 --- !u!1 &2022161508
 GameObject:
   m_ObjectHideFlags: 0
@@ -48000,11 +48155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a60183295b8ded4c8696d90f976f7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greenKey: {fileID: 2741690303093707316}
   greenKeyActivate: {fileID: 6334774572050641334}
   greenKeyUnlocked: 0
   rb: {fileID: 2082343205}
   rb2: {fileID: 1967011558}
+  playerUITrigger: {fileID: 287553315}
 --- !u!54 &2082343205
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54615,6 +54770,7 @@ GameObject:
   - component: {fileID: 913121706}
   - component: {fileID: 913121708}
   - component: {fileID: 8918280149932462778}
+  - component: {fileID: 8918280149932462779}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -55031,6 +55187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3155949316249170852}
   - component: {fileID: 3155949316249170853}
+  - component: {fileID: 3155949316249170854}
   m_Layer: 8
   m_Name: Safe2 (1)
   m_TagString: Untagged
@@ -55595,7 +55752,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
-  player: {fileID: 5648484564585408428}
   canvas: {fileID: 1490566014}
   codeAnswer: 
   safeContents: {fileID: 136706960}
@@ -55604,6 +55760,28 @@ MonoBehaviour:
   safeDoor: {fileID: 6182167451991708810}
   codeInputField: {fileID: 1299275966}
   feedbackText: {fileID: 1227012763}
+  CloseEnough: 0
+--- !u!65 &3155949316249170854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2344123065930836254}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.57, y: 5.85, z: 6.57}
+  m_Center: {x: -3.28, y: 0, z: 0}
 --- !u!1 &3234818074827665814
 GameObject:
   m_ObjectHideFlags: 0
@@ -56161,6 +56339,7 @@ GameObject:
   - component: {fileID: 7675370291956136904}
   - component: {fileID: 7675370291956136905}
   - component: {fileID: 7675370291956136906}
+  - component: {fileID: 7675370291956136907}
   m_Layer: 8
   m_Name: WardrobeDoor1
   m_TagString: Untagged
@@ -56605,6 +56784,7 @@ GameObject:
   - component: {fileID: 1997002280}
   - component: {fileID: 1997002279}
   - component: {fileID: 5092708246467546088}
+  - component: {fileID: 5092708246467546089}
   m_Layer: 0
   m_Name: Door.001
   m_TagString: Untagged
@@ -56632,6 +56812,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 100, y: 452.18427, z: 199.99997}
+  m_Center: {x: -50.000122, y: -2.8932338, z: 0.000091552734}
+--- !u!65 &5092708246467546089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092708246467546087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 4787.7, z: 199.99997}
   m_Center: {x: -50.000122, y: -2.8932338, z: 0.000091552734}
 --- !u!1 &5123913637656759410
 GameObject:
@@ -56912,6 +57113,7 @@ GameObject:
   - component: {fileID: 8527287383731849373}
   - component: {fileID: 8527287383731849374}
   - component: {fileID: 8527287383731849375}
+  - component: {fileID: 8527287383731849376}
   m_Layer: 8
   m_Name: WardrobeDoor2
   m_TagString: Untagged
@@ -58139,8 +58341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!65 &7675370291956136906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58161,6 +58363,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.0000005, y: 2.0000002, z: 2.0000007}
+  m_Center: {x: -0.000061035156, y: 0, z: -0.0000038146973}
+--- !u!65 &7675370291956136907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4680092503507953097}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2.0000007}
   m_Center: {x: -0.000061035156, y: 0, z: -0.0000038146973}
 --- !u!4 &7700228560951112763
 Transform:
@@ -58610,8 +58833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2220136ff50e1bb4888d6839b9b8de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 318693121}
   isOpen: 0
+  CanOpen: 0
 --- !u!65 &8527287383731849375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58632,6 +58855,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.0000005, y: 2.0000002, z: 2.0000007}
+  m_Center: {x: 0, y: 0, z: -0.0000038146973}
+--- !u!65 &8527287383731849376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843617597402604220}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 2.0000002, z: 2.0000007}
   m_Center: {x: 0, y: 0, z: -0.0000038146973}
 --- !u!33 &8544464892272883096
 MeshFilter:
@@ -58841,6 +59085,27 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 100.000015, y: 452.18442, z: 200.00003}
+  m_Center: {x: -49.999153, y: -2.8893313, z: -0.0006942964}
+--- !u!65 &8918280149932462779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155298509763052168}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100.000015, y: 4787.7, z: 200.00003}
   m_Center: {x: -49.999153, y: -2.8893313, z: -0.0006942964}
 --- !u!4 &9014609336762052035
 Transform:

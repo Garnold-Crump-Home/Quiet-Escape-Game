@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class BlueKey : MonoBehaviour
 {
-    public Transform blueKey;
+   
     public GameObject blueKeyActivate;
     public bool blueKeyUnlocked = false;
     public Rigidbody rb;
     public Rigidbody rb2;
+    public PlayerUITrigger playerUITrigger;
 
     void Start()
     {
@@ -18,23 +19,29 @@ public class BlueKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(blueKey.position, transform.position);
-        if (blueKeyActivate.activeSelf)
-        {
-
-
-            if (distance <= 3f)
-            {
-                if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    blueKeyUnlocked = true;
-                }
-            }
+        if (playerUITrigger.KeyCanUnlock) {
+        KeyUnlock();
         }
+    
         if (blueKeyUnlocked)
         {
             rb.constraints = RigidbodyConstraints.None;
             rb2.constraints = RigidbodyConstraints.None;
+        }
+    }
+
+    public void KeyUnlock()
+    {
+        if (blueKeyActivate.activeSelf)
+        {
+
+
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                blueKeyUnlocked = true;
+            }
+
         }
     }
 }

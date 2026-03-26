@@ -18,7 +18,7 @@ public class StartGameCar : MonoBehaviour
     public bool exit = true;
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame

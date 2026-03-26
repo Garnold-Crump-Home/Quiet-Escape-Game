@@ -12,6 +12,7 @@ public class Passcode : MonoBehaviour
     public Safe safeScript;
     public Text answer1;
     public GameObject paper;
+    public bool CanPickUp = false;
 
 
 
@@ -25,17 +26,17 @@ public class Passcode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             paper.SetActive(false);
         }
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+      
         Ray ray = new Ray(playerCamera.position, playerCamera.forward);
         RaycastHit hit;
 
-        float maxDistance = 4.5f;
+     
 
-        if (Physics.Raycast(ray, out hit, maxDistance))
+        if (Physics.Raycast(ray, out hit) && CanPickUp)
         {
             if (hit.transform == this.transform)
             {
@@ -50,7 +51,7 @@ public class Passcode : MonoBehaviour
                 }
 
 
-                return; // stop here so canvas doesn't get disabled
+                return; 
             }
         }
     }
@@ -61,5 +62,14 @@ paper.SetActive(true);
 
 
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player")) { CanPickUp = true; } 
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player")) { CanPickUp = false; }
     }
 }

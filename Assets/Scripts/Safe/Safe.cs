@@ -7,7 +7,7 @@ public class Safe : MonoBehaviour
 {
     public bool isOpen = false; 
     private bool turnedHandle = false;
-    public Transform player;
+
     public GameObject canvas;
 
     public string codeAnswer = "";
@@ -18,6 +18,7 @@ public class Safe : MonoBehaviour
     public Animator safeDoor;
     public InputField codeInputField;
     public Text feedbackText;
+    public bool CloseEnough = false;    
 
     void Start()
     {
@@ -41,9 +42,9 @@ public class Safe : MonoBehaviour
 
         if (isOpen) {
            
-            float distance = Vector3.Distance(player.position, transform.position);
+           
             
-            if (distance <= 4.5f && Input.GetKeyDown(KeyCode.E)) {
+            if (CloseEnough && Input.GetKeyDown(KeyCode.E)) {
 
        
                 if (!turnedHandle) { safeAnimator.SetTrigger("TurnHandle"); 
@@ -60,10 +61,10 @@ public class Safe : MonoBehaviour
         if (!isOpen)
         {
             safeContents.SetActive(false);
-            float distance = Vector3.Distance(player.position, transform.position);
+          
 
             // Open safe
-            if (distance <= 4.5f && Input.GetKeyDown(KeyCode.E) && !canvasOpened)
+            if (CloseEnough  && Input.GetKeyDown(KeyCode.E) && !canvasOpened)
             {
                 canvas.SetActive(true);
                 canvasOpened = true;
@@ -110,5 +111,20 @@ public class Safe : MonoBehaviour
     {
         safeDoor.SetTrigger("OpenDoor");
         safeContents.SetActive(true);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CloseEnough = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CloseEnough = false;
+        }
     }
 }

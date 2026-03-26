@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WardrobeDoor : MonoBehaviour
 {
-    public Transform player;
+   
     public bool isOpen = false;
+    public bool CanOpen =false;
     void Start()
     {
 
@@ -14,10 +15,10 @@ public class WardrobeDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+      
         if (!isOpen)
         {
-            if (distance <= 6f && Input.GetKeyDown(KeyCode.E))
+            if (CanOpen && Input.GetKeyDown(KeyCode.E))
             {
                 GetComponent<Animator>().SetBool("OpenDoor", true);
                 GetComponent<Animator>().SetBool("CloseDoor", false);
@@ -26,13 +27,29 @@ public class WardrobeDoor : MonoBehaviour
         }
         else
         {
-            if (distance <= 6f && Input.GetKeyDown(KeyCode.E))
+            if (CanOpen && Input.GetKeyDown(KeyCode.E))
             {
                 GetComponent<Animator>().SetBool("OpenDoor", false);
                 GetComponent<Animator>().SetBool("CloseDoor", true);
 
                 isOpen =false;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CanOpen = true;
+        } 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            CanOpen=false;
         }
     }
 }

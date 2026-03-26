@@ -33,7 +33,7 @@ public class EnemyGotYou : MonoBehaviour
     {
         death.enabled = false;
 
-        // Make death screen invisible at start
+      
         Color color = deathScreen.color;
         color.a = 0f;
         deathScreen.color = color;

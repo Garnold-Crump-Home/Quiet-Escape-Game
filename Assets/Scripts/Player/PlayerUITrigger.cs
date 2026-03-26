@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerUITrigger : MonoBehaviour
 {
     public GameObject playerUICanvas; 
+    public bool KeyCanUnlock = false;
     void Start()
     {
         
@@ -23,7 +24,7 @@ public class PlayerUITrigger : MonoBehaviour
            
          
                 playerUICanvas.SetActive(true); 
-            
+            KeyCanUnlock = true;
         }
     }
 
@@ -33,7 +34,7 @@ public class PlayerUITrigger : MonoBehaviour
             {
               
                     playerUICanvas.SetActive(false);
-                
+                KeyCanUnlock = false ;
             }
     }
 }

@@ -31,5 +31,7 @@ public class ItemSpawnPT : MonoBehaviour
 
             gameObjects[i].transform.position = availablePoints[i].position;
         }
+
+        Destroy(gameObject);
     }
 }

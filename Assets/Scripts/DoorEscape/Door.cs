@@ -12,10 +12,10 @@ public class Door : MonoBehaviour
     public RedKey redKey;
     public GreenKey greenKey;
     public BlueKey blueKey;
-    public GameObject TerrainObj;
+ 
+    public bool KeyCanUnlock;
 
 
-    public float interactionDistance = 5f;
     void Start()
     {
        
@@ -28,10 +28,10 @@ public class Door : MonoBehaviour
         {
 
 
-            float distance = Vector3.Distance(player.position, transform.position);
+         
             if (doorOpen == false)
             {
-                if (distance <= interactionDistance)
+                if (KeyCanUnlock)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
             }
             else if (doorOpen == true)
             {
-                if (distance <= interactionDistance)
+                if (KeyCanUnlock)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
@@ -66,5 +66,21 @@ public class Door : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            KeyCanUnlock = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.CompareTag("Player"))
+        {
+            KeyCanUnlock = false;
+        }
+    }
+
+
+
 }
