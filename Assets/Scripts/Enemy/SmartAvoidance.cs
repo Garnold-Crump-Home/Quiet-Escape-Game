@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SmartAvoidance : MonoBehaviour
 {
@@ -47,10 +48,18 @@ public class SmartAvoidance : MonoBehaviour
     void Start()
     {
 
-        Invoke("Start2", 22f);
+   
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        Player.SetActive(false);
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        
+        string sceneName = currentScene.name;
+        if (sceneName != "Tutorial")
+        {
+            Invoke("Start2", 22f);
+            Player.SetActive(false);
+        }
         PickNewWanderDirection();
     }
 

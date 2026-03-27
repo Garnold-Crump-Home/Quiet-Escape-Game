@@ -16,11 +16,7 @@ public class Settings : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
 
-        GameObject lightObj = GameObject.FindWithTag("MainLight");
-        if (lightObj != null)
-            mainLight = lightObj.GetComponent<Light>();
-        else
-            Debug.LogWarning("MainLight not found!");
+
 
         qualityDropdown.value = QualitySettings.GetQualityLevel();
         volumeSlider.value = AudioListener.volume;
@@ -40,7 +36,15 @@ public class Settings : MonoBehaviour
         volumeSlider.onValueChanged.AddListener(SetVolume);
         fpsSlider.onValueChanged.AddListener(SetFpsMax);
     }
+    private void Update()
+    {
+        GameObject lightObj = GameObject.FindWithTag("MainLight");
 
+        if (lightObj != null)
+            mainLight = lightObj.GetComponent<Light>();
+        else
+            Debug.LogWarning("MainLight not found!");
+    }
     void SetQuality(int index)
     {
         QualitySettings.SetQualityLevel(index);

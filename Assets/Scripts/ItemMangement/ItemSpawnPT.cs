@@ -32,6 +32,12 @@ public class ItemSpawnPT : MonoBehaviour
             gameObjects[i].transform.position = availablePoints[i].position;
         }
 
+        Invoke("DestroyObj", 16f);
+    }
+
+    public void DestroyObj()
+    {
         Destroy(gameObject);
     }
+
 }

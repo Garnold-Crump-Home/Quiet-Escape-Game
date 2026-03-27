@@ -30,12 +30,12 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        DontDestroyOnLoad(building);
-        DontDestroyOnLoad(Cutscene);
-        DontDestroyOnLoad(car);
 
         if (buttonManager.MapChoose == true)
         {
+            DontDestroyOnLoad(building);
+            DontDestroyOnLoad(Cutscene);
+            DontDestroyOnLoad(car);
             building.SetActive(true);
             Furniture.SetActive(true);
             Boxes.SetActive(true);
@@ -57,6 +57,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         car.SetActive(true);
         Cutscene.SetActive(true);
+        Destroy(this.gameObject);
         
     }
 }

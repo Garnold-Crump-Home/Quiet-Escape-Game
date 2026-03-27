@@ -31,9 +31,9 @@ public class RegularDoor : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         DoorAnimation.SetBool("Closed", false);
-                        DoorAnimation.SetBool("Closed1", false);
+
                         DoorAnimation.SetBool("DoorOpen", true);
-                        DoorAnimation.SetBool("DoorOpen1", true);
+                      
 
                         doorOpen = true;
                     }
@@ -48,9 +48,9 @@ public class RegularDoor : MonoBehaviour
 
                         doorOpen = false;
                         DoorAnimation.SetBool("DoorOpen", false);
-                        DoorAnimation.SetBool("DoorOpen1", false);
+                       
                         DoorAnimation.SetBool("Closed", true);
-                        DoorAnimation.SetBool("Closed1", true);
+                     
 
 
                     }

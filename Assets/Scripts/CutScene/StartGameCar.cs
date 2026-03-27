@@ -59,6 +59,7 @@ public class StartGameCar : MonoBehaviour
         Destroy(OutsideCarCam);
         Destroy(Terrain);
         Destroy(Car);
+     
        
     }
 }

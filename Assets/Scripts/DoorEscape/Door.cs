@@ -21,7 +21,7 @@ public class Door : MonoBehaviour
        
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         if (woodFall.woodIsFalling && redKey.redKeyUnlocked && blueKey.blueKeyUnlocked && greenKey.greenKeyUnlocked)
