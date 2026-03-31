@@ -26,12 +26,12 @@ public class FirstPerson : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // Vertical rotation (camera)
+        
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, minY, maxY);
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // Horizontal rotation (player body)
+      
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

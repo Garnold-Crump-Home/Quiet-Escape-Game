@@ -18,7 +18,11 @@ public class ButtonManager : MonoBehaviour
     public PlayableDirector playableDirector;
     public bool MapChoose = false;
     private bool colorChanged = false;
+    public GameObject Image;
+    public GameObject Lights;
 
+
+  
     public void audioButton()
     {
                mainScreen.SetActive(false);
@@ -73,15 +77,18 @@ public class ButtonManager : MonoBehaviour
 
     public void loadLevel()
     {
+      
+        Lights.SetActive(true);
         mapChooseScreen.SetActive(false);
         loading.SetActive(true);
         StartCoroutine(LoadSceneWithDots("Level1", 6f));
         MapChoose = true;
-       playableDirector.Play(); 
+        playableDirector.Play();
     }
     
     public void loadTutorial()
     {
+        Image.SetActive(true);
         mainScreen.SetActive(false) ;
         mapChooseScreen.SetActive(false);
         loading.SetActive(true);

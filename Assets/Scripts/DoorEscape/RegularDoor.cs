@@ -7,12 +7,13 @@ public class RegularDoor : MonoBehaviour
     public Transform player;
     public Animator DoorAnimation;
     public bool doorOpen = false;
-   
-   
-  
+    public bool CanOpenDoor;
 
 
-    public float interactionDistance = 5f;
+
+
+
+    
     void Start()
     {
 
@@ -23,10 +24,10 @@ public class RegularDoor : MonoBehaviour
     {
         
 
-            float distance = Vector3.Distance(player.position, transform.position);
+        
             if (doorOpen == false)
             {
-                if (distance <= interactionDistance)
+                if (CanOpenDoor)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
@@ -41,7 +42,7 @@ public class RegularDoor : MonoBehaviour
             }
             else if (doorOpen == true)
             {
-                if (distance <= interactionDistance)
+                if (CanOpenDoor)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
@@ -57,7 +58,23 @@ public class RegularDoor : MonoBehaviour
                 }
             }
         }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform == player)
+        {
+            CanOpenDoor = true;
+        }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform == player)
+        {
+            CanOpenDoor = false;
+        }
+    }
+}
 
 
 
