@@ -12,8 +12,9 @@ public class Door : MonoBehaviour
     public RedKey redKey;
     public GreenKey greenKey;
     public BlueKey blueKey;
- 
-    public bool KeyCanUnlock;
+    public bool CanOpenDoor;
+
+   
 
 
     void Start()
@@ -21,66 +22,65 @@ public class Door : MonoBehaviour
        
     }
 
-  
+
     void Update()
     {
         if (woodFall.woodIsFalling && redKey.redKeyUnlocked && blueKey.blueKeyUnlocked && greenKey.greenKeyUnlocked)
         {
 
 
-         
+
             if (doorOpen == false)
             {
-                if (KeyCanUnlock)
+                if (CanOpenDoor)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         DoorAnimation.SetBool("Closed", false);
-                        DoorAnimation.SetBool("Closed1", false);
+
                         DoorAnimation.SetBool("DoorOpen", true);
-                        DoorAnimation.SetBool("DoorOpen1", true);
+
 
                         doorOpen = true;
-                    
-
                     }
                 }
             }
             else if (doorOpen == true)
             {
-                if (KeyCanUnlock)
+                if (CanOpenDoor)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
 
                         doorOpen = false;
                         DoorAnimation.SetBool("DoorOpen", false);
-                        DoorAnimation.SetBool("DoorOpen1", false);
+
                         DoorAnimation.SetBool("Closed", true);
-                        DoorAnimation.SetBool("Closed1", true);
+
 
 
                     }
                 }
             }
-        }
-    }
+        } }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.transform == player)
         {
-            KeyCanUnlock = true;
+            CanOpenDoor = true;
         }
     }
 
-    private void OnTriggerExit(Collider other) {
-        if (other.CompareTag("Player"))
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform == player)
         {
-            KeyCanUnlock = false;
+            CanOpenDoor = false;
         }
     }
+} 
 
 
 
-}
+

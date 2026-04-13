@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class FlashLightBattery : MonoBehaviour
 {
     public float BatteryLevel = 100f;
-    public Light flashlight;
-    public GameObject Lights;
+   
+  
 
     [Header("Settings")]
     public float drainRate = 0.2f;
@@ -23,9 +23,16 @@ public class FlashLightBattery : MonoBehaviour
     private float flickerTimer;
     private int lastIconCount = -1; 
 
+    private Light flashlight;
+
     void Update()
     {
-       
+        GameObject lightObj = GameObject.FindWithTag("MainLight");
+
+        if (lightObj != null)
+            flashlight = lightObj.GetComponent<Light>();
+        else
+            Debug.LogWarning("MainLight not found!");
         if (flashlight.enabled && BatteryLevel > 0)
         {
             BatteryLevel -= drainRate * Time.deltaTime;
@@ -40,7 +47,7 @@ public class FlashLightBattery : MonoBehaviour
 
     void UpdateUI()
     {
-      
+        GameObject lightObj = GameObject.FindWithTag("MainLight");
         int currentIconCount = Mathf.CeilToInt(BatteryLevel / 20f);
 
        
@@ -53,7 +60,7 @@ public class FlashLightBattery : MonoBehaviour
             lastIconCount = currentIconCount;
 
          
-            Lights.SetActive(BatteryLevel > 0);
+            lightObj.SetActive(BatteryLevel > 0);
         }
     }
 
