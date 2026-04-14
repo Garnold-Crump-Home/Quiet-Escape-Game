@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayersLight : MonoBehaviour
 {
-    // Start is called before the first frame update
+ 
     void Start()
     {
       
@@ -20,7 +20,11 @@ public class PlayersLight : MonoBehaviour
 
         if (sceneName != "MainMenu")
         {
-            Invoke("Attach", 18.2f);
+            Invoke("Attach", 17f);
+        }
+        if(sceneName == "Tutorial")
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -29,6 +33,13 @@ public class PlayersLight : MonoBehaviour
 
         Transform targetTransform = GameObject.FindWithTag("FlashLight").transform;
         this.transform.parent = targetTransform.transform;
+        this.transform.localPosition = new Vector3(60f, -43f, -166.4f);
+        this.transform.localRotation = Quaternion.Euler(180f, 0f, 0f);
+        PlayersLight playerLightScript = this.GetComponent<PlayersLight>();
+        DontDestroyThis dontDestroyThisScript = this.GetComponent<DontDestroyThis>();
+        dontDestroyThisScript.enabled = false;
+        playerLightScript.enabled = false;
+
     }
     
 }

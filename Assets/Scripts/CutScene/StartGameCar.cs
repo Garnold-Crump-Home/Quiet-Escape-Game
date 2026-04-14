@@ -31,11 +31,12 @@ public class StartGameCar : MonoBehaviour
 
     public void Exit()
     {
-        Canvas.SetActive(true);
+       
         if (carCutScene.play)
         {
             if (exit)
             {
+                Canvas.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Canvas.SetActive(false);

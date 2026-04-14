@@ -22,7 +22,7 @@ public class EnemyStun : MonoBehaviour
 
     IEnumerator StunRoutine(float time)
     {
-      avoidance.Animate =false;
+      avoidance.animationsEnabled = false;
        particleSystem1.Play();
         
         rb.freezeRotation = true;
@@ -35,6 +35,6 @@ public class EnemyStun : MonoBehaviour
         rb.freezeRotation = false;
         rb.constraints = RigidbodyConstraints.None;
      particleSystem1.Stop();
-        avoidance.Animate = true;
+        avoidance.animationsEnabled = true;
     }
 }

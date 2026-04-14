@@ -70,7 +70,12 @@ public class PlayerMovement : MonoBehaviour
         IsSprinting();
         IdleAnimation();
 
-
+        if (flashlight == null)
+        {
+            GameObject lightObj = GameObject.FindWithTag("MainLight");
+            if (lightObj != null)
+                flashlight = lightObj.GetComponent<Light>();
+        }
 
         if (isCrouching == true)
         {

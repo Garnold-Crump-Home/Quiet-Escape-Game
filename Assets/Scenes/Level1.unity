@@ -5143,7 +5143,6 @@ MonoBehaviour:
   player: {fileID: 5648484564585408428}
   deathArea: {fileID: 1270202355}
   enemyTransform: {fileID: 235760179}
-  jumpScare: {fileID: 0}
   rightLeg: {fileID: 966259732}
   leftLeg: {fileID: 2001939916}
   leftArm: {fileID: 2030734388}
@@ -5189,12 +5188,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playScript: 1
   player: {fileID: 5648484564585408428}
+  playerObject: {fileID: 0}
   detectionRange: 35
   loseRange: 50
   requireLineOfSight: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 960
+  hearingRange: 5
+  memoryDuration: 5
   moveSpeed: 9
   turnSpeed: 6
   wanderSpeed: 5
@@ -5207,10 +5209,9 @@ MonoBehaviour:
   leftLeg: {fileID: 2001939916}
   leftArm: {fileID: 2030734388}
   rightArm: {fileID: 2100617819}
+  animationsEnabled: 1
   wardrobeCollider: {fileID: 1365422898}
-  Animate: 1
-  Player: {fileID: 7441282417784006709}
-  start: 0
+  activationDelay: 22
 --- !u!136 &235760183
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31633,6 +31634,7 @@ MonoBehaviour:
   volumeSlider: {fileID: 2037252884}
   fpsSlider: {fileID: 1842558812}
   fpsText: {fileID: 210686216}
+  mainLight: {fileID: 0}
 --- !u!4 &1255635168
 Transform:
   m_ObjectHideFlags: 0
@@ -48518,7 +48520,6 @@ MonoBehaviour:
   player: {fileID: 5648484564585408428}
   deathArea: {fileID: 494144811}
   enemyTransform: {fileID: 2126521089}
-  jumpScare: {fileID: 0}
   rightLeg: {fileID: 984415227}
   leftLeg: {fileID: 324811732}
   leftArm: {fileID: 2083878765}
@@ -48564,12 +48565,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playScript: 1
   player: {fileID: 5648484564585408428}
+  playerObject: {fileID: 4901946534119116836}
   detectionRange: 35
   loseRange: 50
   requireLineOfSight: 1
   obstacleMask:
     serializedVersion: 2
     m_Bits: 960
+  hearingRange: 5
+  memoryDuration: 5
   moveSpeed: 9
   turnSpeed: 6
   wanderSpeed: 5
@@ -48577,15 +48581,14 @@ MonoBehaviour:
   wanderDirectionChangeInterval: 1
   rayDistance: 2
   sideOffset: 0.6
-  avoidStrength: 2
+  avoidStrength: 15
   rightLeg: {fileID: 984415227}
   leftLeg: {fileID: 324811732}
   leftArm: {fileID: 2083878765}
   rightArm: {fileID: 1550039940}
+  animationsEnabled: 1
   wardrobeCollider: {fileID: 1365422898}
-  Animate: 1
-  Player: {fileID: 7441282417784006709}
-  start: 0
+  activationDelay: 22
 --- !u!136 &2126521087
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -56561,7 +56564,7 @@ Transform:
   m_GameObject: {fileID: 4719964045060436472}
   serializedVersion: 2
   m_LocalRotation: {x: -0.09535276, y: 0.7006482, z: -0.09535274, w: 0.7006482}
-  m_LocalPosition: {x: -0.266, y: -0.058, z: 0.333}
+  m_LocalPosition: {x: -0.238, y: -0.052, z: 0.354}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:

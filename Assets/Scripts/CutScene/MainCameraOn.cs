@@ -23,8 +23,8 @@ public class MainCameraOn : MonoBehaviour
         if (other.CompareTag("Car"))
         {
             Cam.SetActive(true);
-            SmartAvoidance.start = true;
-            SmartAvoidance2.start = true;
+            SmartAvoidance.enabled = true;
+            SmartAvoidance2.enabled = true;
         }
     }
 }

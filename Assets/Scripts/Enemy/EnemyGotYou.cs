@@ -13,7 +13,7 @@ public class EnemyGotYou : MonoBehaviour
     public Transform player;
     public Transform deathArea;
     public Transform enemyTransform;
-    public Transform jumpScare;
+  
 
     [Header("Animation")]
     public Animator rightLeg;
@@ -86,8 +86,7 @@ public class EnemyGotYou : MonoBehaviour
 
     void JumpScare()
     {
-        enemyTransform.position = jumpScare.position;
-        enemyTransform.rotation = jumpScare.rotation;
+       
         playerManagement.SetActive(false);
         StartCoroutine(FadeDeathScreen());
     }
