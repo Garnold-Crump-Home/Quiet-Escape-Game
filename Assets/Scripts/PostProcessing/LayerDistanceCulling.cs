@@ -8,9 +8,9 @@ public class LayerDistanceCulling : MonoBehaviour
     {
       
 
-        // Create an array of 32 floats (one for each layer)
+      
         float[] distances = new float[32];
-        distances[0] = 80f; // Default layer
+        distances[0] = 80f;
         distances[6] = 75f; 
         distances[6] = 60f; 
         distances[8] = 50f;
@@ -18,7 +18,7 @@ public class LayerDistanceCulling : MonoBehaviour
 
        
 
-        // Assign the distances to the camera
+      
         cam.layerCullDistances = distances;
     }
 }

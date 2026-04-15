@@ -69,8 +69,8 @@ public class SmartAvoidance : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
-        // Always pick a wander direction immediately so it's ready when we activate
+        if (wardrobeCollider.isInWardrobe == true) { 
+        state = AIState.Wander; }
         PickNewWanderDirection();
 
         string sceneName = SceneManager.GetActiveScene().name;
@@ -118,6 +118,17 @@ public class SmartAvoidance : MonoBehaviour
     // ── Detection logic ──────────────────────────────────────────────────────
     void UpdateDetection()
     {
+        // 🚫 If player is hiding, ignore them completely
+        if (wardrobeCollider != null && wardrobeCollider.isInWardrobe)
+        {
+            // Optional: reset detection so AI forgets player
+            if (state == AIState.Chase || state == AIState.Investigate)
+            {
+                state = AIState.Wander;
+            }
+            return;
+        }
+
         float dist = Vector3.Distance(transform.position, player.position);
 
         bool canSee = dist <= detectionRange && (!requireLineOfSight || HasLineOfSight());
@@ -131,7 +142,7 @@ public class SmartAvoidance : MonoBehaviour
         }
         else if (state == AIState.Chase)
         {
-            // Lost visual/sound – investigate last known position
+            // Lost player → investigate last position
             state = AIState.Investigate;
         }
     }
