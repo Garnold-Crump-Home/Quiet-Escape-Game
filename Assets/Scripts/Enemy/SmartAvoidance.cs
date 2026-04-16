@@ -1,43 +1,43 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class SmartAvoidance : MonoBehaviour
 {
-    
     public bool playScript = true;
 
     [Header("Target")]
     public Transform player;
     public GameObject playerObject;
 
-    [Header("Detection – Sight")]
-    public float detectionRange = 12f;
-    public float loseRange = 16f;
-    public bool requireLineOfSight = true;
-    public LayerMask obstacleMask;
-
-    [Header("Detection – Sound")]
-    [Tooltip("Radius inside which the AI hears the player regardless of LOS")]
-    public float hearingRange = 5f;
-
-    [Header("Detection – Memory")]
-    [Tooltip("How long the AI investigates the player's last known position before giving up")]
-    public float memoryDuration = 5f;
+    [Header("Detection")]
+    public float detectionRange = 18f;
+    public float hearingRange = 6f;
+    public float loseRange = 22f;
+    public float memoryDuration = 6f;
 
     [Header("Movement")]
-    public float moveSpeed = 4f;
-    public float turnSpeed = 6f;
+    public float moveSpeed = 4.5f;
+    public float turnSpeed = 14f;
 
     [Header("Wandering")]
     public float wanderSpeed = 2f;
-    public float wanderTurnSpeed = 3f;
+    public float wanderTurnSpeed = 6f;
     public float wanderDirectionChangeInterval = 3f;
 
     [Header("Avoidance")]
-    public float rayDistance = 2f;
-    public float sideOffset = 0.6f;
-    public float avoidStrength = 2f;
+    public float rayDistance = 4f;
+    public float avoidStrength = 6f;
+    public LayerMask obstacleMask;
+
+    [Header("Horror Behavior")]
+    public float searchRadius = 4f;
+    public float fakeWanderChance = 0.15f;
+    public float cornerCutStrength = 1.5f;
+
+    [Header("Hands")]
+    public bool leftHandHit;
+    public bool rightHandHit;
+    public bool frontHit;
 
     [Header("Animations")]
     public Animator rightLeg;
@@ -46,92 +46,83 @@ public class SmartAvoidance : MonoBehaviour
     public Animator rightArm;
     public bool animationsEnabled = true;
 
-    [Header("Wardrobe")]
-    public WardrobeCollider wardrobeCollider;
-
     [Header("Startup")]
-    [Tooltip("Delay (seconds) before the AI activates on non-Tutorial scenes")]
     public float activationDelay = 22f;
+    private bool isActive = false;
 
-    // ── State machine ────────────────────────────────────────────────────────
-    private enum AIState { Inactive, Wander, Investigate, Chase }
+    public WardrobeCollider wardrobeCollider;
+    private enum AIState { Inactive, Wander, Search, Chase }
     private AIState state = AIState.Inactive;
 
-    // ── Private fields ───────────────────────────────────────────────────────
     private Rigidbody rb;
     private Vector3 wanderDirection;
     private float wanderTimer;
+
     private Vector3 lastKnownPosition;
     private float memoryTimer;
 
-    // ── Unity lifecycle ──────────────────────────────────────────────────────
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
-        if (wardrobeCollider.isInWardrobe == true) { 
-        state = AIState.Wander; }
-        PickNewWanderDirection();
+    private Vector3 searchPoint;
+    private bool hasSearchPoint;
 
-        string sceneName = SceneManager.GetActiveScene().name;
-        if (sceneName == "Tutorial")
-        {
-            Activate();
-        }
-        else
-        {
-            if (playerObject != null) playerObject.SetActive(false);
-            Invoke(nameof(Activate), activationDelay);
-        }
-    }
-
+    private Vector3 lastPosition;
+    private float stuckTimer;
     void Update()
     {
-        if (state == AIState.Inactive) return;
-
-        // Toggle animations at runtime
         bool on = animationsEnabled;
+
         if (rightArm) rightArm.enabled = on;
         if (leftArm) leftArm.enabled = on;
         if (rightLeg) rightLeg.enabled = on;
         if (leftLeg) leftLeg.enabled = on;
+        if (wardrobeCollider.isInWardrobe)
+        {
+            detectionRange = 0f;
+        }
+        if(wardrobeCollider.isInWardrobe == false)
+        {
+            detectionRange = 35f;
+        }
+    }
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+
+        state = AIState.Inactive;
+
+        PickNewWanderDirection();
+
+        if (playerObject != null)
+            playerObject.SetActive(false);
+
+        Invoke(nameof(Activate), activationDelay);
+    }
+
+    void Activate()
+    {
+        isActive = true;
+
+        if (playerObject != null)
+            playerObject.SetActive(true);
+
+        state = AIState.Wander;
     }
 
     void FixedUpdate()
     {
-        if (state == AIState.Inactive || !playScript || player == null) return;
+        if (!isActive || !playScript || player == null) return;
 
         UpdateDetection();
         RunStateMachine();
-
-        // Keep upright
-        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
+        HandleStuck();
     }
 
-    // ── Activation ───────────────────────────────────────────────────────────
-    void Activate()
-    {
-        if (playerObject != null) playerObject.SetActive(true);
-        state = AIState.Wander;
-    }
-
-    // ── Detection logic ──────────────────────────────────────────────────────
+    // ───────── DETECTION ─────────
     void UpdateDetection()
     {
-        // 🚫 If player is hiding, ignore them completely
-        if (wardrobeCollider != null && wardrobeCollider.isInWardrobe)
-        {
-            // Optional: reset detection so AI forgets player
-            if (state == AIState.Chase || state == AIState.Investigate)
-            {
-                state = AIState.Wander;
-            }
-            return;
-        }
-
         float dist = Vector3.Distance(transform.position, player.position);
 
-        bool canSee = dist <= detectionRange && (!requireLineOfSight || HasLineOfSight());
+        bool canSee = dist <= detectionRange;
         bool canHear = dist <= hearingRange;
 
         if (canSee || canHear)
@@ -142,150 +133,176 @@ public class SmartAvoidance : MonoBehaviour
         }
         else if (state == AIState.Chase)
         {
-            // Lost player → investigate last position
-            state = AIState.Investigate;
+            state = AIState.Search;
+            hasSearchPoint = false;
         }
     }
 
-    bool HasLineOfSight()
-    {
-        Vector3 origin = transform.position + Vector3.up;
-        Vector3 dir = (player.position - transform.position).normalized;
-
-        if (Physics.Raycast(origin, dir, out RaycastHit hit, detectionRange, obstacleMask | (1 << player.gameObject.layer)))
-            return hit.transform == player;
-
-        // Raycast hit nothing blocked – check plain distance
-        return Vector3.Distance(transform.position, player.position) <= detectionRange;
-    }
-
-    // ── State machine ─────────────────────────────────────────────────────────
+    // ───────── STATES ─────────
     void RunStateMachine()
     {
         switch (state)
         {
-            case AIState.Chase: ChasePlayer(); break;
-            case AIState.Investigate: Investigate(); break;
+            case AIState.Chase: Chase(); break;
+            case AIState.Search: Search(); break;
             case AIState.Wander: Wander(); break;
         }
     }
 
-    // ── Behaviours ────────────────────────────────────────────────────────────
-    void ChasePlayer()
+    void Chase()
     {
-        if (wardrobeCollider != null && wardrobeCollider.isInWardrobe)
-        {
-            state = AIState.Wander;
-            return;
-        }
-
-        UpdateAnimations();
-        MoveToward(player.position, moveSpeed, turnSpeed);
+        Vector3 predicted = player.position + player.forward * cornerCutStrength;
+        Move(predicted, moveSpeed, turnSpeed);
     }
 
-    void Investigate()
+    void Search()
     {
-        UpdateAnimations();
-
         memoryTimer -= Time.deltaTime;
+
         if (memoryTimer <= 0f)
         {
             state = AIState.Wander;
             return;
         }
 
-        float distToLKP = Vector3.Distance(transform.position, lastKnownPosition);
-        if (distToLKP < 1f)
+        if (!hasSearchPoint || Vector3.Distance(transform.position, searchPoint) < 1f)
         {
-            // Arrived at last known position – look around before giving up
-            memoryTimer -= Time.deltaTime * 2f;
+            searchPoint = lastKnownPosition + Random.insideUnitSphere * searchRadius;
+            searchPoint.y = transform.position.y;
+            hasSearchPoint = true;
         }
-        else
+
+        Move(searchPoint, wanderSpeed * 1.5f, turnSpeed);
+        UpdateAnimations();
+        // Random fake wander to feel creepy
+        if (Random.value < fakeWanderChance * Time.deltaTime)
         {
-            MoveToward(lastKnownPosition, wanderSpeed * 1.5f, turnSpeed);
+            state = AIState.Wander;
+            Invoke(nameof(ReturnToSearch), 2f);
         }
+    }
+
+    void ReturnToSearch()
+    {
+        if (state == AIState.Wander)
+            state = AIState.Search;
     }
 
     void Wander()
     {
-        UpdateAnimations();
-
         wanderTimer -= Time.deltaTime;
+
         if (wanderTimer <= 0f)
             PickNewWanderDirection();
 
-        Vector3 avoid = GetAvoidanceVector();
-        Vector3 direction = avoid != Vector3.zero
-            ? (wanderDirection + avoid).normalized
-            : wanderDirection;
-
-        RotateToward(direction, wanderTurnSpeed);
-        rb.MovePosition(rb.position + transform.forward * wanderSpeed * Time.deltaTime);
+        Move(transform.position + wanderDirection, wanderSpeed, wanderTurnSpeed);
     }
 
-    // ── Shared movement helpers ───────────────────────────────────────────────
-    void MoveToward(Vector3 target, float speed, float rotSpeed)
+    // ───────── MOVEMENT ─────────
+    void Move(Vector3 target, float speed, float rotSpeed)
     {
         Vector3 direction = (target - transform.position).normalized;
-        Vector3 avoid = GetAvoidanceVector();
-        if (avoid != Vector3.zero)
-            direction = (direction + avoid).normalized;
 
-        RotateToward(direction, rotSpeed);
-        rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
+        Vector3 avoid = GetAvoidanceVector();
+        Vector3 handAvoid = GetHandAvoidance();
+
+        direction = (direction + avoid + handAvoid).normalized;
+
+        Quaternion rot = Quaternion.LookRotation(direction);
+        rb.MoveRotation(Quaternion.Lerp(rb.rotation, rot, Time.deltaTime * rotSpeed));
+        rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
     }
 
-    void RotateToward(Vector3 direction, float rotSpeed)
+    // ───────── SMART HAND LOGIC ─────────
+    Vector3 GetHandAvoidance()
     {
-        if (direction == Vector3.zero) return;
-        Quaternion targetRot = Quaternion.LookRotation(direction);
-        rb.MoveRotation(Quaternion.Lerp(rb.rotation, targetRot, Time.deltaTime * rotSpeed));
+        Vector3 avoid = Vector3.zero;
+
+        if (frontHit)
+        {
+            avoid -= transform.forward * 2f;
+            avoid += transform.right * Random.Range(-1f, 1f);
+        }
+        else if (leftHandHit && !rightHandHit)
+        {
+            avoid += transform.right * 2f;
+        }
+        else if (rightHandHit && !leftHandHit)
+        {
+            avoid -= transform.right * 2f;
+        }
+        else if (leftHandHit && rightHandHit)
+        {
+            avoid -= transform.forward * 2f;
+            avoid += transform.right * Random.Range(-2f, 2f);
+        }
+
+        return avoid;
+    }
+
+    // ───────── RAYCAST AVOIDANCE ─────────
+    Vector3 GetAvoidanceVector()
+    {
+        Vector3 origin = transform.position + Vector3.up;
+        Vector3 forward = transform.forward;
+
+        Vector3 left = Quaternion.AngleAxis(-30, Vector3.up) * forward;
+        Vector3 right = Quaternion.AngleAxis(30, Vector3.up) * forward;
+
+        bool f = Physics.Raycast(origin, forward, rayDistance, obstacleMask);
+        bool l = Physics.Raycast(origin, left, rayDistance, obstacleMask);
+        bool r = Physics.Raycast(origin, right, rayDistance, obstacleMask);
+
+        Vector3 avoid = Vector3.zero;
+
+        if (f) avoid -= forward * avoidStrength;
+        if (l) avoid += transform.right * avoidStrength;
+        if (r) avoid -= transform.right * avoidStrength;
+
+        return avoid;
+    }
+
+    // ───────── UNSTUCK ─────────
+    void HandleStuck()
+    {
+        float moved = Vector3.Distance(transform.position, lastPosition);
+
+        if (moved < 0.05f)
+            stuckTimer += Time.deltaTime;
+        else
+            stuckTimer = 0f;
+
+        lastPosition = transform.position;
+
+        if (stuckTimer > 1.5f)
+        {
+            PickNewWanderDirection();
+            stuckTimer = 0f;
+        }
     }
 
     void PickNewWanderDirection()
     {
         wanderTimer = wanderDirectionChangeInterval;
-        Vector2 random = Random.insideUnitCircle.normalized;
-        wanderDirection = new Vector3(random.x, 0f, random.y);
+        Vector2 rand = Random.insideUnitCircle.normalized;
+        wanderDirection = new Vector3(rand.x, 0, rand.y);
     }
-
-    // ── Avoidance ─────────────────────────────────────────────────────────────
-    Vector3 GetAvoidanceVector()
-    {
-        Vector3 forward = transform.forward;
-        Vector3 right = transform.right;
-        Vector3 origin = transform.position + Vector3.up;
-
-        bool frontHit = Physics.Raycast(origin, forward, out RaycastHit hitF, rayDistance, obstacleMask);
-        bool leftHit = Physics.Raycast(origin - right * sideOffset, forward, rayDistance, obstacleMask);
-        bool rightHit = Physics.Raycast(origin + right * sideOffset, forward, rayDistance, obstacleMask);
-
-        Vector3 avoid = Vector3.zero;
-        if (frontHit) avoid += hitF.normal * avoidStrength;
-        if (leftHit) avoid += transform.right * avoidStrength;
-        if (rightHit) avoid -= transform.right * avoidStrength;
-
-        return avoid;
-    }
-
-    // ── Animations ────────────────────────────────────────────────────────────
     void UpdateAnimations()
     {
         if (!animationsEnabled) return;
 
         float dist = Vector3.Distance(transform.position, player.position);
 
-        // Thresholds are relative to detection/lose ranges for meaningful transitions
         bool idle = state == AIState.Wander && dist > loseRange;
-        bool walking = !idle && state != AIState.Chase;
+        bool walking = state == AIState.Search || (state == AIState.Wander && !idle);
         bool chasing = state == AIState.Chase;
 
-        SetAnimBool("Idle", idle);
-        SetAnimBool("Walking", walking);
-        SetAnimBool("Chasing", chasing);
+        SetAnim("Idle", idle);
+        SetAnim("Walking", walking);
+        SetAnim("Chasing", chasing);
     }
 
-    void SetAnimBool(string param, bool value)
+    void SetAnim(string param, bool value)
     {
         if (rightLeg) rightLeg.SetBool(param, value);
         if (leftLeg) leftLeg.SetBool(param, value);

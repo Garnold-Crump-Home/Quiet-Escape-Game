@@ -45,7 +45,7 @@ public class RemoveSmallerNails : MonoBehaviour
                 {
                     nails.freezeRotation = false;
                     nails.constraints = RigidbodyConstraints.None;
-                    Debug.Log("Hit");
+                   
 
 
                 }
