@@ -20,9 +20,10 @@ public class ButtonManager : MonoBehaviour
     private bool colorChanged = false;
     public GameObject Image;
     public GameObject Lights;
+    public GameObject shop;
 
 
-  
+
     public void audioButton()
     {
                mainScreen.SetActive(false);
@@ -40,6 +41,7 @@ public class ButtonManager : MonoBehaviour
         }
         
     }
+ 
     public void QuitGame()
     {
         Application.Quit();

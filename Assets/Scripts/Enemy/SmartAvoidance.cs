@@ -48,7 +48,7 @@ public class SmartAvoidance : MonoBehaviour
 
     [Header("Startup")]
     public float activationDelay = 22f;
-    private bool isActive = false;
+    public bool isActive = false;
 
     public WardrobeCollider wardrobeCollider;
     private enum AIState { Inactive, Wander, Search, Chase }
@@ -68,6 +68,7 @@ public class SmartAvoidance : MonoBehaviour
     private float stuckTimer;
     void Update()
     {
+        Activate();
         bool on = animationsEnabled;
 
         if (rightArm) rightArm.enabled = on;
@@ -95,15 +96,18 @@ public class SmartAvoidance : MonoBehaviour
         if (playerObject != null)
             playerObject.SetActive(false);
 
-        Invoke(nameof(Activate), activationDelay);
+       
     }
 
     void Activate()
     {
-        isActive = true;
-
-        if (playerObject != null)
-            playerObject.SetActive(true);
+       
+       
+        if (isActive == true)
+        {
+            if (playerObject != null)
+                playerObject.SetActive(true);
+        }
 
         state = AIState.Wander;
     }

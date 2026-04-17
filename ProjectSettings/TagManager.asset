@@ -12,6 +12,7 @@ TagManager:
   - TerrainObj
   - Car
   - ParentLights
+  - Money
   layers:
   - Default
   - TransparentFX

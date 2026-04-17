@@ -8,6 +8,7 @@ public class MainCameraOn : MonoBehaviour
     public SmartAvoidance SmartAvoidance;
     public SmartAvoidance SmartAvoidance2;
     public GameObject player;
+    public GameObject PlayerCanvas;
     void Start()
     {
         
@@ -16,7 +17,10 @@ public class MainCameraOn : MonoBehaviour
    
     void Update()
     {
-        Invoke("PlayerActive", 17f);
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+           PlayerActive();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +37,7 @@ public class MainCameraOn : MonoBehaviour
     void PlayerActive()
     {
         player.SetActive(true);
+        PlayerCanvas.SetActive(true);
         Destroy(this.gameObject);
     }
 }

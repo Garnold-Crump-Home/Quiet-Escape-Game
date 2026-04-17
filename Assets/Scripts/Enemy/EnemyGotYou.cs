@@ -11,8 +11,10 @@ public class EnemyGotYou : MonoBehaviour
     public FirstPerson firstPersonScript;
 
     public Transform player;
+    public Transform playerCamera;
     public Transform deathArea;
     public Transform enemyTransform;
+    public Transform lookAt;
   
 
     [Header("Animation")]
@@ -46,7 +48,7 @@ public class EnemyGotYou : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             triggered = true;
-
+          
             StartCoroutine(DeathSequence());
         }
     }
@@ -55,7 +57,10 @@ public class EnemyGotYou : MonoBehaviour
     {
         // Move player to death area
         player.position = deathArea.position;
-
+     
+ smartAvoidanceScript.enabled = false;
+        firstPersonScript.enabled = false;
+        playerCamera.LookAt(lookAt);
         // Enemy grab animation
         rightLeg.SetTrigger("GotYou");
         leftLeg.SetTrigger("GotYou");
@@ -63,8 +68,7 @@ public class EnemyGotYou : MonoBehaviour
         rightArm.SetTrigger("GotYou");
 
         // Stop movement
-        smartAvoidanceScript.enabled = false;
-        firstPersonScript.enabled = false;
+       
 
         playerRb.constraints = RigidbodyConstraints.FreezeAll;
         enemy.constraints = RigidbodyConstraints.FreezeAll;
@@ -98,7 +102,7 @@ public class EnemyGotYou : MonoBehaviour
 
         while (color.a < 1f)
         {
-            color.a += Time.deltaTime * 0.5f; // fade speed
+            color.a += Time.deltaTime * 0.5f; 
             deathScreen.color = color;
             
             yield return null;

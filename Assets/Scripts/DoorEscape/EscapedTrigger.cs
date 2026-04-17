@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class EscapedTrigger : MonoBehaviour
@@ -10,6 +11,7 @@ public class EscapedTrigger : MonoBehaviour
     public GameObject Camera;
     public GameObject escapeCanvas;
     public SmartAvoidance avoidance;
+    private bool gaveMoney = false; 
     void Start()
     {
         
@@ -38,5 +40,18 @@ public class EscapedTrigger : MonoBehaviour
     public void Escaped()
     {
         escapeCanvas.SetActive(true);
+        Invoke("MainMenu", 5f);
+    }
+
+    public void MainMenu()
+    {
+        Money money = FindObjectOfType<Money>();
+        string SceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if(SceneName == "Level1" && !gaveMoney)
+        {
+            money.moneyAmount += 25;
+            gaveMoney = true;
+        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }
