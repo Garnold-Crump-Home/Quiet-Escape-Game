@@ -6,6 +6,7 @@ public class Pause : MonoBehaviour
 {
    public GameObject pauseMenu;
     public GameObject graphics;
+    public GameObject shop;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class Pause : MonoBehaviour
             {
                 pauseMenu.SetActive(false);
                 graphics.SetActive(false);
+                shop.SetActive(false);
                 Time.timeScale = 1;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;

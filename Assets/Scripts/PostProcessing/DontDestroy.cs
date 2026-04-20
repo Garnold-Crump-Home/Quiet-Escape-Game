@@ -26,7 +26,41 @@ public class NewBehaviourScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    void Awake()
+    {
+        if (buttonManager.MapChoose == true)
+        {
+            if (building == null)
+            {
+                DontDestroyOnLoad(building);
+
+            }
+            else
+            {
+                Destroy(building); // Destroys the duplicate
+            }
+
+            if (Cutscene == null)
+            {
+                DontDestroyOnLoad(Cutscene);
+
+            }
+            else
+            {
+                Destroy(Cutscene); // Destroys the duplicate
+            }
+
+            if (car == null)
+            {
+                DontDestroyOnLoad(car);
+
+            }
+            else
+            {
+                Destroy(car); // Destroys the duplicate
+            }
+        }
+    }
     void Update()
     {
 

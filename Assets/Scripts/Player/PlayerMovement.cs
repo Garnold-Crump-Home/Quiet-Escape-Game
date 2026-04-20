@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 8f;
     public float jumpForce = 7f;
     public float stamina = 100f;
+    public float maxStamina = 100f;
     public bool isSprinting = false;
 
     [Header("Crouch")]
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         staminaSlider.value = stamina;
-        staminaSlider.maxValue = 100f;
+        staminaSlider.maxValue = maxStamina;
         staminaSlider.minValue = 0f;
         FlashLight();
         HandleJump();
@@ -210,9 +211,9 @@ public class PlayerMovement : MonoBehaviour
             IdleRight.SetBool("isSprinting", false);
             Camera.fieldOfView = Mathf.Lerp(Camera.fieldOfView, 60f, Time.deltaTime * 5f);
             stamina += 5f * Time.deltaTime;
-            if(stamina > 100f)
+            if(stamina > maxStamina)
             {
-                stamina = 100f;
+                stamina = maxStamina;
                 moveSpeed = 8f;
 
             }
