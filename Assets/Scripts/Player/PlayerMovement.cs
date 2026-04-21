@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 8f;
     public float jumpForce = 7f;
+    public float runningSpeed = 12f;
     public float stamina = 100f;
     public float maxStamina = 100f;
     public bool isSprinting = false;
@@ -174,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
             stamina -= 10f * Time.deltaTime;
             if(stamina > 0f)
             {
-               moveSpeed = 12f;
+               moveSpeed = runningSpeed;
                 isSprinting = true;
                
                 IdleRight.SetBool("isSprinting", true);

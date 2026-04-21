@@ -27,7 +27,7 @@ public class EscapedTrigger : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("escaped");
+            
             Enemy.transform.position=point.position;
             Enemy.transform.rotation=point.rotation;
             avoidance.enabled = false;

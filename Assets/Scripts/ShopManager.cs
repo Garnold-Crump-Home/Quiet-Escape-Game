@@ -43,5 +43,17 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void SpeedUpgrade()
+    {
+        PlayerMovement player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        Money money = GameObject.FindWithTag("Money").GetComponent<Money>();
+        if (money.moneyAmount >= 10)
+        {
+                       money.moneyAmount -= 10;
+           
+            player.runningSpeed += 0.5f;
+        }
+    }
+
 
 }
