@@ -33,7 +33,7 @@ public class Money : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // Destroys the duplicate immediately
+            Destroy(gameObject); 
         }
     }
 

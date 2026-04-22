@@ -40,6 +40,7 @@ public class EscapedTrigger : MonoBehaviour
     public void Escaped()
     {
         escapeCanvas.SetActive(true);
+        
         Invoke("MainMenu", 5f);
     }
 
@@ -52,6 +53,19 @@ public class EscapedTrigger : MonoBehaviour
             money.moneyAmount += 25;
             gaveMoney = true;
         }
+       DestroyAllObjectsWithTag("Destroy");
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
+    void DestroyAllObjectsWithTag(string tagToDestroy )
+    {
+       
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(tagToDestroy);
+
+       
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
     }
 }

@@ -48,6 +48,7 @@ public class ButtonManager : MonoBehaviour
     }
     public void graphicsButton()
     {
+       
         mainScreen.SetActive(false);
         settingsScreen.SetActive(false);
         graphics.SetActive(true);
@@ -67,6 +68,7 @@ public class ButtonManager : MonoBehaviour
     }
      public void settingsButton()
     {
+        
         mainScreen.SetActive(false);
         settingsScreen.SetActive(true);
     }

@@ -13,6 +13,7 @@ TagManager:
   - Car
   - ParentLights
   - Money
+  - Destroy
   layers:
   - Default
   - TransparentFX
