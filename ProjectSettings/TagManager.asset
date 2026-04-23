@@ -14,6 +14,8 @@ TagManager:
   - ParentLights
   - Money
   - Destroy
+  - MoneyText
+  - ShopUI
   layers:
   - Default
   - TransparentFX
