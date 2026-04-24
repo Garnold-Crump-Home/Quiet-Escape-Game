@@ -11,8 +11,8 @@ public class Battery : MonoBehaviour
     public GameObject canvas;
     public Transform playerCamera;
 
-    public float maxDistance = 4f;
-    public float detectionRadius = 0.3f;
+    public float maxDistance = 6f;
+    public float detectionRadius = 0.8f;
 
     void Start()
     {
