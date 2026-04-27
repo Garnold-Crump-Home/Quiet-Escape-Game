@@ -9,9 +9,10 @@ public class RedKey : MonoBehaviour
     public Rigidbody rb;
     public Rigidbody rb2;
     public PlayerUITrigger playerUITrigger;
+    public AudioSource keyUnlockSound;
     void Start()
     {
-
+        keyUnlockSound = GetComponent<AudioSource>();
     }
 
    
@@ -38,6 +39,7 @@ public class RedKey : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 redKeyUnlocked = true;
+                keyUnlockSound.Play();
             }
 
         }

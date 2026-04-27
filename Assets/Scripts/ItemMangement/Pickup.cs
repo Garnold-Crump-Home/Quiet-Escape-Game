@@ -13,6 +13,9 @@ public class Pickup : MonoBehaviour
     public Animator animator;
     public PlayerMovement playerMovement;
     public GameObject canvas;
+    public bool key = false;
+    public AudioSource keyPickup;
+
 
     [Header("Pickup Settings")]
     public float maxDistance = 4f;
@@ -22,12 +25,14 @@ public class Pickup : MonoBehaviour
     {
         if (playerCamera == null) return;
 
+
+       
+            if (playerMovement != null && playerMovement.HoldingObj && Input.GetKeyDown(KeyCode.Q))
+            {
+                DropObject();
+                return;
+            }
         
-        if (playerMovement != null && playerMovement.HoldingObj && Input.GetKeyDown(KeyCode.Q))
-        {
-            DropObject();
-            return;
-        }
 
         
         if (playerMovement != null && !playerMovement.HoldingObj)
@@ -61,6 +66,10 @@ public class Pickup : MonoBehaviour
 
     public void PickupObj()
     {
+        if(key)
+        {
+         keyPickup.Play();
+        }
         if (!Application.isPlaying) return;
 
         canvas.SetActive(false);

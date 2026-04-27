@@ -12,6 +12,11 @@ public class Safe : MonoBehaviour
 
     public string codeAnswer = "";
     public GameObject safeContents;
+    public GameObject bill1;
+    public GameObject bill2;
+    public GameObject bill3;
+    public GameObject bill4;
+    public GameObject bill5;
     public int randomNumber;
     private bool canvasOpened = false;
     public Animator safeAnimator;
@@ -61,7 +66,13 @@ public class Safe : MonoBehaviour
         if (!isOpen)
         {
             safeContents.SetActive(false);
-          
+            bill1.SetActive(false);
+            bill2.SetActive(false);
+            bill3.SetActive(false);
+            bill4.SetActive(false);
+            bill5.SetActive(false);
+
+
 
             // Open safe
             if (CloseEnough  && Input.GetKeyDown(KeyCode.E) && !canvasOpened)
@@ -111,6 +122,11 @@ public class Safe : MonoBehaviour
     {
         safeDoor.SetTrigger("OpenDoor");
         safeContents.SetActive(true);
+        bill1.SetActive(true);
+        bill2.SetActive(true);
+        bill3.SetActive(true);
+        bill4.SetActive(true);
+        bill5.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)

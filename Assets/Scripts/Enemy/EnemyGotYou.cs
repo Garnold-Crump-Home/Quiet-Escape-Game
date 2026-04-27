@@ -29,10 +29,13 @@ public class EnemyGotYou : MonoBehaviour
     public Text gameOver;
     public GameObject playerManagement;
 
+    public AudioSource jumpScareSound;
+
     private bool triggered = false;
 
     void Start()
     {
+        jumpScareSound = GetComponent<AudioSource>();
         death.enabled = false;
 
       
@@ -61,7 +64,7 @@ public class EnemyGotYou : MonoBehaviour
  smartAvoidanceScript.enabled = false;
         firstPersonScript.enabled = false;
         playerCamera.LookAt(lookAt);
-        // Enemy grab animation
+       jumpScareSound.Play();
         rightLeg.SetTrigger("GotYou");
         leftLeg.SetTrigger("GotYou");
         leftArm.SetTrigger("GotYou");

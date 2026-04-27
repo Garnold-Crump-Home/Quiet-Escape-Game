@@ -13,12 +13,13 @@ public class StartGameCar : MonoBehaviour
     public GameObject Car;
     public GameObject Terrain;
     public GameObject Canvas;
+    public AudioSource carSound;
 
-    
+
     public bool exit = true;
     void Start()
     {
-      
+      carSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,8 +40,10 @@ public class StartGameCar : MonoBehaviour
                 Canvas.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    
                     Canvas.SetActive(false);
                     Destroy(carCam);
+                    carSound.Play();
                     OutsideCarCam.SetActive(true);
                     animator.SetTrigger("Exit");
                    

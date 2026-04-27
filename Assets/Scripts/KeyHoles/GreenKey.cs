@@ -10,9 +10,10 @@ public class GreenKey : MonoBehaviour
     public Rigidbody rb;
     public Rigidbody rb2;
     public PlayerUITrigger playerUITrigger;
+    public AudioSource keyUnlockSound;
     void Start()
     {
-
+        keyUnlockSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -37,6 +38,7 @@ public class GreenKey : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 greenKeyUnlocked = true;
+                keyUnlockSound.Play();
             }
 
 

@@ -13,13 +13,13 @@ public class Door : MonoBehaviour
     public GreenKey greenKey;
     public BlueKey blueKey;
     public bool CanOpenDoor;
+    public AudioSource doorOpenSound;
 
-   
 
 
     void Start()
     {
-       
+       doorOpenSound = GetComponent<AudioSource>();
     }
 
 
@@ -36,6 +36,7 @@ public class Door : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        doorOpenSound.Play();
                         DoorAnimation.SetBool("Closed", false);
 
                         DoorAnimation.SetBool("DoorOpen", true);

@@ -7,9 +7,10 @@ public class PickUpMoney : MonoBehaviour
     public Transform player;
     public int amount = 10;
     public GameObject canvas;
+    public AudioSource pickupSound;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -21,8 +22,10 @@ public class PickUpMoney : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Money money = GameObject.FindWithTag("Money").GetComponent<Money>();
+                pickupSound.Play();
                 money.moneyAmount += amount;
                 canvas.SetActive(false);
+                    
                 Destroy(gameObject);
                 
             }

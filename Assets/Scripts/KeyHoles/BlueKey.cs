@@ -10,10 +10,11 @@ public class BlueKey : MonoBehaviour
     public Rigidbody rb;
     public Rigidbody rb2;
     public PlayerUITrigger playerUITrigger;
+    public AudioSource keyUnlockSound;
 
     void Start()
     {
-        
+        keyUnlockSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,11 +36,12 @@ public class BlueKey : MonoBehaviour
         if (blueKeyActivate.activeSelf)
         {
 
-
+            
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 blueKeyUnlocked = true;
+                keyUnlockSound.Play();
             }
 
         }

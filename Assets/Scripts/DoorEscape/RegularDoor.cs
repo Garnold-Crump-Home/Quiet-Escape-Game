@@ -8,15 +8,16 @@ public class RegularDoor : MonoBehaviour
     public Animator DoorAnimation;
     public bool doorOpen = false;
     public bool CanOpenDoor;
+    public AudioSource doorOpenSound;
 
 
 
 
 
-    
+
     void Start()
     {
-
+        doorOpenSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,12 +32,14 @@ public class RegularDoor : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        DoorAnimation.SetBool("Closed", false);
+                  
+                    DoorAnimation.SetBool("Closed", false);
 
                         DoorAnimation.SetBool("DoorOpen", true);
-                      
+                    doorOpenSound.Play();
 
-                        doorOpen = true;
+
+                    doorOpen = true;
                     }
                 }
             }
