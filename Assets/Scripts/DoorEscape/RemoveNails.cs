@@ -36,6 +36,8 @@ public class RemoveNails : MonoBehaviour
                 animator.SetTrigger("Hit");
                 if (distance <= 4f)
                 {
+                    AudioSource x = GetComponent<AudioSource>();
+                    x.Play();
                     nails.freezeRotation = false;
                     nails.constraints = RigidbodyConstraints.None;
 

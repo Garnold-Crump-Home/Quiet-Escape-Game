@@ -9,6 +9,7 @@ public class RegularDoor : MonoBehaviour
     public bool doorOpen = false;
     public bool CanOpenDoor;
     public AudioSource doorOpenSound;
+    public AudioSource doorCloseSound;
 
 
 
@@ -32,11 +33,11 @@ public class RegularDoor : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                  
+                    doorOpenSound.Play();
                     DoorAnimation.SetBool("Closed", false);
 
                         DoorAnimation.SetBool("DoorOpen", true);
-                    doorOpenSound.Play();
+                   
 
 
                     doorOpen = true;
@@ -49,8 +50,8 @@ public class RegularDoor : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-
-                        doorOpen = false;
+                    doorCloseSound.Play();
+                    doorOpen = false;
                         DoorAnimation.SetBool("DoorOpen", false);
                        
                         DoorAnimation.SetBool("Closed", true);

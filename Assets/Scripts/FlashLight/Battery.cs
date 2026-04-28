@@ -10,7 +10,7 @@ public class Battery : MonoBehaviour
     public Animator animator;
     public GameObject canvas;
     public Transform playerCamera;
-
+    public AudioSource pickupSound;
     public float maxDistance = 6f;
     public float detectionRadius = 0.8f;
 
@@ -49,7 +49,7 @@ public class Battery : MonoBehaviour
     public void PickupObj()
     {
         if (!Application.isPlaying) return;
-
+        pickupSound.Play();
         flashlightBattery.BatteryLevel += 50f;
                     Destroy(gameObject);
 

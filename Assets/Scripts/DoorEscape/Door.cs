@@ -14,6 +14,7 @@ public class Door : MonoBehaviour
     public BlueKey blueKey;
     public bool CanOpenDoor;
     public AudioSource doorOpenSound;
+    public AudioSource doorCloseSound;
 
 
 
@@ -52,7 +53,7 @@ public class Door : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-
+                        doorCloseSound.Play();
                         doorOpen = false;
                         DoorAnimation.SetBool("DoorOpen", false);
 

@@ -14,6 +14,7 @@ public class StartGameCar : MonoBehaviour
     public GameObject Terrain;
     public GameObject Canvas;
     public AudioSource carSound;
+    public AudioSource carAudio;
 
 
     public bool exit = true;
@@ -32,7 +33,7 @@ public class StartGameCar : MonoBehaviour
 
     public void Exit()
     {
-       
+       carAudio.Stop();
         if (carCutScene.play)
         {
             if (exit)
