@@ -66,6 +66,9 @@ public class SmartAvoidance : MonoBehaviour
 
     private Vector3 lastPosition;
     private float stuckTimer;
+
+    
+
     void Update()
     {
         Activate();
@@ -83,6 +86,7 @@ public class SmartAvoidance : MonoBehaviour
         {
             detectionRange = 35f;
         }
+       
     }
     void Start()
     {
