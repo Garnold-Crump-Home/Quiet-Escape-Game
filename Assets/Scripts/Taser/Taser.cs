@@ -28,6 +28,8 @@ public class Taser : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.Mouse0))
                     {
+                        AudioSource audioSource = GetComponent<AudioSource>();
+                        audioSource.Play();
                         particle.Play();
                         reloadTime = 2f;
                         GameObject newProjectile = Instantiate(bullet, firePoint.position, firePoint.rotation);

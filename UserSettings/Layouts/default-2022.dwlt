@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -218,8 +218,8 @@ MonoBehaviour:
     y: 0
     width: 1222
     height: 663
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,17 +246,17 @@ MonoBehaviour:
     y: 663
     width: 1565
     height: 276
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 2
-  m_LastSelected: 1
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -692,9 +692,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -65.653046, y: 86.81974, z: 209.38347}
+    m_Target: {x: -105.44842, y: 10.119362, z: 82.370575}
     speed: 2
-    m_Value: {x: -65.653046, y: 86.81974, z: 209.38347}
+    m_Value: {x: -105.44842, y: 10.119362, z: 82.370575}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -740,13 +740,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03060968, y: -0.8112491, z: 0.042632863, w: -0.5825732}
+    m_Target: {x: -0.03184882, y: -0.9132381, z: 0.07276254, w: -0.39994842}
     speed: 2
-    m_Value: {x: -0.032877494, y: -0.81528383, z: 0.046525322, w: -0.5762523}
+    m_Value: {x: -0.0318445, y: -0.91311425, z: 0.07275267, w: -0.39989418}
   m_Size:
-    m_Target: 62.892994
+    m_Target: 10
     speed: 2
-    m_Value: 62.892994
+    m_Value: 10.000003
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -808,23 +808,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7c60fdff1465fdffc869fdff5a75fdfffe79fdffa67ffdff6691fdff38adfdff84b1fdff58bcfdff04fbfdff9efffdff7c06feff4c11feff321cfeff9c6bfeffb478feff847afeff1c8ffeff5e92feffa69efeff86a5feff0aaefeff8c78ffff067dffff6c84ffff4e86ffff8c8affff96d6ffff80d8ffff34ddffff7adfffffe0faffffa693000074ea00008c13010092200100e6db01003aee01009eee0100a05d02000070020022270400c82d0400d02d0400702e040046b904003ac40500
+      m_SelectedIDs: 40b00300
+      m_LastClickedID: 241728
+      m_ExpandedIDs: fc56feffb457feffe85cfeff745efeff9062feffb46afeff6c6bfeff7072fefff473feff6876feffbe8cfeffb494feff78cdfeff5ed4feff78defeff34e3feff96e9feffa6f6feff3a07ffffde0bffff7a10fffff466ffffd0b1ffffb8b8ffff82ddffffe0faffffba8f0000809f000084ed000012ee0000641401000a910100989101001ade0100e4ed010098230200da6b0200d27f020060800200eab80300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 140594
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 377914
+  m_LastSelectedObjectID: 60946
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1476,7 +1476,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/DoorEscape
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1484,16 +1484,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/DoorEscape
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\gacr846\Documents\GitHub\Quiet-Escape-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 89}
-    m_SelectedIDs: 4a8d0000
-    m_LastClickedID: 36170
-    m_ExpandedIDs: 00000000808b0000828b0000848b0000868b0000888b00008a8b00008c8b00008e8b0000908b0000928b0000948b0000968b0000988b00009a8b00009c8b00009e8b0000a08b0000a28b0000a48b0000a68b0000488d000000ca9a3b
+    scrollPos: {x: 0, y: 57}
+    m_SelectedIDs: 8ea50000
+    m_LastClickedID: 42382
+    m_ExpandedIDs: 000000008e8b0000908b0000928b0000948b0000968b0000988b00009a8b00009c8b00009e8b0000a08b0000a28b0000a48b0000a68b0000a88b0000aa8b0000ac8b0000ae8b0000b08b0000b28b0000b48b0000568d0000668d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1521,7 +1521,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000808b0000828b0000848b0000868b0000888b00008a8b00008c8b00008e8b0000908b0000928b0000948b0000968b0000988b00009a8b00009c8b00009e8b0000a08b0000a28b0000a48b0000a68b0000
+    m_ExpandedIDs: 000000008e8b0000908b0000928b0000948b0000968b0000988b00009a8b00009c8b00009e8b0000a08b0000a28b0000a48b0000a68b0000a88b0000aa8b0000ac8b0000ae8b0000b08b0000b28b0000b48b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1548,7 +1548,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300008e6300008c62000034630000b2630000565b00005e700000327700007e770000f6ea0000242b01007096000090060200fe2b0300f6c40400c81b0500daa6000082c100003c8d00005c8d0000067d00005253040060530400c21d0400ee85000000000000c88e00004ac300007a860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

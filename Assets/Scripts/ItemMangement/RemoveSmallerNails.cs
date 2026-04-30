@@ -43,6 +43,8 @@ public class RemoveSmallerNails : MonoBehaviour
                 animator.SetTrigger("Hit");
                 if (canRemoveNails)
                 {
+                    AudioSource audioSource = GetComponent<AudioSource>();
+                    audioSource.Play();
                     nails.freezeRotation = false;
                     nails.constraints = RigidbodyConstraints.None;
                    
